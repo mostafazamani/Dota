@@ -64,18 +64,119 @@ public class AgilityStore extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         switch (list.get(position).getName()){
 
-                            case("Phantom Lancer"):
+                            case("Anti Mage"):
 
                                 startActivity(new Intent(AgilityStore.this, ShowList.class));
                                 break;
-
-                            case ("Slark"):
-
-
-
-
+                            case ("Arc Warden"):
 
                                 break;
+                            case ("Bloodseeker"):
+
+                                break;
+                            case ("Bounty Hunter"):
+
+                                break;
+                            case ("Broodmother"):
+
+                                break;
+                            case ("Clinkz"):
+
+                                break;
+                            case ("Drow Ranger"):
+
+                                break;
+                            case ("Ember Spirit"):
+
+                                break;
+                            case ("Faceless Void"):
+
+                                break;
+                            case ("Gyrocopter"):
+
+                                break;
+                            case ("Juggernaut"):
+
+                                break;
+                            case ("Lone Druid"):
+
+                                break;
+                            case ("Luna"):
+
+                                break;
+                            case ("Medusa"):
+
+                                break;
+                            case ("Meepo"):
+
+                                break;
+                            case ("Mirana"):
+
+                                break;
+                            case ("Monkey King"):
+
+                                break;
+                            case ("Morphling"):
+
+                                break;
+                            case ("Naga Siren"):
+
+                                break;
+                            case ("Nyx Assassin"):
+
+                                break;
+                            case ("Pangolier"):
+
+                                break;
+                            case ("Phantom Assassin"):
+
+                                break;
+                            case ("Phantom Lancer"):
+
+                                break;
+                            case ("Razor"):
+
+                                break;
+                            case ("Riki"):
+
+                                break;
+                            case ("Shadow Fiend"):
+
+                                break;
+                            case ("Slark"):
+
+                                break;
+                            case ("Sniper"):
+
+                                break;
+                            case ("Spectre"):
+
+                                break;
+                            case ("Templar Assassin"):
+
+                                break;
+                            case ("Terrorblade"):
+
+                                break;
+                            case ("Troll Warlord"):
+
+                                break;
+                            case ("Ursa"):
+
+                                break;
+                            case ("Vengeful Spirit"):
+
+                                break;
+                            case ("Venomancer"):
+
+                                break;
+                            case ("Viper"):
+
+                                break;
+                            case ("Weaver"):
+
+                                break;
+
                             default:
                                 break;
 
