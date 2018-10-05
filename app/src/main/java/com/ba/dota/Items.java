@@ -56,7 +56,7 @@ public class Items {
         values.put(KEY_TEXT, getItem_text());
         values.put(KEY_IMAGE, getUri_image());
         values.put(KEY_CAST, getCast());
-        values.put(Key_Id,getId());
+
 
         return values;
 
