@@ -62,12 +62,133 @@ public class InteligenceStore extends AppCompatActivity {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         switch (list.get(position).getName()) {
 
-                            case ("Phantom Lancer"):
+                            case ("Ancient Apparition"):
                                 break;
 
-                            case ("Slark"):
+                            case ("Bane"):
 
                                 break;
+                            case ("Batrider"):
+
+                                break;
+                            case ("Chen"):
+
+                                break;
+                            case ("Crystal Maiden"):
+
+                                break;
+                            case ("Dark Seer"):
+
+                                break;
+                            case ("Dark Willow"):
+
+                                break;
+                            case ("Dazzle"):
+
+                                break;
+                            case ("Death Prophet"):
+
+                                break;
+                            case ("Disruptor"):
+
+                                break;
+                            case ("Enchantress"):
+
+                                break;
+                            case ("Enigma"):
+
+                                break;
+                            case ("Grimstroke"):
+
+                                break;
+                            case ("Invoker"):
+
+                                break;
+                            case ("Jakiro"):
+
+                                break;
+                            case ("Keeper Of The Light"):
+
+                                break;
+                            case ("Leshrac"):
+
+                                break;
+                            case ("Lich"):
+
+                                break;
+                            case ("Lina"):
+
+                                break;
+                            case ("Lion"):
+
+                                break;
+                            case ("Nature Prophet"):
+
+                                break;
+                            case ("Necrophos"):
+
+                                break;
+                            case ("Ogre Magi"):
+
+                                break;
+                            case ("Oracle"):
+
+                                break;
+                            case ("Outworld Devourer"):
+
+                                break;
+                            case ("Pugna"):
+
+                                break;
+                            case ("Puck"):
+
+                                break;
+                            case ("Queen Of Pain"):
+
+                                break;
+                            case ("Rubick"):
+
+                                break;
+                            case ("Shadow Demon"):
+
+                                break;
+                            case ("Shadow Shaman"):
+
+                                break;
+                            case ("Silencer"):
+
+                                break;
+                            case ("Skywrath Mage"):
+
+                                break;
+                            case ("Storm Spirit"):
+
+                                break;
+                            case ("Techies"):
+
+                                break;
+                            case ("Tinker"):
+
+                                break;
+                            case ("Visage"):
+
+                                break;
+                            case ("Warlock"):
+
+                                break;
+                            case ("Windranger"):
+
+                                break;
+                            case ("Winter Wyvern"):
+
+                                break;
+                            case ("Witch Doctor"):
+
+                                break;
+                            case ("Zeus"):
+
+                                break;
+
                             default:
                                 break;
 

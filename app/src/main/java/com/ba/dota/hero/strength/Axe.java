@@ -1,8 +1,10 @@
 package com.ba.dota.hero.strength;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -21,6 +23,7 @@ import com.android.volley.toolbox.Volley;
 import com.ba.dota.JsonStrengthItem;
 import com.ba.dota.ListStoreStrength;
 import com.ba.dota.R;
+import com.ba.dota.ShowList;
 import com.ba.dota.Strengthlistitem;
 
 import org.json.JSONArray;
@@ -31,23 +34,21 @@ import java.util.List;
 
 public class Axe extends AppCompatActivity {
 
-    List<Strengthlistitem> list;
     ListView listView;
-    ListStoreStrength liststore;
+    List<Strengthlistitem> list;
+    ListStoreStrength strength;
+    TextView textView;
 
-    Button button;
-    TextView txt;
     public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hero_item);
-        listView = (ListView) findViewById(R.id.list_hshop);
-        button = (Button) findViewById(R.id.btn_slist);
-        txt = (TextView) findViewById(R.id.text_hlist);
 
-        RelativeLayout layout  = (RelativeLayout) findViewById(R.id.hero_layout);
+        listView = (ListView) findViewById(R.id.list_hshop);
+        Button button = (Button) findViewById(R.id.btn_hlist);
+        textView = (TextView) findViewById(R.id.text_hlist);
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -60,9 +61,8 @@ public class Axe extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                liststore = new ListStoreStrength(list, getApplicationContext());
-                listView.setAdapter(liststore);
-
+                strength = new ListStoreStrength(list, getApplicationContext());
+                listView.setAdapter(strength);
 
 
             }
@@ -95,5 +95,13 @@ public class Axe extends AppCompatActivity {
         requestQueue.add(jsonRequest);
 
 
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Axe.this, ShowList.class));
+
+            }
+        });
     }
 }
