@@ -39,7 +39,7 @@ public class Axe extends AppCompatActivity {
     ListStoreStrength strength;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/z9t5816qohc8eru/Axe.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

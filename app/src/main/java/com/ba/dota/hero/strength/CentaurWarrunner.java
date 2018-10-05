@@ -41,7 +41,7 @@ public class CentaurWarrunner extends AppCompatActivity {
     ListStoreStrength strength;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/u5sj4entxn53un0/Centaur%20Warrunner.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

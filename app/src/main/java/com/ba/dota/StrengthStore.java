@@ -109,6 +109,11 @@ public class StrengthStore extends AppCompatActivity {
 
                             break;
 
+                            case ("Axe"):
+                                startActivity(new Intent(StrengthStore.this, Axe.class));
+
+                                break;
+
                             case ("Beastmaster"):
                                 startActivity(new Intent(StrengthStore.this, Beastmaster.class));
 

@@ -41,7 +41,7 @@ public class Omniknight extends AppCompatActivity {
     ListStoreStrength strength;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/x7ubq34v51rk2c8/Omniknight.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
