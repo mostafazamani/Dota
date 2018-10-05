@@ -20,7 +20,42 @@ import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 import com.ba.dota.hero.strength.Abaddon;
+import com.ba.dota.hero.strength.Alchemist;
 import com.ba.dota.hero.strength.Axe;
+import com.ba.dota.hero.strength.Beastmaster;
+import com.ba.dota.hero.strength.Brewmaster;
+import com.ba.dota.hero.strength.Bristleback;
+import com.ba.dota.hero.strength.CentaurWarrunner;
+import com.ba.dota.hero.strength.ChaosKnight;
+import com.ba.dota.hero.strength.Clockwerk;
+import com.ba.dota.hero.strength.Doom;
+import com.ba.dota.hero.strength.DragonKnight;
+import com.ba.dota.hero.strength.EarthSpirit;
+import com.ba.dota.hero.strength.Earthshaker;
+import com.ba.dota.hero.strength.ElderTitan;
+import com.ba.dota.hero.strength.Huskar;
+import com.ba.dota.hero.strength.IO;
+import com.ba.dota.hero.strength.Kunkka;
+import com.ba.dota.hero.strength.LegionCommander;
+import com.ba.dota.hero.strength.Lifestealer;
+import com.ba.dota.hero.strength.Lycan;
+import com.ba.dota.hero.strength.Magnus;
+import com.ba.dota.hero.strength.NightStalker;
+import com.ba.dota.hero.strength.Omniknight;
+import com.ba.dota.hero.strength.Phoenix;
+import com.ba.dota.hero.strength.Pudge;
+import com.ba.dota.hero.strength.SandKing;
+import com.ba.dota.hero.strength.Slardar;
+import com.ba.dota.hero.strength.SpiritBreaker;
+import com.ba.dota.hero.strength.Sven;
+import com.ba.dota.hero.strength.Tidehunter;
+import com.ba.dota.hero.strength.Timbersaw;
+import com.ba.dota.hero.strength.Tiny;
+import com.ba.dota.hero.strength.TreantProtector;
+import com.ba.dota.hero.strength.Tusk;
+import com.ba.dota.hero.strength.Underlord;
+import com.ba.dota.hero.strength.Undying;
+import com.ba.dota.hero.strength.WraithKing;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,113 +105,150 @@ public class StrengthStore extends AppCompatActivity {
                                     break;
 
                             case ("Alchemist"):
+                                startActivity(new Intent(StrengthStore.this, Alchemist.class));
 
                             break;
 
                             case ("Beastmaster"):
+                                startActivity(new Intent(StrengthStore.this, Beastmaster.class));
 
                                 break;
 
                             case ("Brewmaster"):
+                                startActivity(new Intent(StrengthStore.this, Brewmaster.class));
 
                                 break;
 
                             case ("Bristleback"):
+                                startActivity(new Intent(StrengthStore.this, Bristleback.class));
+
 
                                 break;
 
                             case ("Centaur Warrunner"):
+                                startActivity(new Intent(StrengthStore.this, CentaurWarrunner.class));
 
                                 break;
 
                             case ("Chaos Knight"):
+                                startActivity(new Intent(StrengthStore.this, ChaosKnight.class));
 
                                 break;
                             case ("Clockwerk"):
+                                startActivity(new Intent(StrengthStore.this, Clockwerk.class));
 
                                 break;
                             case ("Doom"):
+                                startActivity(new Intent(StrengthStore.this, Doom.class));
 
                                 break;
                             case ("Dragon Knight"):
+                                startActivity(new Intent(StrengthStore.this, DragonKnight.class));
 
                                 break;
                             case ("Earthshaker"):
+                                startActivity(new Intent(StrengthStore.this, Earthshaker.class));
 
                                 break;
                             case ("Earth Spirit"):
+                                startActivity(new Intent(StrengthStore.this, EarthSpirit.class));
 
                                 break;
                             case ("Elder Titan"):
+                                startActivity(new Intent(StrengthStore.this, ElderTitan.class));
 
                                 break;
                             case ("Huskar"):
+                                startActivity(new Intent(StrengthStore.this, Huskar.class));
 
                                 break;
                             case ("IO"):
+                                startActivity(new Intent(StrengthStore.this, IO.class));
 
                                 break;
                             case ("Kunkka"):
+                                startActivity(new Intent(StrengthStore.this, Kunkka.class));
 
                                 break;
                             case ("Legion Commander"):
+                                startActivity(new Intent(StrengthStore.this, LegionCommander.class));
 
                                 break;
                             case ("Lifestealer"):
+                                startActivity(new Intent(StrengthStore.this, Lifestealer.class));
 
                                 break;
                             case ("Lycan"):
+                                startActivity(new Intent(StrengthStore.this, Lycan.class));
 
                                 break;
                             case ("Magnus"):
+                                startActivity(new Intent(StrengthStore.this, Magnus.class));
 
                                 break;
                             case ("Night Stalker"):
+                                startActivity(new Intent(StrengthStore.this, NightStalker.class));
 
                                 break;
                             case ("Omniknight"):
+                                startActivity(new Intent(StrengthStore.this, Omniknight.class));
 
                                 break;
                             case ("Phoenix"):
+                                startActivity(new Intent(StrengthStore.this, Phoenix.class));
+
 
                                 break;
                             case ("Pudge"):
+                                startActivity(new Intent(StrengthStore.this, Pudge.class));
 
                                 break;
                             case ("Sand King"):
+                                startActivity(new Intent(StrengthStore.this, SandKing.class));
 
                                 break;
                             case ("Slardar"):
+                                startActivity(new Intent(StrengthStore.this, Slardar.class));
 
                                 break;
                             case ("Spirit Breaker"):
+                                startActivity(new Intent(StrengthStore.this, SpiritBreaker.class));
 
                                 break;
                             case ("Sven"):
+                                startActivity(new Intent(StrengthStore.this, Sven.class));
 
                                 break;
                             case ("Tidehunter"):
+                                startActivity(new Intent(StrengthStore.this, Tidehunter.class));
 
                                 break;
                             case ("Timbersaw"):
+                                startActivity(new Intent(StrengthStore.this, Timbersaw.class));
 
                                 break;
                             case ("Tiny"):
+                                startActivity(new Intent(StrengthStore.this, Tiny.class));
 
                                 break;
                             case ("Treant Protector"):
+                                startActivity(new Intent(StrengthStore.this, TreantProtector.class));
 
                                 break;
                             case ("Tusk"):
+                                startActivity(new Intent(StrengthStore.this, Tusk.class));
 
                                 break;
                             case ("Underlord"):
+                                startActivity(new Intent(StrengthStore.this, Underlord.class));
 
                                 break;
                             case ("Undying"):
+                                startActivity(new Intent(StrengthStore.this, Undying.class));
 
                                 break;
                             case ("Wraith King"):
+                                startActivity(new Intent(StrengthStore.this, WraithKing.class));
 
                                 break;
 
