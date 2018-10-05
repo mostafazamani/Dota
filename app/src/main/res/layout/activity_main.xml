@@ -27,7 +27,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:background="#00000000"
-        android:text="Bio" />
+        android:text="B" />
 
     <Button
         android:id="@+id/update"
