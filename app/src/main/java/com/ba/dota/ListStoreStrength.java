@@ -95,7 +95,7 @@ public class ListStoreStrength extends BaseAdapter {
 
 
             }
-        }, 160, 160, ImageView.ScaleType.FIT_CENTER, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+        }, 100, 100, ImageView.ScaleType.FIT_CENTER, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
 
