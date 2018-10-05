@@ -86,7 +86,7 @@ public class DbUtil extends SQLiteOpenHelper {
                 sl.setItem_text(cursor.getString(cursor.getColumnIndex(Items.KEY_TEXT)));
                 sl.setUri_image(cursor.getString(cursor.getColumnIndex(Items.KEY_IMAGE)));
                 sl.setCast(cursor.getString(cursor.getColumnIndex(Items.KEY_CAST)));
-
+                sl.setId(cursor.getInt(cursor.getColumnIndex(Items.Key_Id)));
 
                 lsl.add(sl);
             } while (cursor.moveToNext());
