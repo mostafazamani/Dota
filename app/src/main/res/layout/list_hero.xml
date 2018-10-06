@@ -5,21 +5,22 @@
     android:layout_margin="5dp">
 
 
-
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:id="@+id/image_hero"
-        android:scaleType="fitCenter"
-        />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter" />
 
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
         android:id="@+id/name_hero"
-        android:layout_below="@id/image_hero"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@id/image_hero"
+        android:layout_toRightOf="@id/image_hero"
         android:gravity="center"
+
         />
 
 </RelativeLayout>

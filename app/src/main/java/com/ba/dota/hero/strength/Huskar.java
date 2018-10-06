@@ -42,7 +42,7 @@ public class Huskar extends AppCompatActivity {
     ListStoreStrength strength;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/gi46tthze93rpsc/Elder%20Titan.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/8j77v6k1ey7nco8/Huskar.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
