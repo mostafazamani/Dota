@@ -28,8 +28,13 @@
         android:layout_height="50dp"
         android:id="@+id/btn_s"
         android:layout_toRightOf="@+id/text_s"
-        android:layout_margin="5dp"
-        android:text="del"
+
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/delete"
+
         />
 
 

@@ -14,8 +14,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:background="@mipmap/ic_launcher"
-        android:text="buy" />
+        android:background="@drawable/store" />
 
     <TextView
         android:layout_width="match_parent"
@@ -23,7 +22,8 @@
         android:layout_toLeftOf="@id/btn_ilist"
         android:gravity="center"
         android:text="Intelligence"
-        android:textSize="18sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/list_ishop"

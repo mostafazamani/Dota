@@ -21,7 +21,8 @@
         android:layout_toLeftOf="@id/btn_slist"
         android:gravity="center"
         android:text="Strength"
-        android:textSize="18sp" />
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/list_shop"

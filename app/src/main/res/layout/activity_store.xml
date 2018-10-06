@@ -17,21 +17,27 @@
             android:id="@+id/go_st"
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="Strength" />
+            android:text="Strength"
+            android:drawableLeft="@drawable/striconleft"
+
+            />
 
         <Button
             android:id="@+id/go_ag"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@id/go_st"
-            android:text="Agility" />
+            android:text="Agility"
+            android:drawableLeft="@drawable/agiiconleft"
+            />
 
         <Button
             android:id="@+id/go_int"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_below="@id/go_ag"
-            android:text="Intelligence" />
+            android:text="Intelligence"
+            android:drawableLeft="@drawable/inticonleft"/>
 
     </RelativeLayout>
 

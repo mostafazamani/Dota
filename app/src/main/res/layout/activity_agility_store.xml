@@ -14,14 +14,16 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
-        android:background="@mipmap/ic_launcher" />
+        android:background="@drawable/store" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_toLeftOf="@id/btn_alist"
         android:gravity="center"
-        android:text="Agility" />
+        android:text="Agility"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
 
     <ListView
         android:id="@+id/list_shopa"
