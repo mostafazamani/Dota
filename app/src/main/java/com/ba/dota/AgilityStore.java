@@ -2,12 +2,14 @@ package com.ba.dota;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
@@ -78,7 +80,7 @@ public class AgilityStore extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agility_store);
         listView = (ListView) findViewById(R.id.list_shopa);
-
+        final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_storeagility);
         Button button = (Button) findViewById(R.id.btn_alist);
 
 
@@ -267,7 +269,20 @@ public class AgilityStore extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                Snackbar snackbar =Snackbar.make(layout,"Connection Failed...",Snackbar.LENGTH_INDEFINITE);
+                View sbview = snackbar.getView();
+                sbview.setBackgroundColor(0xffff4334);
+                snackbar.setAction("Retry", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                        recreate();
+                    }
+                });
+
+
+                snackbar.show();
+
 
             }
         }) {

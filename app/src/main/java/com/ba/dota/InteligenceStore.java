@@ -2,12 +2,14 @@ package com.ba.dota;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
@@ -80,8 +82,8 @@ public class InteligenceStore extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inteligence_store);
-
         listView = (ListView) findViewById(R.id.list_ishop);
+        final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_intelstor);
         Button button= (Button) findViewById(R.id.btn_ilist);
 
 
@@ -287,7 +289,21 @@ public class InteligenceStore extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+
+                Snackbar snackbar =Snackbar.make(layout,"Connection Failed...",Snackbar.LENGTH_INDEFINITE);
+                View sbview = snackbar.getView();
+                sbview.setBackgroundColor(0xffff4334);
+                snackbar.setAction("Retry", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // startActivity(new Intent(StrengthStore.this, StrengthStore.class));
+                        recreate();
+                    }
+                });
+
+
+                snackbar.show();
+
 
             }
         }) {

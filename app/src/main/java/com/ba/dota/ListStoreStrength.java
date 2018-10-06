@@ -114,7 +114,11 @@ public class ListStoreStrength extends BaseAdapter {
 
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
-                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+                    Snackbar snackbar =Snackbar.make(v,"This Item Exist...",Snackbar.LENGTH_LONG);
+                    View sbview = snackbar.getView();
+                    sbview.setBackgroundColor(0xffff4334);
+                    snackbar.show();
+
                 } else {
                     items = new Items();
 
@@ -122,7 +126,6 @@ public class ListStoreStrength extends BaseAdapter {
                     items.setCast(list_view.get(position).getCast());
                     items.setUri_image(list_view.get(position).getUri_image());
                     items.setId(list_view.get(position).getId());
-
 
                     dbUtil.AddItem(items);
                 }

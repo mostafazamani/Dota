@@ -2,6 +2,7 @@ package com.ba.dota;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -90,7 +91,11 @@ public class ListStoreAgility extends BaseAdapter {
                 dbUtil.getWritableDatabase();
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
-                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+
+                    Snackbar snackbar =Snackbar.make(v,"This Item Exist...",Snackbar.LENGTH_LONG);
+                    View sbview = snackbar.getView();
+                    sbview.setBackgroundColor(0xffff4334);
+                    snackbar.show();
                 } else {
                     items = new Items();
 

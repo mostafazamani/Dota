@@ -55,7 +55,7 @@ public class SList extends BaseAdapter {
         TextView textView = (TextView) view.findViewById(R.id.text_s);
         final ImageView imageView = (ImageView) view.findViewById(R.id.image_s);
         Button button = (Button) view.findViewById(R.id.btn_s);
-        dbUtil = new DbUtil(context);
+        dbUtil = new DbUtil(context,view);
 
 
 

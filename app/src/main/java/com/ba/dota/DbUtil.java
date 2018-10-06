@@ -69,27 +69,17 @@ public class DbUtil extends SQLiteOpenHelper {
         long insertId = sd.insert(TB_NAME, null, items.getContentValues());
 
         if (insertId == -1) {
-            Log.i("ff", "data insertion failed. (item : " + items.toString() + ")");
-            Toast.makeText(context, "failed", Toast.LENGTH_SHORT).show();
-            final Snackbar snackbar = Snackbar.make(view, "ssdd", Snackbar.LENGTH_SHORT);
-            snackbar.setAction("ok", new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    snackbar.dismiss();
-                }
-            });
+
+            Snackbar snackbar = Snackbar.make(view, "Failed", Snackbar.LENGTH_LONG);
+            View sbview = snackbar.getView();
+            sbview.setBackgroundColor(0xffff4334);
             snackbar.show();
 
         } else {
-            Log.i("ff", "data inserted with id : " + insertId);
-            Toast.makeText(context, "added:" + items.getCast(), Toast.LENGTH_SHORT).show();
-            final Snackbar snackbar = Snackbar.make(view, "Add", Snackbar.LENGTH_INDEFINITE);
-            snackbar.setAction("ok", new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    snackbar.dismiss();
-                }
-            });
+
+            Snackbar snackbar = Snackbar.make(view, " Item Added ", Snackbar.LENGTH_LONG);
+            View sbview = snackbar.getView();
+            sbview.setBackgroundColor(0xff4cff51);
             snackbar.show();
         }
 
@@ -130,7 +120,11 @@ public class DbUtil extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
 
         db.delete(TB_NAME, Items.Key_Id + " = " + id + ";", null);
-        Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
+
+        Snackbar snackbar = Snackbar.make(view, " Item Deleted ", Snackbar.LENGTH_LONG);
+        View sbview = snackbar.getView();
+        sbview.setBackgroundColor(0xff782278);
+        snackbar.show();
 
 
         if (db.isOpen()) db.close();
@@ -141,7 +135,7 @@ public class DbUtil extends SQLiteOpenHelper {
     public boolean CheckItem(String i) {
         SQLiteDatabase db = getReadableDatabase();
 
-        Cursor cursor = db.rawQuery("SELECT * FROM " + TB_NAME + " WHERE "+Items.KEY_TEXT+"='" + i + "'", null);
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TB_NAME + " WHERE " + Items.KEY_TEXT + "='" + i + "'", null);
 
         if (cursor.moveToFirst()) {
             return true;
