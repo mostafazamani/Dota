@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -32,7 +33,6 @@ public class ListStoreIntelligence extends BaseAdapter {
     }
 
 
-
     @Override
     public int getCount() {
         return list_view.size();
@@ -52,7 +52,7 @@ public class ListStoreIntelligence extends BaseAdapter {
     public View getView(final int position, View convertView, ViewGroup parent) {
 
 
-        View v = View.inflate(context,R.layout.list_store,null);
+        View v = View.inflate(context, R.layout.list_store, null);
         TextView textView = (TextView) v.findViewById(R.id.text_item);
         TextView cast = (TextView) v.findViewById(R.id.cast_item);
         final ImageView imageView = (ImageView) v.findViewById(R.id.image_item);
@@ -91,13 +91,20 @@ public class ListStoreIntelligence extends BaseAdapter {
 
                 items = new Items();
 
-                items.setItem_text(list_view.get(position).getItem_text());
-                items.setCast(list_view.get(position).getCast());
-                items.setUri_image(list_view.get(position).getUri_image());
-                items.setId(list_view.get(position).getId());
+                if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
+                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+                } else {
+                    items = new Items();
+
+                    items.setItem_text(list_view.get(position).getItem_text());
+                    items.setCast(list_view.get(position).getCast());
+                    items.setUri_image(list_view.get(position).getUri_image());
+                    items.setId(list_view.get(position).getId());
 
 
-                dbUtil.AddItem(items);
+                    dbUtil.AddItem(items);
+
+                }
 
 
             }

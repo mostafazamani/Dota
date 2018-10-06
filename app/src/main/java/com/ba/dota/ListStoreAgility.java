@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -88,14 +89,20 @@ public class ListStoreAgility extends BaseAdapter {
                 dbUtil = new DbUtil(context);
                 dbUtil.getWritableDatabase();
 
-                items = new Items();
+                if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
+                    Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show();
+                } else {
+                    items = new Items();
 
-                items.setItem_text(list_view.get(position).getItem_text());
-                items.setCast(list_view.get(position).getCast());
-                items.setUri_image(list_view.get(position).getUri_image());
+                    items.setItem_text(list_view.get(position).getItem_text());
+                    items.setCast(list_view.get(position).getCast());
+                    items.setUri_image(list_view.get(position).getUri_image());
+                    items.setId(list_view.get(position).getId());
 
 
-                dbUtil.AddItem(items);
+                    dbUtil.AddItem(items);
+
+                }
 
 
             }

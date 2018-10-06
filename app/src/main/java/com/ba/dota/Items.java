@@ -8,9 +8,9 @@ import android.content.ContentValues;
 
 public class Items {
     public static final String Key_Id = "Id";
-    public static final String KEY_TEXT = "item_text";
-    public static final String KEY_IMAGE = "uri_image";
-    public static final String KEY_CAST = "cast";
+    public static final String KEY_TEXT = "Item_text";
+    public static final String KEY_IMAGE = "Uri_image";
+    public static final String KEY_CAST = "Item_cast";
 
 
     String item_text;

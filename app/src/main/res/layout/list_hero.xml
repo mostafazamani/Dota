@@ -15,12 +15,11 @@
     <TextView
         android:id="@+id/name_hero"
         android:layout_width="match_parent"
-        android:textStyle="bold"
         android:layout_height="match_parent"
         android:layout_alignBottom="@id/image_hero"
-        android:layout_toRightOf="@id/image_hero"
+        android:layout_toEndOf="@id/image_hero"
         android:gravity="center"
-
+        android:textStyle="bold"
         />
 
 </RelativeLayout>

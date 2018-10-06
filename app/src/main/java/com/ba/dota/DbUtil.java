@@ -4,7 +4,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.support.design.widget.Snackbar;
+import android.support.v4.database.DatabaseUtilsCompat;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -16,7 +19,8 @@ import java.util.List;
 
 public class DbUtil extends SQLiteOpenHelper {
     Context context;
-    List<Items> itemses;
+
+    View view;
     private static final String DBname = "ListItem";
     private static final String TB_NAME = "tb_Item";
 
@@ -35,6 +39,15 @@ public class DbUtil extends SQLiteOpenHelper {
         super(context, DBname, null, 1);
         this.context = context;
     }
+
+    public DbUtil(Context context, View view) {
+        super(context, DBname, null, 1);
+        this.context = context;
+        this.view = view;
+
+
+    }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -58,11 +71,26 @@ public class DbUtil extends SQLiteOpenHelper {
         if (insertId == -1) {
             Log.i("ff", "data insertion failed. (item : " + items.toString() + ")");
             Toast.makeText(context, "failed", Toast.LENGTH_SHORT).show();
+            final Snackbar snackbar = Snackbar.make(view, "ssdd", Snackbar.LENGTH_SHORT);
+            snackbar.setAction("ok", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    snackbar.dismiss();
+                }
+            });
+            snackbar.show();
 
         } else {
             Log.i("ff", "data inserted with id : " + insertId);
             Toast.makeText(context, "added:" + items.getCast(), Toast.LENGTH_SHORT).show();
-
+            final Snackbar snackbar = Snackbar.make(view, "Add", Snackbar.LENGTH_INDEFINITE);
+            snackbar.setAction("ok", new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    snackbar.dismiss();
+                }
+            });
+            snackbar.show();
         }
 
 
@@ -101,8 +129,7 @@ public class DbUtil extends SQLiteOpenHelper {
 
         SQLiteDatabase db = getReadableDatabase();
 
-
-        db.delete(TB_NAME, Items.Key_Id + " = " + id, null);
+        db.delete(TB_NAME, Items.Key_Id + " = " + id + ";", null);
         Toast.makeText(context, "Deleted", Toast.LENGTH_SHORT).show();
 
 
@@ -111,37 +138,17 @@ public class DbUtil extends SQLiteOpenHelper {
 
     }
 
-    public boolean CheckItem() {
-
+    public boolean CheckItem(String i) {
         SQLiteDatabase db = getReadableDatabase();
-        List<Items> cil = new ArrayList<>();
-   //    Cursor cursor = db.rawQuery("SELECT * FROM "+TB_NAME+" WHERE "+Items.KEY_TEXT+" LIKE 'gg'" ,null);
-/*
-        //  Cursor cursor = db.query(TB_NAME, allColumns, Items.KEY_TEXT + " = '%" + i + "%'" , null, null, null, null);
+
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TB_NAME + " WHERE "+Items.KEY_TEXT+"='" + i + "'", null);
+
         if (cursor.moveToFirst()) {
-            do {
-                Items ci = new Items();
-
-                ci.setItem_text(cursor.getString(cursor.getColumnIndex(Items.KEY_TEXT)));
-                ci.setUri_image(cursor.getString(cursor.getColumnIndex(Items.KEY_IMAGE)));
-                ci.setCast(cursor.getString(cursor.getColumnIndex(Items.KEY_CAST)));
-                ci.setId(cursor.getInt(cursor.getColumnIndex(Items.Key_Id)));
-
-                cil.add(ci);
-
-            } while (cursor.moveToNext());
+            return true;
+        } else {
+            return false;
         }
-        cursor.close();
-        if (db.isOpen()) db.close();
-/*
-        if (cil.size()>1) {
-        return true;
 
-        }else {
-
-        return false;
-        }*/
-        return true;
 
     }
 
