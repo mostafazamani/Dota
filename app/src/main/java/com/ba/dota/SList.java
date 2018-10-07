@@ -27,6 +27,8 @@ public class SList extends BaseAdapter {
 
     DbUtil dbUtil;
 
+    int c;
+
     public SList(List<Items> slist, Context context) {
         this.slist = slist;
         this.context = context;
@@ -56,8 +58,6 @@ public class SList extends BaseAdapter {
         final ImageView imageView = (ImageView) view.findViewById(R.id.image_s);
         Button button = (Button) view.findViewById(R.id.btn_s);
         dbUtil = new DbUtil(context,view);
-
-
 
         textView.setText(slist.get(position).getItem_text());
 
@@ -93,4 +93,5 @@ public class SList extends BaseAdapter {
 
         return view;
     }
+
 }

@@ -281,7 +281,7 @@ public class StrengthStore extends AppCompatActivity {
                 snackbar.setAction("Retry", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       // startActivity(new Intent(StrengthStore.this, StrengthStore.class));
+                       //
                        recreate();
                     }
                 });
