@@ -1,10 +1,12 @@
 package com.ba.dota;
 
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.design.widget.Snackbar;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.database.DatabaseUtilsCompat;
 import android.util.Log;
 import android.view.View;
@@ -55,6 +57,7 @@ public class DbUtil extends SQLiteOpenHelper {
         Toast.makeText(context, "created", Toast.LENGTH_SHORT).show();
 
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -125,6 +128,12 @@ public class DbUtil extends SQLiteOpenHelper {
         View sbview = snackbar.getView();
         sbview.setBackgroundColor(0xff782278);
         snackbar.show();
+
+
+
+        Intent intent = new Intent("custom-event-name");
+        intent.putExtra("message", "update!");
+        LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
 
 
         if (db.isOpen()) db.close();
