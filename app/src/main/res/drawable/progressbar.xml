@@ -1,0 +1,10 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ringload"
+    android:fromDegrees="0"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:toDegrees="2160"
+    android:duration="1"
+
+    >
+</rotate>
