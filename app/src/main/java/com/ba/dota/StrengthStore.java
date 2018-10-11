@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -67,7 +68,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public class StrengthStore extends AppCompatActivity {
-
+    ProgressBar bar;
     ListView listView;
     List<Hero> list;
     HeroSAdapte heroAdapte;
@@ -82,9 +83,10 @@ public class StrengthStore extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list_shop);
         button = (Button) findViewById(R.id.btn_slist);
         final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_storstrength);
+        bar = (ProgressBar) findViewById(R.id.progressBar);
 
 
-
+        bar.setVisibility(View.VISIBLE);
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -94,25 +96,30 @@ public class StrengthStore extends AppCompatActivity {
             public void onResponse(Object response) {
 
 
+
+                bar.setVisibility(View.GONE);
+
+
+
                 String json = response.toString();
                 list = JsonHero.Item(json);
-                heroAdapte = new HeroSAdapte(list,getApplicationContext());
+                heroAdapte = new HeroSAdapte(list, getApplicationContext());
                 listView.setAdapter(heroAdapte);
                 listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                        switch (list.get(position).getName()){
+                        switch (list.get(position).getName()) {
 
-                            case("Abaddon"):
+                            case ("Abaddon"):
 
                                 startActivity(new Intent(StrengthStore.this, Abaddon.class));
-                                    break;
+                                break;
 
                             case ("Alchemist"):
                                 startActivity(new Intent(StrengthStore.this, Alchemist.class));
 
-                            break;
+                                break;
 
                             case ("Axe"):
                                 startActivity(new Intent(StrengthStore.this, Axe.class));
@@ -275,19 +282,21 @@ public class StrengthStore extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                Snackbar snackbar =Snackbar.make(layout,"Connection Failed...",Snackbar.LENGTH_INDEFINITE);
+                bar.setVisibility(View.GONE);
+
+                Snackbar snackbar = Snackbar.make(layout, "Connection Failed...", Snackbar.LENGTH_INDEFINITE);
                 View sbview = snackbar.getView();
                 sbview.setBackgroundColor(0xffff4334);
                 snackbar.setAction("Retry", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                       //
-                       recreate();
+                        //
+                        recreate();
                     }
                 });
 
 
-            snackbar.show();
+                snackbar.show();
 
             }
         }) {
@@ -313,13 +322,13 @@ public class StrengthStore extends AppCompatActivity {
         requestQueue.add(jsonRequest);
 
 
-    button.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            startActivity(new Intent(StrengthStore.this, ShowList.class));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StrengthStore.this, ShowList.class));
 
-        }
-    });
+            }
+        });
 
     }
 }

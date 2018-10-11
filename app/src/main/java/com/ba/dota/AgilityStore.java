@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -70,7 +71,7 @@ public class AgilityStore extends AppCompatActivity {
     ListView listView;
     List<Hero> list;
     HeroSAdapte strength;
-
+    ProgressBar bar;
 
     public static final String url = "https://www.dropbox.com/s/e8hjpjbqs071y2l/Agility.json?dl=1";
 
@@ -83,6 +84,10 @@ public class AgilityStore extends AppCompatActivity {
         final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_storeagility);
         Button button = (Button) findViewById(R.id.btn_alist);
 
+        bar = (ProgressBar) findViewById(R.id.progressBar_a);
+
+
+        bar.setVisibility(View.VISIBLE);
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
@@ -91,6 +96,8 @@ public class AgilityStore extends AppCompatActivity {
             @Override
             public void onResponse(Object response) {
 
+
+                bar.setVisibility(View.GONE);
 
                 String json = response.toString();
                 list = JsonHero.Item(json);
@@ -269,6 +276,9 @@ public class AgilityStore extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+
+                bar.setVisibility(View.GONE);
+
                 Snackbar snackbar =Snackbar.make(layout,"Connection Failed...",Snackbar.LENGTH_INDEFINITE);
                 View sbview = snackbar.getView();
                 sbview.setBackgroundColor(0xffff4334);

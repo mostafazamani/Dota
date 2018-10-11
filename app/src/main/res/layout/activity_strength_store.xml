@@ -9,6 +9,8 @@
     android:background="@drawable/wallstrenge"
     tools:context="com.ba.dota.StrengthStore">
 
+
+
     <Button
         android:id="@+id/btn_slist"
         android:layout_width="50dp"
@@ -30,8 +32,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="50dp"
-        android:scrollbars="none"
-        />
+        android:scrollbars="none" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/progress"
+        android:background="@drawable/dotaload"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>
