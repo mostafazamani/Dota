@@ -42,7 +42,7 @@ public class Slark extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/6ao3kf7f7kb7lu7/Slark.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

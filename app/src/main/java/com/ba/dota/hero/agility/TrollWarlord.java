@@ -42,7 +42,7 @@ public class TrollWarlord extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/vh9mov8i9u2hjsm/Troll%20Warlord.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

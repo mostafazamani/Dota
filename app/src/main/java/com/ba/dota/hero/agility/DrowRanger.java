@@ -42,7 +42,7 @@ public class DrowRanger extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/f70pe8v0u9jh6dc/Drow%20Ranger.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

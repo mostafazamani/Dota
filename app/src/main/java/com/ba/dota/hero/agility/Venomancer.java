@@ -42,7 +42,7 @@ public class Venomancer extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/9dha5j6x1j5f88k/Venomancer.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

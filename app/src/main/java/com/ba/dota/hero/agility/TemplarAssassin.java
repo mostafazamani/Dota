@@ -42,7 +42,7 @@ public class TemplarAssassin extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/g7zkk26l2mzfjhm/Spectre.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

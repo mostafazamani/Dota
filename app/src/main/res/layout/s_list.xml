@@ -18,6 +18,7 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:gravity="center"
+        android:textColor="#ffffff"
         android:id="@+id/text_s"
         android:layout_toRightOf="@id/image_s"
         android:layout_margin="5dp"

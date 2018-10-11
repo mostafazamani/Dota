@@ -42,7 +42,7 @@ public class ShadowFiend extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/wn97xbvytvx2497/Shadow%20Fiend.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -43,7 +43,7 @@ public class Clinkz extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/64pzjlrl3yaoqwn/Clinkz.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

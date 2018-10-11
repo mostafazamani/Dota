@@ -42,7 +42,7 @@ public class VengefulSpirit extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/md2a59hdi4r2l46/Vengeful%20Spirit.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

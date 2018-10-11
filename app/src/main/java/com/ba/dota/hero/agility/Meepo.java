@@ -42,7 +42,7 @@ public class Meepo extends AppCompatActivity {
     ListStoreAgility agility;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/rwnf0du7ki7955l/Meepo.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
