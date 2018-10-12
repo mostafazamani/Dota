@@ -64,7 +64,7 @@ public class Meepo extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Meepo.this);
                 listView.setAdapter(agility);
 
 

@@ -64,7 +64,7 @@ public class DrowRanger extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),DrowRanger.this);
                 listView.setAdapter(agility);
 
 

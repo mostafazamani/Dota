@@ -64,7 +64,7 @@ public class Gyrocopter extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Gyrocopter.this);
                 listView.setAdapter(agility);
 
 

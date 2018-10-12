@@ -65,7 +65,7 @@ public class BountyHunter extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),BountyHunter.this);
                 listView.setAdapter(agility);
 
 

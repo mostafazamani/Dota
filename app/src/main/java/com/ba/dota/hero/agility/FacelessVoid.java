@@ -64,7 +64,7 @@ public class FacelessVoid extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),FacelessVoid.this);
                 listView.setAdapter(agility);
 
 

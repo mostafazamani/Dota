@@ -1,5 +1,6 @@
 package com.ba.dota.hero.agility;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -69,7 +70,7 @@ public class AntiMage extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),AntiMage.this);
                 listView.setAdapter(agility);
 
 

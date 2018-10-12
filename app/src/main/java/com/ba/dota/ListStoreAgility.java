@@ -1,5 +1,7 @@
 package com.ba.dota;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.design.widget.Snackbar;
@@ -9,7 +11,6 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -30,10 +31,15 @@ public class ListStoreAgility extends BaseAdapter {
     DbUtil dbUtil;
     Items items;
 
-    public ListStoreAgility(List<Agilitylistitem> list_view, Context context) {
+    Activity activity;
+
+    public ListStoreAgility(List<Agilitylistitem> list_view, Context context, Activity activity) {
         this.list_view = list_view;
         this.context = context;
+        this.activity = activity;
+
     }
+
 
     @Override
     public int getCount() {
@@ -58,8 +64,8 @@ public class ListStoreAgility extends BaseAdapter {
         TextView textView = (TextView) v.findViewById(R.id.text_item);
         TextView cast = (TextView) v.findViewById(R.id.cast_item);
         final ImageView imageView = (ImageView) v.findViewById(R.id.image_item);
-        Button button = (Button) v.findViewById(R.id.btn);
-
+        final Button button = (Button) v.findViewById(R.id.btn);
+        // activity = (Activity) context;
 
         textView.setText(list_view.get(position).getItem_text());
         cast.setText(list_view.get(position).getCast());
@@ -92,7 +98,7 @@ public class ListStoreAgility extends BaseAdapter {
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
 
-                    Snackbar snackbar =Snackbar.make(v,"This Item Exist...",Snackbar.LENGTH_LONG);
+                    Snackbar snackbar = Snackbar.make(v, "This Item Exist...", Snackbar.LENGTH_LONG);
                     View sbview = snackbar.getView();
                     sbview.setBackgroundColor(0xffff4334);
                     snackbar.show();
@@ -109,6 +115,16 @@ public class ListStoreAgility extends BaseAdapter {
 
                 }
 
+
+            }
+        });
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BigImage bigImage = BigImage.newInstace(list_view.get(position).getUri_image());
+
+                bigImage.show(activity.getFragmentManager(), "lol");
 
             }
         });

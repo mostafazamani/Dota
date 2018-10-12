@@ -64,7 +64,7 @@ public class Terrorblade extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Terrorblade.this);
                 listView.setAdapter(agility);
 
 

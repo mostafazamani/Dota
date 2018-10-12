@@ -64,7 +64,7 @@ public class Spectre extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Spectre.this);
                 listView.setAdapter(agility);
 
 

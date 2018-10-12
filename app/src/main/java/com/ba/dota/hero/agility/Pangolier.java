@@ -64,7 +64,7 @@ public class Pangolier extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Pangolier.this);
                 listView.setAdapter(agility);
 
 

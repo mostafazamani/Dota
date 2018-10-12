@@ -65,7 +65,7 @@ public class LoneDruid extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),LoneDruid.this);
                 listView.setAdapter(agility);
 
 

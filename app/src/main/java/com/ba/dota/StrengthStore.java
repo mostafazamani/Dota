@@ -85,8 +85,7 @@ public class StrengthStore extends AppCompatActivity {
         final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_storstrength);
         bar = (ProgressBar) findViewById(R.id.progressBar);
 
-
-        bar.setVisibility(View.VISIBLE);
+       bar.setVisibility(View.VISIBLE);
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 

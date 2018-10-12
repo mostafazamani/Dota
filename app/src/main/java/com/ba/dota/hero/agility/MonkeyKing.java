@@ -65,7 +65,7 @@ public class MonkeyKing extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),MonkeyKing.this);
                 listView.setAdapter(agility);
 
 

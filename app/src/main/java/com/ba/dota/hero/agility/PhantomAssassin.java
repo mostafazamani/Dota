@@ -64,7 +64,7 @@ public class PhantomAssassin extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),PhantomAssassin.this);
                 listView.setAdapter(agility);
 
 

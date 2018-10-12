@@ -84,6 +84,7 @@ public class AgilityStore extends AppCompatActivity {
         final RelativeLayout layout = (RelativeLayout) findViewById(R.id.l_storeagility);
         Button button = (Button) findViewById(R.id.btn_alist);
 
+
         bar = (ProgressBar) findViewById(R.id.progressBar_a);
 
 

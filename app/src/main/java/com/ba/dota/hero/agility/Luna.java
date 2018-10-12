@@ -64,7 +64,7 @@ public class Luna extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Luna.this);
                 listView.setAdapter(agility);
 
 

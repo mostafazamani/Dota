@@ -64,7 +64,7 @@ public class NagaSiren extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),NagaSiren.this);
                 listView.setAdapter(agility);
 
 

@@ -64,7 +64,7 @@ public class Viper extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonAgilityItem.Item(json);
-                agility = new ListStoreAgility(list, getApplicationContext());
+                agility = new ListStoreAgility(list, getApplicationContext(),Viper.this);
                 listView.setAdapter(agility);
 
 
