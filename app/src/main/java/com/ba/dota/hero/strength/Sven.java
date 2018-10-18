@@ -63,7 +63,7 @@ public class Sven extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Sven.this);
                 listView.setAdapter(strength);
 
 

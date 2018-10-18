@@ -60,7 +60,7 @@ public class OutworldDevourer extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),OutworldDevourer.this);
                 listView.setAdapter(intelligence);
 
 

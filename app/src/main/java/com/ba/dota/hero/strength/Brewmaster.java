@@ -64,7 +64,7 @@ public class Brewmaster extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Brewmaster.this);
                 listView.setAdapter(strength);
 
 

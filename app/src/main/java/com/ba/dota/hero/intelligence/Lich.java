@@ -60,7 +60,7 @@ public class Lich extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),Lich.this);
                 listView.setAdapter(intelligence);
 
 

@@ -63,7 +63,7 @@ public class Phoenix extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Phoenix.this);
                 listView.setAdapter(strength);
 
 

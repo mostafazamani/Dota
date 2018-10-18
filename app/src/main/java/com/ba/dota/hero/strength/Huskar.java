@@ -64,7 +64,7 @@ public class Huskar extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Huskar.this);
                 listView.setAdapter(strength);
 
 

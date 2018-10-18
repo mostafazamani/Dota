@@ -1,5 +1,6 @@
 package com.ba.dota;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.design.widget.Snackbar;
@@ -22,15 +23,17 @@ import java.util.List;
 public class ListStoreIntelligence extends BaseAdapter {
     List<Inteligencelistitem> list_view;
     Context context;
+    Activity activity;
 
     DbUtil dbUtil;
 
     Items items;
 
 
-    public ListStoreIntelligence(List<Inteligencelistitem> list_view, Context context) {
+    public ListStoreIntelligence(List<Inteligencelistitem> list_view, Context context, Activity activity) {
         this.list_view = list_view;
         this.context = context;
+        this.activity = activity;
     }
 
 
@@ -94,7 +97,7 @@ public class ListStoreIntelligence extends BaseAdapter {
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
 
-                    Snackbar snackbar =Snackbar.make(v,"This Item Exist...",Snackbar.LENGTH_LONG);
+                    Snackbar snackbar = Snackbar.make(v, "This Item Exist...", Snackbar.LENGTH_LONG);
                     View sbview = snackbar.getView();
                     sbview.setBackgroundColor(0xffff4334);
                     snackbar.show();
@@ -110,6 +113,17 @@ public class ListStoreIntelligence extends BaseAdapter {
                     dbUtil.AddItem(items);
 
                 }
+
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        BigImage bigImage = BigImage.newInstace(list_view.get(position).getUri_image());
+
+                        bigImage.show(activity.getFragmentManager(), "lol");
+
+                    }
+                });
+
 
 
             }

@@ -60,7 +60,7 @@ public class Jakiro extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),Jakiro.this);
                 listView.setAdapter(intelligence);
 
 

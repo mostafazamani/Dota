@@ -63,7 +63,7 @@ public class Alchemist extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Alchemist.this);
                 listView.setAdapter(strength);
 
 

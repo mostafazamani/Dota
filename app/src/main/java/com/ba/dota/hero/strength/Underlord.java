@@ -63,7 +63,7 @@ public class Underlord extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Underlord.this);
                 listView.setAdapter(strength);
 
 

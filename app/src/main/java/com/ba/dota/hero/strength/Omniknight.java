@@ -63,7 +63,7 @@ public class Omniknight extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Omniknight.this);
                 listView.setAdapter(strength);
 
 

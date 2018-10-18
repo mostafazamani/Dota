@@ -60,7 +60,7 @@ public class WinterWyvern extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),WinterWyvern.this);
                 listView.setAdapter(intelligence);
 
 

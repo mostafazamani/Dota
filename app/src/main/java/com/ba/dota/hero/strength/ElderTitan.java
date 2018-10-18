@@ -63,7 +63,7 @@ public class ElderTitan extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),ElderTitan.this);
                 listView.setAdapter(strength);
 
 

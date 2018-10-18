@@ -61,7 +61,7 @@ public class Axe extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Axe.this);
                 listView.setAdapter(strength);
 
 

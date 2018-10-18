@@ -60,7 +60,7 @@ public class Lion extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),Lion.this);
                 listView.setAdapter(intelligence);
 
 

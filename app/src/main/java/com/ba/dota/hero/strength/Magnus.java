@@ -63,7 +63,7 @@ public class Magnus extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),Magnus.this);
                 listView.setAdapter(strength);
 
 

@@ -60,7 +60,7 @@ public class OgreMagi extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),OgreMagi.this);
                 listView.setAdapter(intelligence);
 
 

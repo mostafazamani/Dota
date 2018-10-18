@@ -63,7 +63,7 @@ public class SpiritBreaker extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),SpiritBreaker.this);
                 listView.setAdapter(strength);
 
 

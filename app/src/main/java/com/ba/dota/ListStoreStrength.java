@@ -45,15 +45,17 @@ public class ListStoreStrength extends BaseAdapter {
     List<Strengthlistitem> list_view;
 
     Context context;
+    Activity activity;
 
     DbUtil dbUtil;
 
     Items items;
 
 
-    public ListStoreStrength(List<Strengthlistitem> list_view, Context context) {
+    public ListStoreStrength(List<Strengthlistitem> list_view, Context context, Activity activity) {
         this.list_view = list_view;
         this.context = context;
+        this.activity = activity;
     }
 
 
@@ -114,7 +116,7 @@ public class ListStoreStrength extends BaseAdapter {
 
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {
-                    Snackbar snackbar =Snackbar.make(v,"This Item Exist...",Snackbar.LENGTH_LONG);
+                    Snackbar snackbar = Snackbar.make(v, "This Item Exist...", Snackbar.LENGTH_LONG);
                     View sbview = snackbar.getView();
                     sbview.setBackgroundColor(0xffff4334);
                     snackbar.show();
@@ -130,6 +132,15 @@ public class ListStoreStrength extends BaseAdapter {
                     dbUtil.AddItem(items);
                 }
 
+
+            }
+        });
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BigImage bigImage = BigImage.newInstace(list_view.get(position).getUri_image());
+
+                bigImage.show(activity.getFragmentManager(), "lol");
 
             }
         });

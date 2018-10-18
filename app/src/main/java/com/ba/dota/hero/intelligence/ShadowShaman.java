@@ -60,7 +60,7 @@ public class ShadowShaman extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
-                intelligence = new ListStoreIntelligence(list, getApplicationContext());
+                intelligence = new ListStoreIntelligence(list, getApplicationContext(),ShadowShaman.this);
                 listView.setAdapter(intelligence);
 
 

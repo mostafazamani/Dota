@@ -64,7 +64,7 @@ public class DragonKnight extends AppCompatActivity {
 
                 String json = response.toString();
                 list = JsonStrengthItem.Item(json);
-                strength = new ListStoreStrength(list, getApplicationContext());
+                strength = new ListStoreStrength(list, getApplicationContext(),DragonKnight.this);
                 listView.setAdapter(strength);
 
 
