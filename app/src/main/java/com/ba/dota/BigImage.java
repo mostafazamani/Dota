@@ -2,6 +2,7 @@ package com.ba.dota;
 
 import android.app.DialogFragment;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -41,6 +43,7 @@ public class BigImage extends DialogFragment {
 
         String url = getArguments().getString("url");
 
+        final RelativeLayout layout = (RelativeLayout) view.findViewById(R.id.layout_big_image);
        final ImageView imageView = (ImageView) view.findViewById(R.id.big_item_image);
         Button button = (Button) view.findViewById(R.id.big_item_btn);
        final ProgressBar bar = (ProgressBar) view.findViewById(R.id.big_bar);
@@ -54,6 +57,10 @@ public class BigImage extends DialogFragment {
                 bar.setVisibility(View.GONE);
                 imageView.setImageBitmap(response);
 
+                Bitmap bitmap = Blurry.blur(getActivity(),response);
+                layout.setBackground(new BitmapDrawable(getResources(),bitmap));
+
+
 
             }
         }, 160, 160, ImageView.ScaleType.FIT_CENTER, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
@@ -66,6 +73,7 @@ public class BigImage extends DialogFragment {
                         view.invalidate();
                     }
                 });
+
 
             }
         });
