@@ -9,6 +9,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -60,6 +61,21 @@ public class ShowList extends AppCompatActivity {
 
         LocalBroadcastManager.getInstance(this).registerReceiver(msg,
                 new IntentFilter("custom-event-name"));
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ShowList.this,PayPage.class);
+                intent.putExtra("name",na(list));
+                intent.putExtra("gh",gh(list));
+
+                startActivity(intent);
+
+
+            }
+        });
+
     }
 
     public int gh(List<Items> lc) {
@@ -72,6 +88,18 @@ public class ShowList extends AppCompatActivity {
         return c;
     }
 
+    public String na(List<Items> n){
+        String name="";
+
+        for (int i = 0; i < (n.size()); i++) {
+
+            name = name + n.get(i).getItem_text()+" , ";
+
+        }
+
+        return name;
+    }
+
     private BroadcastReceiver msg = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -79,6 +107,7 @@ public class ShowList extends AppCompatActivity {
             recreate();
         }
     };
+
 
 
 
