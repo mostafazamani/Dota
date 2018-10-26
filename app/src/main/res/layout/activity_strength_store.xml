@@ -39,7 +39,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         style="@style/progress"
-        android:background="@drawable/dotaload"
+        android:background="@drawable/dotaloadblack"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"/>
 

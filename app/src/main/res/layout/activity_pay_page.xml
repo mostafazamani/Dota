@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
-    >
+    android:background="@drawable/wall">
 
     <TextView
         android:id="@+id/pay_text"
@@ -23,8 +22,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/pay_text"
-        android:gravity="center"
         android:layout_marginTop="4dp"
+        android:gravity="center"
         android:text="867876787$"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -70,16 +69,16 @@
             android:text="لینک ترد :"
             android:textSize="14sp"
             android:textStyle="bold" />
+
         <ImageView
             android:id="@+id/image_info"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:layout_toStartOf="@+id/pay_tradelink_text"
-            android:layout_marginRight="3dp"
             android:layout_below="@+id/payer_name"
+            android:layout_marginRight="3dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/mangoo"
-            />
+            android:layout_toStartOf="@+id/pay_tradelink_text"
+            android:background="@drawable/mangoo" />
 
         <EditText
             android:id="@+id/trade_link"
@@ -108,7 +107,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/pay_number_text"
-
             android:hint="Number : 091****1015"
             android:inputType="number"
             android:maxLength="11" />
@@ -119,8 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@+id/payer_number"
-
-            android:text="Next" />
+            android:text="Pay" />
 
         <Button
             android:id="@+id/pay_cancel"
