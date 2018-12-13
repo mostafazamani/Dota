@@ -1,6 +1,8 @@
 package com.ba.dota;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +17,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.zarinpal.ewallets.purchase.OnCallbackRequestPaymentListener;
+import com.zarinpal.ewallets.purchase.OnCallbackVerificationPaymentListener;
+import com.zarinpal.ewallets.purchase.PaymentRequest;
+import com.zarinpal.ewallets.purchase.ZarinPal;
 
 public class PayPage extends AppCompatActivity {
     TextView amount, payer_name, trade, number;
@@ -34,10 +42,27 @@ public class PayPage extends AppCompatActivity {
         number = (TextView) findViewById(R.id.payer_number);
 
         String item_name = getIntent().getStringExtra("name");
-        int gh = getIntent().getIntExtra("gh", 0);
+        final int gh = getIntent().getIntExtra("gh", 0);
+
 
         per = getPreferences(MODE_PRIVATE);
         final SharedPreferences.Editor editor = per.edit();
+
+        Uri data = getIntent().getData();
+        ZarinPal.getPurchase(this).verificationPayment(data, new OnCallbackVerificationPaymentListener() {
+            @Override
+            public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
+
+                if (isPaymentSuccess){
+
+
+                }else {
+
+
+                }
+
+            }
+        });
 
 
         amount.setText(String.valueOf(gh));
@@ -45,9 +70,9 @@ public class PayPage extends AppCompatActivity {
                 getSystemService(LAYOUT_INFLATER_SERVICE);
 
 
-        payer_name.setText(per.getString("payername",null));
-        trade.setText(per.getString("tradelink",null));
-        number.setText(per.getString("number",null));
+        payer_name.setText(per.getString("payername", null));
+        trade.setText(per.getString("tradelink", null));
+        number.setText(per.getString("number", null));
 
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -72,9 +97,37 @@ public class PayPage extends AppCompatActivity {
                 editor.putString("number", number.getText().toString().trim());
                 editor.apply();
 
+                paysetting(gh);
+
 
             }
         });
+
+    }
+
+    public void paysetting(long amount) {
+
+        ZarinPal zarinPal = ZarinPal.getPurchase(this);
+        PaymentRequest request = ZarinPal.getPaymentRequest();
+
+        request.setMerchantID("");
+        request.setAmount(amount);
+        request.setDescription("خرید آیتم DotA2");
+        request.setCallbackURL("return://dotapaypage");
+
+        zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {
+            @Override
+            public void onCallbackResultPaymentRequest(int status, String authority, Uri paymentGatewayUri, Intent intent) {
+                if (status == 100) {
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(PayPage.this, "wrong...", Toast.LENGTH_SHORT).show();
+                }
+
+
+            }
+        });
+
 
     }
 
