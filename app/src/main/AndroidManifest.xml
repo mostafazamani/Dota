@@ -156,7 +156,8 @@
                     android:scheme="return" />
             </intent-filter>
         </activity>
-        <activity android:name=".Chest"></activity>
+        <activity android:name=".Chest" />
+        <activity android:name=".ChestPay"></activity>
     </application>
 
 </manifest>

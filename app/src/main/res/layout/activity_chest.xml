@@ -119,6 +119,7 @@
     <Button
         android:layout_width="200dp"
         android:layout_height="50dp"
+        android:id="@+id/chest_pay"
         android:layout_below="@+id/scrollView"
         android:gravity="center"
         android:text="پرداخـــت"
