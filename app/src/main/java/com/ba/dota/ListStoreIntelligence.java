@@ -89,7 +89,7 @@ public class ListStoreIntelligence extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                dbUtil = new DbUtil(context);
+                dbUtil = new DbUtil(context,v);
                 dbUtil.getWritableDatabase();
 
 

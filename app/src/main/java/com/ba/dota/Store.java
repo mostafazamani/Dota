@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Store extends AppCompatActivity {
-    Button st, ag, in;
+    Button st, ag, in , cart , chest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,8 @@ public class Store extends AppCompatActivity {
         st = (Button) findViewById(R.id.go_st);
         ag = (Button) findViewById(R.id.go_ag);
         in = (Button) findViewById(R.id.go_int);
-
+        chest = (Button) findViewById(R.id.go_chest);
+        cart = (Button) findViewById(R.id.go_store);
 
 
 
@@ -46,6 +47,23 @@ public class Store extends AppCompatActivity {
 
             }
         });
+        chest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Store.this, Chest.class));
+
+            }
+        });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Store.this, ShowList.class));
+
+            }
+        });
+
 
 
 

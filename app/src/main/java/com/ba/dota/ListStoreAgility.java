@@ -93,7 +93,7 @@ public class ListStoreAgility extends BaseAdapter {
             @Override
             public void onClick(View v) {
 
-                dbUtil = new DbUtil(context);
+                dbUtil = new DbUtil(context,v);
                 dbUtil.getWritableDatabase();
 
                 if (dbUtil.CheckItem(list_view.get(position).getItem_text())) {

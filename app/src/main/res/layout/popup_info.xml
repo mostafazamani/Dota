@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="200dp"
+    android:layout_height="100dp"
     android:background="@color/white">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="یاد داری؟؟"
+
         android:textColor="@color/black"
-        android:text="یاد داری؟؟"/>
+        android:textSize="20sp"
+
+        />
+
     <Button
+        android:id="@+id/info_yes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ها"/>
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="بلـــه"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/info_moreinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="اطلاعات بیشتر!"
+        android:textStyle="bold" />
 
 
-</LinearLayout>
+</RelativeLayout>
