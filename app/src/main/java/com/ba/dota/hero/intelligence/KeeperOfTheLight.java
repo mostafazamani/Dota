@@ -38,7 +38,7 @@ public class KeeperOfTheLight extends AppCompatActivity {
     ListStoreIntelligence intelligence;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/w0suma300ziyim8/Keeper%20Of%20The%20Light.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

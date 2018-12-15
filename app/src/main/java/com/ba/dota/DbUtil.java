@@ -155,6 +155,18 @@ public class DbUtil extends SQLiteOpenHelper {
 
     }
 
+    public void EmptyTable(){
+
+        SQLiteDatabase db = getReadableDatabase();
+
+        db.delete(TB_NAME,null,null);
+
+        if (db.isOpen()) db.close();
+
+
+
+
+    }
 
 }
 

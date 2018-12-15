@@ -38,7 +38,7 @@ public class Lion extends AppCompatActivity {
     ListStoreIntelligence intelligence;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/kgnfs1pw9em7tq4/Intelligence.json?dl=1";
+    public static final String url = "https://www.dropbox.com/s/9w87edj3nd0kn7x/Lion.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

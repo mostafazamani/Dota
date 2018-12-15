@@ -26,8 +26,9 @@ import com.zarinpal.ewallets.purchase.ZarinPal;
 
 public class PayPage extends AppCompatActivity {
     TextView amount, payer_name, trade, number;
-    Button btn_pay;
+    Button btn_pay,btn_cancel;
     SharedPreferences per;
+    DbUtil dbUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,10 @@ public class PayPage extends AppCompatActivity {
         payer_name = (TextView) findViewById(R.id.payer_name);
         trade = (TextView) findViewById(R.id.trade_link);
         btn_pay = (Button) findViewById(R.id.pay_next_btn);
+        btn_cancel = (Button) findViewById(R.id.pay_cancel);
         number = (TextView) findViewById(R.id.payer_number);
+
+        dbUtil = new DbUtil(this);
 
         String item_name = getIntent().getStringExtra("name");
         final int gh = getIntent().getIntExtra("gh", 0);
@@ -100,6 +104,13 @@ public class PayPage extends AppCompatActivity {
                 paysetting(gh);
 
 
+            }
+        });
+
+        btn_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dbUtil.EmptyTable();
             }
         });
 
