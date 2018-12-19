@@ -5,14 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/wall"
-    tools:context="com.ba.dota.Store"
-    android:padding="5dp">
+    android:padding="5dp"
+    tools:context="com.ba.dota.Store">
 
+
+    <TextView
+        android:id="@+id/chest_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/dark_yellow"
+        android:drawableLeft="@drawable/chest"
+        android:drawableRight="@drawable/chest"
+        android:gravity="center"
+        android:text="Lucy Chest"
+        android:textColor="@color/Brown"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txt_dis"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chest_welcome"
+        android:layout_margin="3dp"
         android:gravity="right"
         android:padding="5dp"
         android:text="@string/chest"
@@ -22,26 +37,32 @@
     <HorizontalScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:scrollbarStyle="insideOverlay"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_dis">
+        android:layout_below="@+id/txt_dis"
+        android:scrollbarStyle="insideOverlay">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
             <ImageView
                 android:id="@+id/chest_1"
                 android:layout_width="150dp"
                 android:layout_height="200dp"
-                android:background="@drawable/chest" />
+                android:background="@drawable/shape_common"
+                android:src="@drawable/chest" />
 
             <TextView
                 android:id="@+id/txt1"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/chest_1"
-                android:gravity="center_horizontal"
+                android:background="@drawable/shape_common"
+                android:textColor="@color/lime"
+                android:gravity="center"
+                android:layout_marginTop="1dp"
+
                 android:text="احتمال بالا"
 
                 android:textStyle="bold" />
@@ -49,17 +70,23 @@
             <ImageView
                 android:id="@+id/chest_2"
                 android:layout_width="150dp"
+                android:layout_marginLeft="2dp"
                 android:layout_height="200dp"
                 android:layout_toRightOf="@+id/chest_1"
-                android:background="@drawable/chest" />
+                android:background="@drawable/shape_common"
+                android:src="@drawable/chest" />
 
             <TextView
                 android:id="@+id/txt2"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
                 android:layout_below="@+id/chest_2"
                 android:layout_toRightOf="@+id/txt1"
-                android:gravity="center_horizontal"
+                android:layout_marginTop="1dp"
+                android:background="@drawable/shape_common"
+                android:textColor="@color/lime"
+                android:gravity="center"
                 android:text="احتمال بالا"
                 android:textStyle="bold" />
 
@@ -67,17 +94,23 @@
                 android:id="@+id/chest_3"
                 android:layout_width="150dp"
                 android:layout_height="200dp"
+                android:layout_marginLeft="2dp"
                 android:layout_toRightOf="@+id/chest_2"
-                android:background="@drawable/chest" />
+                android:background="@drawable/shape_rare"
+                android:src="@drawable/chest" />
 
             <TextView
                 android:id="@+id/txt3"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
+                android:layout_marginLeft="2dp"
                 android:layout_below="@+id/chest_3"
                 android:layout_toRightOf="@+id/chest_2"
-                android:gravity="center_horizontal"
+                android:background="@drawable/shape_rare"
+                android:textColor="@color/Yellow"
+                android:gravity="center"
                 android:text="احتمال متوسط"
+                android:layout_marginTop="1dp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -85,7 +118,9 @@
                 android:layout_width="150dp"
                 android:layout_height="200dp"
                 android:layout_toRightOf="@+id/chest_3"
-                android:background="@drawable/chest" />
+                android:background="@drawable/shape_epic"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/chest" />
 
             <TextView
                 android:id="@+id/txt4"
@@ -93,7 +128,11 @@
                 android:layout_height="30dp"
                 android:layout_below="@+id/chest_4"
                 android:layout_toRightOf="@+id/txt3"
-                android:gravity="center_horizontal"
+                android:background="@drawable/shape_epic"
+                android:gravity="center"
+                android:textColor="@color/amber_900"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
                 android:text="احتمال کم"
                 android:textStyle="bold" />
 
@@ -102,7 +141,9 @@
                 android:layout_width="150dp"
                 android:layout_height="200dp"
                 android:layout_toRightOf="@+id/chest_4"
-                android:background="@drawable/chest" />
+                android:background="@drawable/shape_legendary"
+                android:layout_marginLeft="2dp"
+                android:src="@drawable/chest" />
 
             <TextView
                 android:id="@+id/txt5"
@@ -110,20 +151,30 @@
                 android:layout_height="30dp"
                 android:layout_below="@+id/chest_5"
                 android:layout_toRightOf="@+id/txt4"
-                android:gravity="center_horizontal"
+                android:background="@drawable/shape_legendary"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/red"
+                android:gravity="center"
                 android:text="احتمال خیلی کم"
                 android:textStyle="bold" />
         </RelativeLayout>
 
+
     </HorizontalScrollView>
+
     <Button
+        android:id="@+id/chest_pay"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:id="@+id/chest_pay"
-        android:layout_below="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_yellow"
         android:gravity="center"
         android:text="پرداخـــت"
-        android:layout_centerHorizontal="true"/>
+        android:textColor="@color/dark_yellow"
+        android:textSize="17sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

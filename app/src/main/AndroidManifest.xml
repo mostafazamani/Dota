@@ -157,7 +157,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Chest" />
-        <activity android:name=".ChestPay"></activity>
+        <activity android:name=".ChestPay" />
+        <activity android:name=".HerosBio"></activity>
     </application>
 
 </manifest>

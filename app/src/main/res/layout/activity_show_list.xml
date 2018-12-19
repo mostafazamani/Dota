@@ -8,28 +8,42 @@
     tools:context="com.ba.dota.ShowList">
 
 
-    <Button
-        android:id="@+id/btn_pay"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_alignParentRight="true"
-        android:text="پرداخت" />
+
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:id="@+id/text_all_cast"
-        android:layout_toLeftOf="@id/btn_pay"
+
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_margin="50dp"
         android:layout_height="match_parent"
+        android:layout_margin="50dp"
         android:id="@+id/show_list"
-        ></ListView>
+        />
+
+    <Button
+        android:id="@+id/btn_pay"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/square"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="پرداخت" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/progress"
+        android:background="@drawable/dotaloadblack"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 
 </RelativeLayout>
