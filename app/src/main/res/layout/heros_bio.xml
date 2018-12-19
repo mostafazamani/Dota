@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallherosbio"
+    tools:context="com.ba.dota.HerosBio">
+
+    <ImageView
+        android:id="@+id/topimage_herosbio"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/topimagebio" />
+
+    <TextView
+        android:id="@+id/txt_strength_bio"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topimage_herosbio"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="Strength" />
+
+
+
+    <ScrollView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottonimage_heros"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txt_strength_bio"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp">
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txt_agility_bio"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/topimage_herosbio"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+
+        android:text="Agility" />
+
+    <ScrollView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottonimage_heros"
+        android:layout_below="@+id/txt_agility_bio"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp">
+
+    </ScrollView>
+
+
+
+
+    <TextView
+        android:id="@+id/txt_inteligence_bio"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/topimage_herosbio"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+
+        android:gravity="center"
+        android:text="Inteligence" />
+
+    <ScrollView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottonimage_heros"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/txt_inteligence_bio"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp">
+
+    </ScrollView>
+
+
+    <ImageView
+        android:id="@+id/bottonimage_heros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottonimagebio" />
+
+</RelativeLayout>

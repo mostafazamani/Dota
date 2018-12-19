@@ -29,6 +29,14 @@
         android:layout_below="@id/text_hlist"
         android:layout_margin="50dp"
         android:scrollbars="none"/>
+    <ProgressBar
+        android:id="@+id/progressBar_i"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/progress"
+        android:background="@drawable/dotaloadblack"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 
 </RelativeLayout>
