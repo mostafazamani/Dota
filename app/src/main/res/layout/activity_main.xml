@@ -39,7 +39,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/shape_hero_btn"
             android:rotation="45"
-            android:text="B" />
+             />
 
         <Button
             android:id="@+id/about_us"

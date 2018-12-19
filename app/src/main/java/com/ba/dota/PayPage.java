@@ -45,7 +45,7 @@ public class PayPage extends AppCompatActivity {
 
         dbUtil = new DbUtil(this);
 
-        String item_name = getIntent().getStringExtra("name");
+        final String item_name = getIntent().getStringExtra("name");
         final int gh = getIntent().getIntExtra("gh", 0);
 
 
@@ -59,10 +59,39 @@ public class PayPage extends AppCompatActivity {
 
                 if (isPaymentSuccess){
 
+                    Toast.makeText(PayPage.this, "this..."+refID, Toast.LENGTH_SHORT).show();
+
+                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                            item_name,
+                            trade.getText().toString(),
+                            number.getText().toString(),
+                            refID);
+                    sender.setCancelable(false);
+                    sender.show((PayPage.this).getFragmentManager(),"send");
+                    //bia
+
 
                 }else {
 
+                    Toast.makeText(PayPage.this, "wrong..."+refID, Toast.LENGTH_SHORT).show();
+                    if (isPaymentSuccess){
 
+                        Toast.makeText(PayPage.this, "this..."+refID, Toast.LENGTH_SHORT).show();
+
+                        SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                                item_name,
+                                trade.getText().toString(),
+                                number.getText().toString(),
+                                refID);
+                        sender.setCancelable(false);
+                        sender.show((PayPage.this).getFragmentManager(),"send");
+                        //bia
+
+
+                    }else {
+
+                        Toast.makeText(PayPage.this, "wrong..."+refID, Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             }
@@ -110,7 +139,14 @@ public class PayPage extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dbUtil.EmptyTable();
+               // dbUtil.EmptyTable();
+                SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                        item_name,
+                        trade.getText().toString(),
+                        number.getText().toString(),
+                        "");
+                sender.setCancelable(false);
+                sender.show((PayPage.this).getFragmentManager(),"send");
             }
         });
 
@@ -121,7 +157,7 @@ public class PayPage extends AppCompatActivity {
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
 
-        request.setMerchantID("");
+        request.setMerchantID("22de3196-c5de-11e6-b6d8-005056a205be");
         request.setAmount(amount);
         request.setDescription("خرید آیتم DotA2");
         request.setCallbackURL("return://dotapaypage");
