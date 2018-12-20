@@ -152,7 +152,6 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:host="dotapaypage"
                     android:scheme="return" />
             </intent-filter>
         </activity>

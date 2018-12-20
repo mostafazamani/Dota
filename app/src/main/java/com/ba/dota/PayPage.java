@@ -42,6 +42,7 @@ public class PayPage extends AppCompatActivity {
         btn_pay = (Button) findViewById(R.id.pay_next_btn);
         btn_cancel = (Button) findViewById(R.id.pay_cancel);
         number = (TextView) findViewById(R.id.payer_number);
+        final int x=0;
 
         dbUtil = new DbUtil(this);
 
@@ -57,23 +58,7 @@ public class PayPage extends AppCompatActivity {
             @Override
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
 
-                if (isPaymentSuccess){
 
-                    Toast.makeText(PayPage.this, "this..."+refID, Toast.LENGTH_SHORT).show();
-
-                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                            item_name,
-                            trade.getText().toString(),
-                            number.getText().toString(),
-                            refID);
-                    sender.setCancelable(false);
-                    sender.show((PayPage.this).getFragmentManager(),"send");
-                    //bia
-
-
-                }else {
-
-                    Toast.makeText(PayPage.this, "wrong..."+refID, Toast.LENGTH_SHORT).show();
                     if (isPaymentSuccess){
 
                         Toast.makeText(PayPage.this, "this..."+refID, Toast.LENGTH_SHORT).show();
@@ -82,7 +67,8 @@ public class PayPage extends AppCompatActivity {
                                 item_name,
                                 trade.getText().toString(),
                                 number.getText().toString(),
-                                refID);
+                                refID,
+                                x);
                         sender.setCancelable(false);
                         sender.show((PayPage.this).getFragmentManager(),"send");
                         //bia
@@ -91,8 +77,16 @@ public class PayPage extends AppCompatActivity {
                     }else {
 
                         Toast.makeText(PayPage.this, "wrong..."+refID, Toast.LENGTH_SHORT).show();
+                        SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                                item_name,
+                                trade.getText().toString(),
+                                number.getText().toString(),
+                                refID,
+                                x);
+                        sender.setCancelable(false);
+                        sender.show((PayPage.this).getFragmentManager(),"send");
                     }
-                }
+
 
             }
         });
@@ -140,13 +134,7 @@ public class PayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                // dbUtil.EmptyTable();
-                SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                        item_name,
-                        trade.getText().toString(),
-                        number.getText().toString(),
-                        "");
-                sender.setCancelable(false);
-                sender.show((PayPage.this).getFragmentManager(),"send");
+
             }
         });
 
@@ -160,7 +148,7 @@ public class PayPage extends AppCompatActivity {
         request.setMerchantID("22de3196-c5de-11e6-b6d8-005056a205be");
         request.setAmount(amount);
         request.setDescription("خرید آیتم DotA2");
-        request.setCallbackURL("return://dotapaypage");
+        request.setCallbackURL("return://return");
 
         zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {
             @Override

@@ -29,10 +29,10 @@ public class SetSender extends DialogFragment {
     TextView text;
     Button btn_ok, btn_ref;
     ProgressBar prog;
-    int x = 0;
+
     public static final String uri = "";
 
-    public static SetSender newinstance(String name, String itemname, String tradelink, String numberphone, String refid) {
+    public static SetSender newinstance(String name, String itemname, String tradelink, String numberphone, String refid,int x) {
 
         SetSender sender = new SetSender();
 
@@ -43,6 +43,7 @@ public class SetSender extends DialogFragment {
         bundle.putString("t", tradelink);
         bundle.putString("np", numberphone);
         bundle.putString("ri", refid);
+        bundle.putInt("x",x);
 
         sender.setArguments(bundle);
 
@@ -71,6 +72,7 @@ public class SetSender extends DialogFragment {
         String tradelink = getArguments().getString("t");
         String numberphone = getArguments().getString("np");
         String refid = getArguments().getString("ri");
+        final int[] x = {getArguments().getInt("x")};
 
 
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -97,7 +99,7 @@ public class SetSender extends DialogFragment {
 
                 prog.setVisibility(View.INVISIBLE);
 
-                if (x < 3) {
+                if (x[0] < 3) {
                     btn_ref.setVisibility(View.VISIBLE);
                 } else {
                     btn_ok.setVisibility(View.VISIBLE);
@@ -127,11 +129,12 @@ public class SetSender extends DialogFragment {
         btn_ref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                x[0]++;
 
                 JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, uri, new JSONObject(param), new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        x++;
+
                         prog.setVisibility(View.INVISIBLE);
                         btn_ok.setVisibility(View.VISIBLE);
 
@@ -142,7 +145,7 @@ public class SetSender extends DialogFragment {
 
                         prog.setVisibility(View.INVISIBLE);
 
-                        if (x < 3) {
+                        if (x[0] < 3) {
                             btn_ref.setVisibility(View.VISIBLE);
                         } else {
                             btn_ok.setVisibility(View.VISIBLE);

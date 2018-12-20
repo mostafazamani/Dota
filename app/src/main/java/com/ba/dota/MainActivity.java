@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
         heros_bio = (Button) findViewById(R.id.bio);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.main_layout);
 
+
+
+
         dbUtil =new DbUtil(this);
 
         heros_bio.setOnClickListener(new View.OnClickListener() {
