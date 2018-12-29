@@ -93,7 +93,7 @@ public class ShowList extends AppCompatActivity {
 
         for (int i = 0; i < (n.size()); i++) {
 
-            name = name + n.get(i).getItem_text()+" , ";
+            name = name + n.get(i).getItem_text()+" ,\n ";
 
         }
 

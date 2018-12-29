@@ -20,6 +20,7 @@
 
                 >
                 <ImageView
+                    android:id="@+id/anti"
                     android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:background="@drawable/shape_mahv"
