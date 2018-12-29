@@ -19,6 +19,7 @@
         android:layout_height="match_parent"
         android:layout_alignBottom="@id/image_hero"
         android:layout_toEndOf="@id/image_hero"
+
         android:gravity="center"
         android:textStyle="bold"
         />

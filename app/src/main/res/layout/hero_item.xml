@@ -30,7 +30,7 @@
         android:layout_margin="50dp"
         android:scrollbars="none"/>
     <ProgressBar
-        android:id="@+id/progressBar_i"
+        android:id="@+id/progressBar_hero_item"
         android:layout_width="50dp"
         android:layout_height="50dp"
         style="@style/progress"

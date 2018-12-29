@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:orientation="vertical"
+
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/ancient_apparition" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/bane" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/batrider" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/chen" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/crystal_maiden" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/dark_seer" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/dark_willow" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/dazzle" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/death_prophet" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/disruptor" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/enchantress" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/enigma" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/grimstroke" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/invoker" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/jakiro" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/keeper_of_the_light" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/leshrac" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/lich" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/lina" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/lion" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/natures_prophet" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/necrophos" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/ogre_magi" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/oracle" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/outworld_devourer" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/puck" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/pugna" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/queen_of_pain" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="right"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/rubick" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/shadow_demon" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/shadow_shaman" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/silencer" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/skywrath_mage" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/storm_spirit" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/techies" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/tinker" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/visage" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/warlock" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/windranger" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/winter_wyvern" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/witch_doctor" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="70dp"
+                    android:background="@drawable/shape_mahv"
+                    android:padding="1dp"
+                    android:src="@drawable/zeus" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

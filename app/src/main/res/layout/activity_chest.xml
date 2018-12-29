@@ -17,164 +17,474 @@
         android:drawableLeft="@drawable/chest"
         android:drawableRight="@drawable/chest"
         android:gravity="center"
-        android:text="Lucy Chest"
+        android:text="Lucky Chest"
         android:textColor="@color/Brown"
         android:textSize="20sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_dis"
+    <Button
+        android:id="@+id/btn_dis"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/chest_welcome"
-        android:layout_margin="3dp"
-        android:gravity="right"
+        android:layout_height="40dp"
         android:padding="5dp"
-        android:text="@string/chest"
-        android:textSize="17sp"
+
+        android:layout_below="@+id/chest_welcome"
+        android:layout_marginTop="2dp"
+        android:background="@color/dark_yellow"
+        android:drawableLeft="@drawable/book"
+        android:gravity="center"
+
+        android:text="قوانین"
+        android:textColor="@color/Brown"
+
+
+        android:textSize="15sp"
         android:textStyle="bold" />
 
-    <HorizontalScrollView
-        android:id="@+id/scrollView"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txt_dis"
-        android:scrollbarStyle="insideOverlay">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_dis"
+        android:layout_marginTop="5dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="5dp">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/chest_1"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:background="@drawable/shape_common"
-                android:src="@drawable/chest" />
 
-            <TextView
-                android:id="@+id/txt1"
-                android:layout_width="150dp"
+            <HorizontalScrollView
+                android:id="@+id/scrollchest_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dis"
+                android:scrollbarStyle="insideOverlay">
+
+                <RelativeLayout
+                    android:id="@+id/relchest1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/chest_11"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt11"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_11"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+
+                        android:textColor="@color/lime"
+
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_21"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_11"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt21"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_21"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt11"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+                        android:textColor="@color/lime"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_31"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_21"
+                        android:background="@drawable/shape_rare"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt31"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_31"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/chest_21"
+                        android:background="@drawable/shape_rare"
+                        android:gravity="center"
+                        android:text="احتمال متوسط"
+                        android:textColor="@color/Yellow"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_41"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_31"
+                        android:background="@drawable/shape_epic"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt41"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_41"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt31"
+                        android:background="@drawable/shape_epic"
+                        android:gravity="center"
+                        android:text="احتمال کم"
+                        android:textColor="@color/amber_900"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_51"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_41"
+                        android:background="@drawable/shape_legendary"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt51"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_51"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt41"
+                        android:background="@drawable/shape_legendary"
+                        android:gravity="center"
+                        android:text="احتمال خیلی کم"
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/pay_chest_1"
+                android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_below="@+id/chest_1"
-                android:background="@drawable/shape_common"
-                android:textColor="@color/lime"
+                android:layout_below="@+id/scrollchest_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_yellow"
+                android:text="پـرداخــت"
+                android:textColor="@color/dark_yellow" />
+
+            <HorizontalScrollView
+                android:id="@+id/scrollchest_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_chest_1"
+                android:layout_marginTop="2dp"
+                android:scrollbarStyle="insideOverlay">
+
+                <RelativeLayout
+                    android:id="@+id/relchest2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/chest_12"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt12"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_12"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+
+                        android:textColor="@color/lime"
+
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_22"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_12"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt22"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_22"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt12"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+                        android:textColor="@color/lime"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_32"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_22"
+                        android:background="@drawable/shape_rare"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt32"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_32"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/chest_22"
+                        android:background="@drawable/shape_rare"
+                        android:gravity="center"
+                        android:text="احتمال متوسط"
+                        android:textColor="@color/Yellow"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_42"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_32"
+                        android:background="@drawable/shape_epic"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt42"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_42"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt32"
+                        android:background="@drawable/shape_epic"
+                        android:gravity="center"
+                        android:text="احتمال کم"
+                        android:textColor="@color/amber_900"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_52"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_42"
+                        android:background="@drawable/shape_legendary"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt52"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_52"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt42"
+                        android:background="@drawable/shape_legendary"
+                        android:gravity="center"
+                        android:text="احتمال خیلی کم"
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/pay_chest_2"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+
+                android:layout_below="@+id/scrollchest_2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_yellow"
+
                 android:gravity="center"
-                android:layout_marginTop="1dp"
-
-                android:text="احتمال بالا"
-
+                android:text="پرداخـــت"
+                android:textColor="@color/dark_yellow"
+                android:textSize="17sp"
                 android:textStyle="bold" />
 
-            <ImageView
-                android:id="@+id/chest_2"
-                android:layout_width="150dp"
-                android:layout_marginLeft="2dp"
-                android:layout_height="200dp"
-                android:layout_toRightOf="@+id/chest_1"
-                android:background="@drawable/shape_common"
-                android:src="@drawable/chest" />
+            <HorizontalScrollView
+                android:id="@+id/scrollchest_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pay_chest_2"
+                android:layout_marginTop="2dp"
+                android:scrollbarStyle="insideOverlay">
 
-            <TextView
-                android:id="@+id/txt2"
-                android:layout_width="150dp"
+                <RelativeLayout
+                    android:id="@+id/relchest3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/chest_13"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt13"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_13"
+                        android:layout_marginTop="1dp"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+
+                        android:textColor="@color/lime"
+
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_23"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_13"
+                        android:background="@drawable/shape_common"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt23"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_23"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt13"
+                        android:background="@drawable/shape_common"
+                        android:gravity="center"
+                        android:text="احتمال بالا"
+                        android:textColor="@color/lime"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_33"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_23"
+                        android:background="@drawable/shape_rare"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt33"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_33"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt23"
+                        android:background="@drawable/shape_rare"
+                        android:gravity="center"
+                        android:text="احتمال متوسط"
+                        android:textColor="@color/Yellow"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_43"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_33"
+                        android:background="@drawable/shape_epic"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt43"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_43"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt33"
+                        android:background="@drawable/shape_epic"
+                        android:gravity="center"
+                        android:text="احتمال کم"
+                        android:textColor="@color/amber_900"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/chest_53"
+                        android:layout_width="150dp"
+                        android:layout_height="200dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@+id/chest_43"
+                        android:background="@drawable/shape_legendary"
+                        android:src="@drawable/chest" />
+
+                    <TextView
+                        android:id="@+id/txt53"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:layout_below="@+id/chest_53"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_toRightOf="@+id/txt43"
+                        android:background="@drawable/shape_legendary"
+                        android:gravity="center"
+                        android:text="احتمال خیلی کم"
+                        android:textColor="@color/red"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+
+            </HorizontalScrollView>
+
+            <Button
+                android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_marginLeft="2dp"
-                android:layout_below="@+id/chest_2"
-                android:layout_toRightOf="@+id/txt1"
-                android:layout_marginTop="1dp"
-                android:background="@drawable/shape_common"
-                android:textColor="@color/lime"
-                android:gravity="center"
-                android:text="احتمال بالا"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/chest_3"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="2dp"
-                android:layout_toRightOf="@+id/chest_2"
-                android:background="@drawable/shape_rare"
-                android:src="@drawable/chest" />
-
-            <TextView
-                android:id="@+id/txt3"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="2dp"
-                android:layout_below="@+id/chest_3"
-                android:layout_toRightOf="@+id/chest_2"
-                android:background="@drawable/shape_rare"
-                android:textColor="@color/Yellow"
-                android:gravity="center"
-                android:text="احتمال متوسط"
-                android:layout_marginTop="1dp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/chest_4"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_toRightOf="@+id/chest_3"
-                android:background="@drawable/shape_epic"
-                android:layout_marginLeft="2dp"
-                android:src="@drawable/chest" />
-
-            <TextView
-                android:id="@+id/txt4"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/chest_4"
-                android:layout_toRightOf="@+id/txt3"
-                android:background="@drawable/shape_epic"
-                android:gravity="center"
-                android:textColor="@color/amber_900"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="1dp"
-                android:text="احتمال کم"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/chest_5"
-                android:layout_width="150dp"
-                android:layout_height="200dp"
-                android:layout_toRightOf="@+id/chest_4"
-                android:background="@drawable/shape_legendary"
-                android:layout_marginLeft="2dp"
-                android:src="@drawable/chest" />
-
-            <TextView
-                android:id="@+id/txt5"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_below="@+id/chest_5"
-                android:layout_toRightOf="@+id/txt4"
-                android:background="@drawable/shape_legendary"
-                android:layout_marginTop="1dp"
-                android:layout_marginLeft="2dp"
-                android:textColor="@color/red"
-                android:gravity="center"
-                android:text="احتمال خیلی کم"
-                android:textStyle="bold" />
+                android:layout_below="@+id/scrollchest_3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:id="@+id/pay_chest_3"
+                android:background="@drawable/shape_yellow"
+                android:text="پـرداخــت"
+                android:textColor="@color/dark_yellow" />
         </RelativeLayout>
-
-
-    </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/chest_pay"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shape_yellow"
-        android:gravity="center"
-        android:text="پرداخـــت"
-        android:textColor="@color/dark_yellow"
-        android:textSize="17sp"
-        android:textStyle="bold" />
+    </ScrollView>
 
 
 </RelativeLayout>

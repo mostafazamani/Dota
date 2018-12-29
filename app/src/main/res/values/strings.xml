@@ -20,4 +20,11 @@
 شانس خود را امتحان کنید...
     </string>
 
+    <string name="trade_exp">
+        ازین این لینک برای انتقال آیتم ها استفاده می شود
+        \n
+
+        Steam -> Inventory -> Trade Offer -> Who Can Send Me Trade Offer -> Copy Trade Url
+        \n
+    </string>
 </resources>

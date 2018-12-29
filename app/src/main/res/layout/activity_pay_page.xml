@@ -116,16 +116,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:background="@drawable/shape_mahv"
             android:layout_below="@+id/payer_number"
-            android:text="Pay" />
+            android:text="پرداخـت"
+            android:textStyle="bold"/>
 
         <Button
             android:id="@+id/pay_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
+            android:background="@drawable/shape_mahv"
             android:layout_below="@+id/payer_number"
-            android:text="cancel" />
+            android:text="لـغــو"
+            android:textStyle="bold"/>
 
 
     </RelativeLayout>
