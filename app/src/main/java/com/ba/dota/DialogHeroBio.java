@@ -12,13 +12,13 @@ import android.widget.TextView;
 
 public class DialogHeroBio extends DialogFragment {
 
-public static DialogHeroBio instance(int id_image, String name_hero, int id_power_hero , int id_text_hero){
+public static DialogHeroBio instance(int id_image, String name_hero , int id_text_hero){
     DialogHeroBio bio = new DialogHeroBio();
     Bundle bundle = new Bundle();
 
     bundle.putInt("image",id_image);
     bundle.putString("name",name_hero);
-    bundle.putInt("power",id_power_hero);
+
     bundle.putInt("text",id_text_hero);
 
     bio.setArguments(bundle);
@@ -36,12 +36,10 @@ public static DialogHeroBio instance(int id_image, String name_hero, int id_powe
         Button close = (Button) view.findViewById(R.id.btn_bastan);
         ImageView imageView = (ImageView) view.findViewById(R.id.profile_hero);
         TextView name = (TextView) view.findViewById(R.id.bio_name);
-        TextView power_hero = (TextView) view.findViewById(R.id.power_hero);
         TextView text_bio = (TextView) view.findViewById(R.id.text_bio);
 
         imageView.setImageResource(getArguments().getInt("image"));
         name.setText(getArguments().getString("name"));
-        power_hero.setText(getArguments().getInt("power"));
         text_bio.setText(getArguments().getInt("text"));
 
 
