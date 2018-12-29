@@ -124,7 +124,7 @@ public class PayPage extends AppCompatActivity {
                 editor.putString("number", number.getText().toString().trim());
                 editor.apply();
 
-                paysetting(gh);
+                paysetting(gh,item_name);
 
 
             }
@@ -140,14 +140,15 @@ public class PayPage extends AppCompatActivity {
 
     }
 
-    public void paysetting(long amount) {
+    public void paysetting(long amount,String itemname) {
 
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
 
         request.setMerchantID("22de3196-c5de-11e6-b6d8-005056a205be");
         request.setAmount(amount);
-        request.setDescription("خرید آیتم DotA2");
+        request.setDescription("DotA 2 Items :\n" +
+                itemname);
         request.setCallbackURL("return://return");
 
         zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {
