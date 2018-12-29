@@ -33,7 +33,7 @@ public class AgilityBio extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.anti:
-                dialog_hero_bio d = dialog_hero_bio.instance(R.drawable.anti_mage, "Anti Mage", 1, 2);
+                DialogHeroBio d = DialogHeroBio.instance(R.drawable.anti_mage, "Anti Mage", 1, 2);
                 d.show(getFragmentManager(),"Oops");
 
         }

@@ -19,7 +19,7 @@
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"
         android:layout_below="@id/profile_hero"
-        android:layout_above="@id/btn_bastan"/>
+        />
 
     <TextView
         android:id="@+id/bio_name"
@@ -35,7 +35,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/bio_name"
-        android:layout_above="@id/btn_bastan"
         android:layout_marginTop="20dp"
         android:layout_marginRight="2dp"
         android:layout_marginLeft="2dp"

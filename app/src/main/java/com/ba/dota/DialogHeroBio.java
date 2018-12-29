@@ -10,10 +10,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class dialog_hero_bio extends DialogFragment {
+public class DialogHeroBio extends DialogFragment {
 
-public static dialog_hero_bio instance(int id_image,String name_hero, int id_power_hero , int id_text_hero){
-    dialog_hero_bio bio = new dialog_hero_bio();
+public static DialogHeroBio instance(int id_image, String name_hero, int id_power_hero , int id_text_hero){
+    DialogHeroBio bio = new DialogHeroBio();
     Bundle bundle = new Bundle();
 
     bundle.putInt("image",id_image);
