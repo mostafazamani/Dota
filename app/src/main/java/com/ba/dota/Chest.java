@@ -77,9 +77,10 @@ public class Chest extends AppCompatActivity {
     ImageView chest_12, chest_22, chest_32, chest_42, chest_52; //chest two
     ImageView chest_13, chest_23, chest_33, chest_43, chest_53; //chest three
 
+   static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chest);
 
@@ -93,11 +94,11 @@ public class Chest extends AppCompatActivity {
         chest_41 = (ImageView) findViewById(R.id.chest_41);
         chest_51 = (ImageView) findViewById(R.id.chest_51);
 
-        setImagechest("",0,chest_11);
-        setImagechest("",1,chest_21);
-        setImagechest("",2,chest_31);
-        setImagechest("",3,chest_41);
-        setImagechest("",4,chest_51);
+        setImagechest(url,0,chest_11);
+        setImagechest(url,1,chest_21);
+        setImagechest(url,2,chest_31);
+        setImagechest(url,3,chest_41);
+        setImagechest(url,4,chest_51);
 
 
         chest_12 = (ImageView) findViewById(R.id.chest_12); //aks aval radif dovom
@@ -106,11 +107,11 @@ public class Chest extends AppCompatActivity {
         chest_42 = (ImageView) findViewById(R.id.chest_42);
         chest_52 = (ImageView) findViewById(R.id.chest_52);
 
-        setImagechest("",0,chest_12);
-        setImagechest("",1,chest_22);
-        setImagechest("",2,chest_32);
-        setImagechest("",3,chest_42);
-        setImagechest("",4,chest_52);
+        setImagechest(url,0,chest_12);
+        setImagechest(url,1,chest_22);
+        setImagechest(url,2,chest_32);
+        setImagechest(url,3,chest_42);
+        setImagechest(url,4,chest_52);
 
 
 
@@ -120,11 +121,11 @@ public class Chest extends AppCompatActivity {
         chest_43 = (ImageView) findViewById(R.id.chest_43);
         chest_53 = (ImageView) findViewById(R.id.chest_53);
 
-        setImagechest("",0,chest_13);
-        setImagechest("",1,chest_23);
-        setImagechest("",2,chest_33);
-        setImagechest("",3,chest_43);
-        setImagechest("",4,chest_53);
+        setImagechest(url,0,chest_13);
+        setImagechest(url,1,chest_23);
+        setImagechest(url,2,chest_33);
+        setImagechest(url,3,chest_43);
+        setImagechest(url,4,chest_53);
 
 
 
