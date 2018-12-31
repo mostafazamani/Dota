@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -157,7 +158,17 @@
         </activity>
         <activity android:name=".Chest" />
         <activity android:name=".ChestPay" />
-        <activity android:name=".HerosBio"></activity>
+        <activity android:name=".HerosBio"/>
+        <service
+            android:name=".ChestNotification"
+            android:label="@string/app_name">
+        <intent-filter>
+            <action android:name="your.app.domain.NotificationService" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </service>
+
     </application>
 
 </manifest>

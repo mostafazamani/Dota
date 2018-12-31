@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
         dbUtil =new DbUtil(this);
 
         heros_bio.setOnClickListener(new View.OnClickListener() {

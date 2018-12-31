@@ -10,6 +10,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class DialogHeroBio extends DialogFragment {
 
 public static DialogHeroBio instance(int id_image, String name_hero , int id_text_hero){
@@ -40,7 +44,23 @@ public static DialogHeroBio instance(int id_image, String name_hero , int id_tex
 
         imageView.setImageResource(getArguments().getInt("image"));
         name.setText(getArguments().getString("name"));
-        text_bio.setText(getArguments().getInt("text"));
+
+        InputStreamReader stream = new InputStreamReader(getActivity().getResources().openRawResource(getArguments().getInt("text")));
+        StringBuilder sb = new StringBuilder();
+        try {
+            BufferedReader bis = new BufferedReader(stream);
+            String line = "";
+            while ((line = bis.readLine()) != null) {
+                sb.append(line);
+                sb.append("\n");
+            }
+            bis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        text_bio.setText(sb);
+
 
 
 

@@ -131,7 +131,7 @@ public class Chest extends AppCompatActivity {
 
 
 
-
+        startService(new Intent(this, ChestNotification.class));
 
 
 
