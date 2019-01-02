@@ -27,6 +27,11 @@ public class ChestPay extends AppCompatActivity {
 
         TextView amount = (TextView) findViewById(R.id.chest_amount_show);
         Button pay = (Button) findViewById(R.id.chest_pay_next_btn);
+        Button cancel = (Button) findViewById(R.id.chest_pay_cancel);
+        final TextView payer_name = (TextView) findViewById(R.id.chest_payer_name);
+        final TextView trade = (TextView) findViewById(R.id.chest_trade_link);
+        final TextView number = (TextView) findViewById(R.id.chest_payer_number);
+
         final int am;
         String des = null;
 
@@ -64,33 +69,38 @@ public class ChestPay extends AppCompatActivity {
         ZarinPal.getPurchase(this).verificationPayment(data, new OnCallbackVerificationPaymentListener() {
             @Override
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
-                if (isPaymentSuccess){
-                    SetsenderChest sc = SetsenderChest.chestinstance(x,refID,random);
-                    sc.show((ChestPay.this).getFragmentManager(),"ff");
+                if (isPaymentSuccess) {
+                    SetsenderChest sc = SetsenderChest.chestinstance(x, refID, random);
+                    sc.show((ChestPay.this).getFragmentManager(), "ff");
 
-                }else {
-                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(per.getInt("nc",0),refID,per.getInt("random",5));
-                    setsenderChest.show((ChestPay.this).getFragmentManager(),"ff");
+                } else {
+                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(per.getInt("nc", 0), refID, per.getInt("random", 5));
+                    setsenderChest.show((ChestPay.this).getFragmentManager(), "ff");
                 }
-
 
 
             }
         });
 
 
-
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                editor.putInt("random",random);
-                editor.putInt("nc",x);
-                editor.apply();
 
-                paysetting(am, g);
+                    editor.putInt("random", random);
+                    editor.putInt("nc", x);
+                    editor.apply();
 
+                    paysetting(am, g);
 
+            }
+        });
+
+        cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 
@@ -143,5 +153,10 @@ public class ChestPay extends AppCompatActivity {
         }
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        return;
     }
 }

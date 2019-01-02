@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,6 +49,7 @@ public class Enigma extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.list_hshop);
         Button button = (Button) findViewById(R.id.btn_hlist);
         textView = (TextView) findViewById(R.id.text_hlist);
+        final ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar_hero_item);
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -57,6 +59,7 @@ public class Enigma extends AppCompatActivity {
             @Override
             public void onResponse(Object response) {
 
+                bar.setVisibility(View.INVISIBLE);
 
                 String json = response.toString();
                 list = JsonInteligenceItem.Item(json);
@@ -99,6 +102,7 @@ public class Enigma extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Enigma.this, ShowList.class));
+                finish();
 
             }
         });

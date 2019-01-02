@@ -119,12 +119,12 @@ public class PayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                editor.putString("payername", payer_name.getText().toString().trim());
-                editor.putString("tradelink", trade.getText().toString().trim());
-                editor.putString("number", number.getText().toString().trim());
-                editor.apply();
+                    editor.putString("payername", payer_name.getText().toString().trim());
+                    editor.putString("tradelink", trade.getText().toString().trim());
+                    editor.putString("number", number.getText().toString().trim());
+                    editor.apply();
 
-                paysetting(gh, item_name);
+                    paysetting(gh, item_name);
 
 
             }
@@ -133,7 +133,7 @@ public class PayPage extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // dbUtil.EmptyTable();
+                finish();
 
             }
         });
@@ -167,5 +167,8 @@ public class PayPage extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }

@@ -63,6 +63,13 @@ public class SetsenderChest extends DialogFragment {
 
         final int numberitem = getArguments().getInt("x") ;
 
+        text.setText("خرید شما با موفقیت انجام شد" +
+                "\n" +
+                "کدرهگیری:" +
+                refid );
+
+        btn_ok.setText("Show chest");
+
 
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
 

@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
@@ -45,8 +46,8 @@ public class ShowList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_list);
         listView = (ListView) findViewById(R.id.show_list);
-        Button button = (Button) findViewById(R.id.btn_pay);
-        TextView textView = (TextView) findViewById(R.id.text_all_cast);
+        final Button button = (Button) findViewById(R.id.btn_pay);
+        final TextView textView = (TextView) findViewById(R.id.text_all_cast);
 
         d = new DbUtil(getApplicationContext());
 
@@ -57,6 +58,18 @@ public class ShowList extends AppCompatActivity {
         listView.setAdapter(slist);
 
         textView.setText(String.valueOf(gh(list)));
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (("0").equals(textView.getText())){
+
+                    button.setClickable(false);
+                }
+            }
+        },1000);
+
 
 
         LocalBroadcastManager.getInstance(this).registerReceiver(msg,
@@ -71,6 +84,8 @@ public class ShowList extends AppCompatActivity {
                 intent.putExtra("gh",gh(list));
 
                 startActivity(intent);
+
+                finish();
 
 
             }

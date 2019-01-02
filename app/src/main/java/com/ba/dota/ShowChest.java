@@ -185,5 +185,8 @@ public class ShowChest extends AppCompatActivity {
 
     }
 
-
+    @Override
+    public void onBackPressed() {
+        return;
+    }
 }
