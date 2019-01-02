@@ -5,13 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
@@ -152,23 +152,33 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data
-                    android:scheme="return" />
+                <data android:scheme="return" />
             </intent-filter>
         </activity>
         <activity android:name=".Chest" />
-        <activity android:name=".ChestPay" />
-        <activity android:name=".HerosBio"/>
+        <activity android:name=".ChestPay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="ches" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HerosBio" />
+
         <service
             android:name=".ChestNotification"
             android:label="@string/app_name">
-        <intent-filter>
-            <action android:name="your.app.domain.NotificationService" />
+            <intent-filter>
+                <action android:name="your.app.domain.NotificationService" />
 
-            <category android:name="android.intent.category.DEFAULT" />
-        </intent-filter>
-    </service>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
 
+        <activity android:name=".ShowChest"></activity>
     </application>
 
 </manifest>

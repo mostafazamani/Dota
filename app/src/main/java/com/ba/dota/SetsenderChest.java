@@ -3,7 +3,7 @@ package com.ba.dota;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
+import android.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,15 +31,15 @@ public class SetsenderChest extends DialogFragment {
     Button btn_ok, btn_ref;
     ProgressBar prog;
 
-    public static final String url = "";
 
-    public static final SetsenderChest chestinstance(int numberchest, String refid, int x) {
+    public static SetsenderChest chestinstance(int numberchest, String refid, int x) {
         SetsenderChest chest = new SetsenderChest();
         Bundle bundle = new Bundle();
         bundle.putInt("numberchest", numberchest);
         bundle.putString("refid", refid);
         bundle.putInt("x", x);
 
+        chest.setArguments(bundle);
 
         return chest;
     }
@@ -47,7 +47,7 @@ public class SetsenderChest extends DialogFragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.set_sender, container, false);
 
         text = (TextView) view.findViewById(R.id.txt_sender);
@@ -60,9 +60,8 @@ public class SetsenderChest extends DialogFragment {
 
         final int numberchest = getArguments().getInt("numberchest");
         final String refid = getArguments().getString("refid");
-        final int[] x = {getArguments().getInt("x")};
 
-        final int numberitem = setrandom();
+        final int numberitem = getArguments().getInt("x") ;
 
 
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
@@ -110,13 +109,13 @@ public class SetsenderChest extends DialogFragment {
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainActivity.class);
+                Intent intent = new Intent(getActivity(), ShowChest.class);
                 intent.putExtra("numberchest",numberchest);
                 intent.putExtra("numberitem",numberitem);
 
                 startActivity(intent);
 
-                getActivity().finish();
+
 
 
             }
@@ -125,11 +124,11 @@ public class SetsenderChest extends DialogFragment {
         btn_ref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                x[0]++;
+
 
                 text.setText("درحال تکمیل خرید....");
 
-                JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(param), new Response.Listener<JSONObject>() {
+                JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "", new JSONObject(param), new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
                         text.setText("خرید تکمیل شد");
@@ -144,18 +143,6 @@ public class SetsenderChest extends DialogFragment {
                         text.setText("خطا در تکمیل خرید");
                         prog.setVisibility(View.INVISIBLE);
 
-                        if (x[0] < 3) {
-                            btn_ref.setVisibility(View.VISIBLE);
-                        } else {
-                            text.setText("خطا در تکمیل خرید" +
-                                    "\n" +
-                                    "کد رهگیری را به شماره زیر تلگرام کنید" +
-                                    "\n" +
-                                    "کدرهگیری:" +
-                                    refid);
-                            btn_ok.setVisibility(View.VISIBLE);
-                            btn_ref.setVisibility(View.INVISIBLE);
-                        }
 
                     }
                 }) {

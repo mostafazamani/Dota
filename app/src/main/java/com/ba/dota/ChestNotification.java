@@ -68,7 +68,7 @@ public class ChestNotification extends Service {
 
         initializeTimerTask();
         //Toast.makeText(this, "aaaaa", Toast.LENGTH_SHORT).show();
-        timer.schedule(timerTask, 86000, 86000); //
+        timer.schedule(timerTask, 860000, 860000); //
     }
 
     public void stoptimertask() {

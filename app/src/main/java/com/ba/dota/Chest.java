@@ -77,7 +77,7 @@ public class Chest extends AppCompatActivity {
     ImageView chest_12, chest_22, chest_32, chest_42, chest_52; //chest two
     ImageView chest_13, chest_23, chest_33, chest_43, chest_53; //chest three
 
-   static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
+   public static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

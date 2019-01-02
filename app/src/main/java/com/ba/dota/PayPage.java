@@ -4,11 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+
+
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.PopupMenu;
-import android.support.v7.widget.Toolbar;
+
+
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,7 +26,7 @@ import com.zarinpal.ewallets.purchase.ZarinPal;
 
 public class PayPage extends AppCompatActivity {
     TextView amount, payer_name, trade, number;
-    Button btn_pay,btn_cancel;
+    Button btn_pay, btn_cancel;
     SharedPreferences per;
     DbUtil dbUtil;
 
@@ -42,7 +42,7 @@ public class PayPage extends AppCompatActivity {
         btn_pay = (Button) findViewById(R.id.pay_next_btn);
         btn_cancel = (Button) findViewById(R.id.pay_cancel);
         number = (TextView) findViewById(R.id.payer_number);
-        final int x=0;
+        final int x = 0;
 
         dbUtil = new DbUtil(this);
 
@@ -59,33 +59,33 @@ public class PayPage extends AppCompatActivity {
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
 
 
-                    if (isPaymentSuccess){
+                if (isPaymentSuccess) {
 
-                        Toast.makeText(PayPage.this, "this..."+refID, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PayPage.this, "this..." + refID, Toast.LENGTH_SHORT).show();
 
-                        SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                                item_name,
-                                trade.getText().toString(),
-                                number.getText().toString(),
-                                refID,
-                                x);
-                        sender.setCancelable(false);
-                        sender.show((PayPage.this).getFragmentManager(),"send");
-                        //bia
+                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                            item_name,
+                            trade.getText().toString(),
+                            number.getText().toString(),
+                            refID,
+                            x);
+                    sender.setCancelable(false);
+                    sender.show((PayPage.this).getFragmentManager(), "send");
+                    //bia
 
 
-                    }else {
+                } else {
 
-                        Toast.makeText(PayPage.this, "wrong..."+refID, Toast.LENGTH_SHORT).show();
-                        SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                                item_name,
-                                trade.getText().toString(),
-                                number.getText().toString(),
-                                refID,
-                                x);
-                        sender.setCancelable(false);
-                        sender.show((PayPage.this).getFragmentManager(),"send");
-                    }
+                    Toast.makeText(PayPage.this, "wrong..." + refID, Toast.LENGTH_SHORT).show();
+                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                            item_name,
+                            trade.getText().toString(),
+                            number.getText().toString(),
+                            refID,
+                            x);
+                    sender.setCancelable(false);
+                    sender.show((PayPage.this).getFragmentManager(), "send");
+                }
 
 
             }
@@ -124,7 +124,7 @@ public class PayPage extends AppCompatActivity {
                 editor.putString("number", number.getText().toString().trim());
                 editor.apply();
 
-                paysetting(gh,item_name);
+                paysetting(gh, item_name);
 
 
             }
@@ -133,14 +133,14 @@ public class PayPage extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // dbUtil.EmptyTable();
+                // dbUtil.EmptyTable();
 
             }
         });
 
     }
 
-    public void paysetting(long amount,String itemname) {
+    public void paysetting(long amount, String itemname) {
 
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();

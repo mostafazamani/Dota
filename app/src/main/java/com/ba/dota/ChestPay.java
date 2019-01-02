@@ -1,6 +1,7 @@
 package com.ba.dota;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,12 +11,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.zarinpal.ewallets.purchase.OnCallbackRequestPaymentListener;
+import com.zarinpal.ewallets.purchase.OnCallbackVerificationPaymentListener;
 import com.zarinpal.ewallets.purchase.PaymentRequest;
 import com.zarinpal.ewallets.purchase.ZarinPal;
 
 import java.util.Random;
 
 public class ChestPay extends AppCompatActivity {
+    SharedPreferences per;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,34 +28,68 @@ public class ChestPay extends AppCompatActivity {
         TextView amount = (TextView) findViewById(R.id.chest_amount_show);
         Button pay = (Button) findViewById(R.id.chest_pay_next_btn);
         final int am;
-         String des = null;
+        String des = null;
 
-        int random = setrandom();
 
-        int x = getIntent().getIntExtra("number", 0);
+        final int random = setrandom();
+
+        final int x = getIntent().getIntExtra("number", 0);
 
         if (x == 1) {
             am = 5000;
-            des = "chest 1 %1%2%4%"+random+"%8%a%l%k%i";
-        } else if (x == 2) {
+            amount.setText("5000");
+            des = "chest 1 %1%2%4%" + random + "%8%a%l%k%i";
 
+        } else if (x == 2) {
+            amount.setText("8000");
             am = 8000;
-            des = "chest 2 %1%2%4%"+random+"%8%a%l%k%i";
+            des = "chest 2 %1%2%4%" + random + "%8%a%l%k%i";
+
         } else if (x == 3) {
+            amount.setText("10000");
             am = 10000;
-            des = "chest 3 %1%2%4%"+random+"%8%a%l%k%i";
+            des = "chest 3 %1%2%4%" + random + "%8%a%l%k%i";
+
         } else {
+            amount.setText("0");
             am = 0;
         }
-
         final String g = des;
+
+        per = getPreferences(MODE_PRIVATE);
+        final SharedPreferences.Editor editor = per.edit();
+
+
+        Uri data = getIntent().getData();
+        ZarinPal.getPurchase(this).verificationPayment(data, new OnCallbackVerificationPaymentListener() {
+            @Override
+            public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
+                if (isPaymentSuccess){
+                    SetsenderChest sc = SetsenderChest.chestinstance(x,refID,random);
+                    sc.show((ChestPay.this).getFragmentManager(),"ff");
+
+                }else {
+                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(x,refID,per.getInt("random",5));
+                    setsenderChest.show((ChestPay.this).getFragmentManager(),"ff");
+                }
+
+
+
+            }
+        });
+
 
 
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                paysetting(am,g );
+                editor.putInt("random",random);
+                editor.apply();
+
+                paysetting(am, g);
+
+
             }
         });
 
@@ -67,7 +104,7 @@ public class ChestPay extends AppCompatActivity {
         request.setAmount(amount);
         request.setDescription("DotA 2 Items :\n" +
                 itemname);
-        request.setCallbackURL("return://return");
+        request.setCallbackURL("ches://ches");
 
         zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {
             @Override
