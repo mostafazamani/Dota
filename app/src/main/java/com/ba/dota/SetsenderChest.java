@@ -110,8 +110,9 @@ public class SetsenderChest extends DialogFragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ShowChest.class);
-                intent.putExtra("numberchest",numberchest);
+                intent.putExtra("chestnumber",numberchest);
                 intent.putExtra("numberitem",numberitem);
+
 
                 startActivity(intent);
 

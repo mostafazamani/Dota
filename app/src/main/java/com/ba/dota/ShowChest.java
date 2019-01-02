@@ -1,6 +1,7 @@
 package com.ba.dota;
 
 import android.graphics.Bitmap;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
@@ -27,7 +29,7 @@ import java.io.UnsupportedEncodingException;
 
 public class ShowChest extends AppCompatActivity {
 
-    ImageView open_image;
+    ImageView open_image,i1,i2,i3,i4,i5;
     Button open_btn;
 
     @Override
@@ -37,13 +39,68 @@ public class ShowChest extends AppCompatActivity {
 
         open_btn = (Button) findViewById(R.id.open_btn);
         open_image = (ImageView) findViewById(R.id.open_image);
+        i1 = (ImageView) findViewById(R.id.i1);
+        i2 = (ImageView) findViewById(R.id.i2);
+        i3 = (ImageView) findViewById(R.id.i3);
+        i4 = (ImageView) findViewById(R.id.i4);
+        i5 = (ImageView) findViewById(R.id.i5);
 
+
+
+        open_btn.setVisibility(View.INVISIBLE);
         open_image.setVisibility(View.INVISIBLE);
 
-        int chest = getIntent().getIntExtra("numberchest",0);
+        int chest = getIntent().getIntExtra("chestnumber",0);
         int pos = getIntent().getIntExtra("numberitem",6);
 
         setOpen_images(Chest.url,pos,open_image);
+
+        if (chest==1){
+            setOpen_images(Chest.url,0,i1);
+            setOpen_images(Chest.url,1,i2);
+            setOpen_images(Chest.url,2,i3);
+            setOpen_images(Chest.url,3,i4);
+            setOpen_images(Chest.url,4,i5);
+
+
+
+        }else if (chest==2){
+            setOpen_images(Chest.url,0,i1);
+            setOpen_images(Chest.url,1,i2);
+            setOpen_images(Chest.url,2,i3);
+            setOpen_images(Chest.url,3,i4);
+            setOpen_images(Chest.url,4,i5);
+
+
+        }else if (chest==3){
+            setOpen_images(Chest.url,0,i1);
+            setOpen_images(Chest.url,1,i2);
+            setOpen_images(Chest.url,2,i3);
+            setOpen_images(Chest.url,3,i4);
+            setOpen_images(Chest.url,4,i5);
+
+        }else {
+            Toast.makeText(this, "failed:"+chest, Toast.LENGTH_SHORT).show();
+        }
+
+
+        i1.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.trans_tl));
+        i2.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.trans_tr));
+        i3.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.trans_c));
+        i4.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.trans_bl));
+        i5.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.trans_br));
+
+
+        Handler handler = new Handler();
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                open_btn.setVisibility(View.VISIBLE);
+
+            }
+        },2000);
+
 
 
 
@@ -54,6 +111,7 @@ public class ShowChest extends AppCompatActivity {
             public void onClick(View v) {
                 open_image.setVisibility(View.VISIBLE);
                 open_image.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.chest_anim));
+                open_btn.setClickable(false);
 
             }
         });

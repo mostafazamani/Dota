@@ -69,7 +69,7 @@ public class ChestPay extends AppCompatActivity {
                     sc.show((ChestPay.this).getFragmentManager(),"ff");
 
                 }else {
-                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(x,refID,per.getInt("random",5));
+                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(per.getInt("nc",0),refID,per.getInt("random",5));
                     setsenderChest.show((ChestPay.this).getFragmentManager(),"ff");
                 }
 
@@ -85,6 +85,7 @@ public class ChestPay extends AppCompatActivity {
             public void onClick(View v) {
 
                 editor.putInt("random",random);
+                editor.putInt("nc",x);
                 editor.apply();
 
                 paysetting(am, g);

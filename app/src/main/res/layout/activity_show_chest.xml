@@ -4,27 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShowChest"
-    android:background="@drawable/wall">
+    android:background="@drawable/wall"
+    android:padding="2dp"
+    tools:context=".ShowChest">
+
 
     <ImageView
-        android:id="@+id/open_image"
+        android:id="@+id/i1"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/i2"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/i4"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/i5"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/i3"
         android:layout_width="150dp"
         android:layout_height="200dp"
         android:layout_centerInParent="true"
-        android:src="@drawable/add"/>
+        android:src="@drawable/add" />
+
+    <ImageView
+        android:id="@+id/open_image"
+        android:layout_width="300dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/add" />
+
     <Button
+
         android:id="@+id/open_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="open"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
-
-
-
-
-
+        android:layout_centerHorizontal="true"
+        android:text="open" />
 
 
 </RelativeLayout>
