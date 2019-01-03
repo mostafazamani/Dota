@@ -7,18 +7,20 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="left"
-                android:orientation="vertical"
-
-                >
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -119,12 +121,14 @@
                     android:src="@drawable/invoker" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:orientation="vertical"
-                >
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="100dp"
@@ -225,12 +229,15 @@
                     android:src="@drawable/queen_of_pain" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
                 android:layout_gravity="right"
-                >
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="70dp"

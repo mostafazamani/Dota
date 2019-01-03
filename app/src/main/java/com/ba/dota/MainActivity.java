@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    Button store,btn,heros_bio;
+    Button store,btn,heros_bio,about_us;
     DbUtil dbUtil;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +23,20 @@ public class MainActivity extends AppCompatActivity {
 
         store = (Button) findViewById(R.id.store);
         heros_bio = (Button) findViewById(R.id.bio);
+        about_us = (Button) findViewById(R.id.about_us);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.main_layout);
 
 
 
         dbUtil =new DbUtil(this);
+
+        about_us.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,AboutUs.class));
+
+            }
+        });
 
         heros_bio.setOnClickListener(new View.OnClickListener() {
             @Override
