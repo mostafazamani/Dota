@@ -178,7 +178,8 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ShowChest"></activity>
+        <activity android:name=".ShowChest"/>
+        <activity android:name=".AboutUs"/>
     </application>
 
 </manifest>

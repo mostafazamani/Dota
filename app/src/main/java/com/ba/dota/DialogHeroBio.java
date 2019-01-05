@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -35,7 +36,7 @@ public static DialogHeroBio instance(int id_image, String name_hero , int id_tex
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.hero_bio,container,false);
+        final View view = inflater.inflate(R.layout.hero_bio,container,false);
 
         Button close = (Button) view.findViewById(R.id.btn_bastan);
         ImageView imageView = (ImageView) view.findViewById(R.id.profile_hero);
@@ -68,10 +69,13 @@ public static DialogHeroBio instance(int id_image, String name_hero , int id_tex
         close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().finish();
+                dismiss();
+
             }
         });
 
         return view;
     }
+
+
 }
