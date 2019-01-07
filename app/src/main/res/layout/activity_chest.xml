@@ -29,13 +29,13 @@
         android:layout_below="@+id/chest_welcome"
 
         android:layout_marginTop="2dp"
-        android:background="@color/dark_yellow"
+        android:background="@drawable/shape_mahv"
         android:drawableLeft="@drawable/book"
         android:gravity="center"
         android:padding="5dp"
 
         android:text="قوانین"
-        android:textColor="@color/Brown"
+        android:textColor="@color/dark_yellow"
 
 
         android:textSize="15sp"
@@ -191,12 +191,25 @@
 
             </HorizontalScrollView>
 
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_mahv"
+                android:text="5000 تومـــان"
+                android:textColor="@color/dark_yellow"
+                android:layout_below="@+id/scrollchest_1"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"/>
+
             <Button
                 android:id="@+id/pay_chest_1"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/scrollchest_1"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
                 android:text="پـرداخــت"
@@ -339,13 +352,27 @@
 
             </HorizontalScrollView>
 
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_mahv"
+                android:text="8000 تومـــان"
+                android:textColor="@color/dark_yellow"
+                android:layout_below="@+id/scrollchest_2"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"/>
+
             <Button
                 android:id="@+id/pay_chest_2"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
 
                 android:layout_below="@+id/scrollchest_2"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
 
@@ -491,12 +518,25 @@
 
             </HorizontalScrollView>
 
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/shape_mahv"
+                android:text="10000 تومـــان"
+                android:textColor="@color/dark_yellow"
+                android:layout_below="@+id/scrollchest_3"
+                android:gravity="center"
+                android:layout_marginTop="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="5dp"/>
+
             <Button
                 android:id="@+id/pay_chest_3"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/scrollchest_3"
-                android:layout_centerHorizontal="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
                 android:text="پـرداخــت"

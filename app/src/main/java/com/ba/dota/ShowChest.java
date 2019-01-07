@@ -1,5 +1,6 @@
 package com.ba.dota;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -30,7 +31,7 @@ import java.io.UnsupportedEncodingException;
 public class ShowChest extends AppCompatActivity {
 
     ImageView open_image,i1,i2,i3,i4,i5;
-    Button open_btn;
+    Button open_btn  , c_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +45,10 @@ public class ShowChest extends AppCompatActivity {
         i3 = (ImageView) findViewById(R.id.i3);
         i4 = (ImageView) findViewById(R.id.i4);
         i5 = (ImageView) findViewById(R.id.i5);
+        c_btn = (Button) findViewById(R.id.c_btn);
 
 
-
+        c_btn.setVisibility(View.INVISIBLE);
         open_btn.setVisibility(View.INVISIBLE);
         open_image.setVisibility(View.INVISIBLE);
 
@@ -111,8 +113,19 @@ public class ShowChest extends AppCompatActivity {
             public void onClick(View v) {
                 open_image.setVisibility(View.VISIBLE);
                 open_image.startAnimation(AnimationUtils.loadAnimation(ShowChest.this,R.anim.chest_anim));
+
+                open_btn.setVisibility(View.INVISIBLE);
+                c_btn.setVisibility(View.VISIBLE);
                 open_btn.setClickable(false);
 
+            }
+        });
+
+        c_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShowChest.this,MainActivity.class));
+                finish();
             }
         });
 

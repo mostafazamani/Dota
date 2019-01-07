@@ -48,7 +48,7 @@
             android:id="@+id/text_bio"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#77000002"
+            android:background="#99000002"
             android:gravity="right"
 
             />
