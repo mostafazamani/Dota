@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.ba.dota.Rules"
-    android:background="@drawable/wall"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
     android:padding="5dp">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:background="#dd5555ff">
 
-        android:src="@drawable/card"
-        android:layout_alignParentTop="true"
-        android:id="@+id/rulescard"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:id="@+id/rulespic"
-        android:layout_below="@+id/rulescard"
-        android:padding="5dp"
-        android:drawableRight="@drawable/book"
-        android:text="    قوانیــــن"
-        android:textStyle="bold"
-        android:textColor="#e2fff235"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#4f515e5b"
-        android:layout_below="@+id/rulespic"
-        android:layout_marginTop="5dp"
-        android:text="@string/chest"/>
+        <ImageView
+            android:id="@+id/rulescard"
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/card" />
+
+        <TextView
+            android:id="@+id/rulespic"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/rulescard"
+            android:drawableRight="@drawable/book"
+            android:padding="5dp"
+            android:text="    قوانیــــن"
+            android:textColor="#e2fff235"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rulespic"
+            android:layout_marginTop="5dp"
+            android:background="#4f515e5b"
+            android:text="@string/chest" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
