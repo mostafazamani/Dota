@@ -220,7 +220,7 @@
                     android:src="@drawable/phantom_lancer" />
 
                 <ImageView
-                    android:id="@+id/rezor"
+                    android:id="@+id/razor"
                     android:layout_width="100dp"
                     android:layout_height="70dp"
                     android:background="@drawable/shape_mahv"

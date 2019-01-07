@@ -119,13 +119,19 @@ public class PayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(payer_name.getText() == null || trade.getText() == null || number.getText() == null )
+                {
+                    Toast.makeText(PayPage.this, " مشخصات را پر کنید...", Toast.LENGTH_SHORT).show();
+                }
+                else {
+
                     editor.putString("payername", payer_name.getText().toString().trim());
                     editor.putString("tradelink", trade.getText().toString().trim());
                     editor.putString("number", number.getText().toString().trim());
                     editor.apply();
 
                     paysetting(gh, item_name);
-
+                }
 
             }
         });

@@ -25,6 +25,7 @@
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="70dp"
+
                     android:background="@drawable/shape_mahv"
                     android:padding="1dp"
                     android:src="@drawable/ancient_apparition" />

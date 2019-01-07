@@ -118,7 +118,7 @@
             android:layout_alignParentRight="true"
             android:background="@drawable/shape_mahv"
             android:layout_below="@+id/payer_number"
-            android:text="پرداخـت"
+            android:text="تکمیل خرید"
             android:textStyle="bold"/>
 
         <Button

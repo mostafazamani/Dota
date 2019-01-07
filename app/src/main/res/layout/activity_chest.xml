@@ -26,13 +26,13 @@
         android:id="@+id/btn_dis"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:padding="5dp"
-
         android:layout_below="@+id/chest_welcome"
+
         android:layout_marginTop="2dp"
         android:background="@color/dark_yellow"
         android:drawableLeft="@drawable/book"
         android:gravity="center"
+        android:padding="5dp"
 
         android:text="قوانین"
         android:textColor="@color/Brown"
@@ -65,14 +65,15 @@
                     android:layout_height="match_parent"
                     android:padding="5dp">
 
+
                     <ImageView
-                        android:padding="3dp"
                         android:id="@+id/chest_11"
                         android:layout_width="150dp"
                         android:layout_height="200dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:background="@drawable/shape_common"
+                        android:padding="3dp"
                         android:src="@drawable/chestwall" />
 
                     <TextView
@@ -86,8 +87,8 @@
                         android:text="احتمال بالا"
 
                         android:textColor="@color/lime"
-
                         android:textStyle="bold" />
+
 
                     <ImageView
 
@@ -97,8 +98,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_11"
                         android:background="@drawable/shape_common"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt21"
@@ -121,8 +122,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_21"
                         android:background="@drawable/shape_rare"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt31"
@@ -145,8 +146,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_31"
                         android:background="@drawable/shape_epic"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt41"
@@ -169,8 +170,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_41"
                         android:background="@drawable/shape_legendary"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt51"
@@ -197,7 +198,7 @@
                 android:layout_below="@+id/scrollchest_1"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/shape_yellow"
+                android:background="@drawable/shape_mahv"
                 android:text="پـرداخــت"
 
                 android:textColor="@color/dark_yellow" />
@@ -221,8 +222,8 @@
                         android:layout_width="150dp"
                         android:layout_height="200dp"
                         android:background="@drawable/shape_common"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp"/>
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt12"
@@ -245,8 +246,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_12"
                         android:background="@drawable/shape_common"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt22"
@@ -269,8 +270,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_22"
                         android:background="@drawable/shape_rare"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt32"
@@ -293,8 +294,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_32"
                         android:background="@drawable/shape_epic"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt42"
@@ -317,8 +318,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_42"
                         android:background="@drawable/shape_legendary"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt52"
@@ -346,7 +347,7 @@
                 android:layout_below="@+id/scrollchest_2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="2dp"
-                android:background="@drawable/shape_yellow"
+                android:background="@drawable/shape_mahv"
 
                 android:gravity="center"
                 android:text="پرداخـــت"
@@ -373,8 +374,8 @@
                         android:layout_width="150dp"
                         android:layout_height="200dp"
                         android:background="@drawable/shape_common"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt13"
@@ -397,8 +398,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_13"
                         android:background="@drawable/shape_common"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt23"
@@ -421,8 +422,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_23"
                         android:background="@drawable/shape_rare"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt33"
@@ -445,8 +446,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_33"
                         android:background="@drawable/shape_epic"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt43"
@@ -469,8 +470,8 @@
                         android:layout_marginLeft="2dp"
                         android:layout_toRightOf="@+id/chest_43"
                         android:background="@drawable/shape_legendary"
-                        android:src="@drawable/chestwall"
-                        android:padding="3dp" />
+                        android:padding="3dp"
+                        android:src="@drawable/chestwall" />
 
                     <TextView
                         android:id="@+id/txt53"
@@ -491,13 +492,13 @@
             </HorizontalScrollView>
 
             <Button
+                android:id="@+id/pay_chest_3"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/scrollchest_3"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="2dp"
-                android:id="@+id/pay_chest_3"
-                android:background="@drawable/shape_yellow"
+                android:background="@drawable/shape_mahv"
                 android:text="پـرداخــت"
                 android:textColor="@color/dark_yellow" />
         </RelativeLayout>
