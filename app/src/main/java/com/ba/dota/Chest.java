@@ -7,10 +7,14 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -72,17 +76,20 @@ import java.util.Map;
 
 public class Chest extends AppCompatActivity {
 
-    Button text_dis, pay_chest_1, pay_chest_2, pay_chest_3;
+    Button btn_dis, pay_chest_1, pay_chest_2, pay_chest_3;
     ImageView chest_11, chest_21, chest_31, chest_41, chest_51; //chest one
     ImageView chest_12, chest_22, chest_32, chest_42, chest_52; //chest two
     ImageView chest_13, chest_23, chest_33, chest_43, chest_53; //chest three
 
-   public static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
+    public static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chest);
+
+
+        btn_dis = (Button) findViewById(R.id.btn_dis);
 
         pay_chest_1 = (Button) findViewById(R.id.pay_chest_1);
         pay_chest_2 = (Button) findViewById(R.id.pay_chest_2);
@@ -94,11 +101,11 @@ public class Chest extends AppCompatActivity {
         chest_41 = (ImageView) findViewById(R.id.chest_41);
         chest_51 = (ImageView) findViewById(R.id.chest_51);
 
-        setImagechest(url,0,chest_11);
-        setImagechest(url,1,chest_21);
-        setImagechest(url,2,chest_31);
-        setImagechest(url,3,chest_41);
-        setImagechest(url,4,chest_51);
+        setImagechest(url, 0, chest_11);
+        setImagechest(url, 1, chest_21);
+        setImagechest(url, 2, chest_31);
+        setImagechest(url, 3, chest_41);
+        setImagechest(url, 4, chest_51);
 
 
         chest_12 = (ImageView) findViewById(R.id.chest_12); //aks aval radif dovom
@@ -107,12 +114,11 @@ public class Chest extends AppCompatActivity {
         chest_42 = (ImageView) findViewById(R.id.chest_42);
         chest_52 = (ImageView) findViewById(R.id.chest_52);
 
-        setImagechest(url,0,chest_12);
-        setImagechest(url,1,chest_22);
-        setImagechest(url,2,chest_32);
-        setImagechest(url,3,chest_42);
-        setImagechest(url,4,chest_52);
-
+        setImagechest(url, 0, chest_12);
+        setImagechest(url, 1, chest_22);
+        setImagechest(url, 2, chest_32);
+        setImagechest(url, 3, chest_42);
+        setImagechest(url, 4, chest_52);
 
 
         chest_13 = (ImageView) findViewById(R.id.chest_13); //aks aval radif seyom :)
@@ -121,18 +127,33 @@ public class Chest extends AppCompatActivity {
         chest_43 = (ImageView) findViewById(R.id.chest_43);
         chest_53 = (ImageView) findViewById(R.id.chest_53);
 
-        setImagechest(url,0,chest_13);
-        setImagechest(url,1,chest_23);
-        setImagechest(url,2,chest_33);
-        setImagechest(url,3,chest_43);
-        setImagechest(url,4,chest_53);
+        setImagechest(url, 0, chest_13);
+        setImagechest(url, 1, chest_23);
+        setImagechest(url, 2, chest_33);
+        setImagechest(url, 3, chest_43);
+        setImagechest(url, 4, chest_53);
 
 
+        int width = LinearLayout.LayoutParams.WRAP_CONTENT;
+        int height = LinearLayout.LayoutParams.WRAP_CONTENT;
 
+        LayoutInflater inflater = (LayoutInflater)
+                getSystemService(LAYOUT_INFLATER_SERVICE);
+
+
+        View view = inflater.inflate(R.layout.activity_rules, null);
+        final PopupWindow popupWindow = new PopupWindow(view, width, height, true);
+
+
+        btn_dis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.showAtLocation(btn_dis, Gravity.TOP, 0, 0);
+            }
+        });
 
 
         startService(new Intent(this, ChestNotification.class));
-
 
 
         pay_chest_1.setOnClickListener(new View.OnClickListener() {
@@ -162,7 +183,7 @@ public class Chest extends AppCompatActivity {
         });
     }
 
-    public void setImagechest(String url, final int pos, final ImageView image){
+    public void setImagechest(String url, final int pos, final ImageView image) {
 
 
         final String[] imagechest = {null};
@@ -198,7 +219,7 @@ public class Chest extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
 
-                imagechest[0] =null;
+                imagechest[0] = null;
             }
         }) {
             @Override
@@ -223,7 +244,6 @@ public class Chest extends AppCompatActivity {
         requestQueue.add(jsonRequest);
 
     }
-
 
 
 }

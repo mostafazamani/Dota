@@ -113,7 +113,7 @@ public class AgilityBio extends Fragment implements View.OnClickListener {
                 DialogHeroBio.instance(R.drawable.luna, "Luna", R.raw.luna).show(getFragmentManager(), "oops");
                 break;
             case R.id.medusa:
-                DialogHeroBio.instance(R.drawable.anti_mage, "Medusa", 2).show(getFragmentManager(), "oops");
+                DialogHeroBio.instance(R.drawable.medusa, "Medusa", R.raw.medusa).show(getFragmentManager(), "oops");
                 break;
             case R.id.meepo:
                 DialogHeroBio.instance(R.drawable.meepo, "Meepo", R.raw.meepo).show(getFragmentManager(), "oops");
