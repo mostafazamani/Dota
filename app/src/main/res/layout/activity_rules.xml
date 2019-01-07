@@ -37,4 +37,5 @@
             android:text="@string/chest" />
 
     </RelativeLayout>
+
 </RelativeLayout>
