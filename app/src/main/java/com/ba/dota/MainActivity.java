@@ -1,14 +1,27 @@
 package com.ba.dota;
 
 import android.app.ActivityManager;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 
 import java.util.Iterator;
 import java.util.List;
@@ -25,6 +38,38 @@ public class MainActivity extends AppCompatActivity {
         heros_bio = (Button) findViewById(R.id.bio);
         about_us = (Button) findViewById(R.id.about_us);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.main_layout);
+
+        try {
+            final int versionCode = (MainActivity.this).getPackageManager()
+                    .getPackageInfo((MainActivity.this).getPackageName(), 0).versionCode;
+
+
+            RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+            StringRequest request = new StringRequest("http://prodall.ir/myupload/version.txt", new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                     Toast.makeText(MainActivity.this, "" + response, Toast.LENGTH_SHORT).show();
+
+                    if (!((String.valueOf(versionCode)).equals(response)))update(MainActivity.this);
+
+                }
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(MainActivity.this, "Time Out", Toast.LENGTH_SHORT).show();
+
+
+                }
+            });
+
+            requestQueue.add(request);
+
+
+
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+
 
 
 
@@ -69,6 +114,36 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return true; // App is in background or foreground
+    }
+
+
+    private void update(Context ctx) {
+        String urlup = "http://prodall.ir";
+
+
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse(urlup));
+        PendingIntent contentIntent = PendingIntent.getActivity(ctx, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder b = new NotificationCompat.Builder(ctx);
+
+        b.setAutoCancel(true)
+                .setDefaults(Notification.DEFAULT_ALL)
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.drawable.add)
+                .setTicker("Hearty365")
+                .setContentTitle("Update")
+                .setContentText("اپ کن دیوث")
+                .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND)
+                .setContentIntent(contentIntent)
+                .setContentInfo("Info");
+
+
+        NotificationManager notificationManager = (NotificationManager) ctx.getSystemService(Context.NOTIFICATION_SERVICE);
+
+        notificationManager.notify(1, b.build());
+
+
     }
 
 }

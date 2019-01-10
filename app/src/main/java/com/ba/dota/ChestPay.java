@@ -70,12 +70,13 @@ public class ChestPay extends AppCompatActivity {
             @Override
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
                 if (isPaymentSuccess) {
-                    SetsenderChest sc = SetsenderChest.chestinstance(x, refID, random);
+                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, refID, random,3);
                     sc.show((ChestPay.this).getFragmentManager(), "ff");
 
                 } else {
-                    SetsenderChest setsenderChest = SetsenderChest.chestinstance(per.getInt("nc", 0), refID, per.getInt("random", 5));
-                    setsenderChest.show((ChestPay.this).getFragmentManager(), "ff");
+                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, refID, random,3);
+                    sc.show((ChestPay.this).getFragmentManager(), "ff");
+
                 }
 
 
@@ -100,7 +101,10 @@ public class ChestPay extends AppCompatActivity {
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+             //   finish();
+                SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, "gg", random,3);
+                sc.show((ChestPay.this).getFragmentManager(), "ff");
+
             }
         });
 

@@ -17,6 +17,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONObject;
@@ -25,6 +26,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+import static com.ba.dota.SetSender.uri;
+
 public class SetsenderChest extends DialogFragment {
 
     TextView text;
@@ -32,12 +35,16 @@ public class SetsenderChest extends DialogFragment {
     ProgressBar prog;
 
 
-    public static SetsenderChest chestinstance(int numberchest, String refid, int x) {
+    public static SetsenderChest chestinstance(String name, String trade, String number, int numberchest, String refid, int x, int i) {
         SetsenderChest chest = new SetsenderChest();
         Bundle bundle = new Bundle();
         bundle.putInt("numberchest", numberchest);
         bundle.putString("refid", refid);
         bundle.putInt("x", x);
+        bundle.putString("name", name);
+        bundle.putString("tradelink", trade);
+        bundle.putString("numberphone", number);
+        bundle.putInt("i", i);
 
         chest.setArguments(bundle);
 
@@ -60,70 +67,67 @@ public class SetsenderChest extends DialogFragment {
 
         final int numberchest = getArguments().getInt("numberchest");
         final String refid = getArguments().getString("refid");
+        final String name = getArguments().getString("name");
+        final String tradelink = getArguments().getString("tradelink");
+        final String numberphone = getArguments().getString("numberphone");
+        final int numberitem = getArguments().getInt("x");
+        final int[] i = {getArguments().getInt("i")};
 
-        final int numberitem = getArguments().getInt("x") ;
-
-        text.setText("خرید شما با موفقیت انجام شد" +
-                "\n" +
-                "کدرهگیری:" +
-                refid );
-
-        btn_ok.setText("Show chest");
-
+        final String url = "http://prodall.ir/myupload/chestdota.php";
 
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
 
-        final Map<String, String> param = new HashMap<String, String>();
 
-        param.put("numberchest", String.valueOf(numberchest));
-        param.put("numberitem", String.valueOf(numberitem));
-        param.put("refid", refid);
-/*
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, new JSONObject(param), new Response.Listener<JSONObject>() {
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONObject response) {
-                text.setText("خرید تکمیل شد");
-                prog.setVisibility(View.INVISIBLE);
+            public void onResponse(String response) {
+
+                text.setText("خرید تکمیل شد" +
+                        "\n" +
+                        "کدرهگیری:" +
+                        response);
                 btn_ok.setVisibility(View.VISIBLE);
+                prog.setVisibility(View.INVISIBLE);
+
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
-                text.setText("خطا در تکمیل خرید");
+                text.setText("connection failed");
+                btn_ref.setVisibility(View.VISIBLE);
                 prog.setVisibility(View.INVISIBLE);
 
-                if (x[0] < 3) {
-                    btn_ref.setVisibility(View.VISIBLE);
-                } else {
-                    btn_ok.setVisibility(View.VISIBLE);
-                }
 
             }
         }) {
             @Override
-            public Map<String, String> getHeaders() throws AuthFailureError {
-                HashMap<String, String> headers = new HashMap<String, String>();
-                headers.put("Content-Type", "application/json; charset=utf-8");
-                return headers;
+            protected Map<String, String> getParams() {
+                Map<String, String> p = new HashMap<String, String>();
+
+                p.put("name", name);
+                p.put("chest", String.valueOf(numberchest));
+                p.put("tradelink", tradelink);
+                p.put("numberphone", numberphone);
+                p.put("refid", refid);
+                p.put("chestitem", String.valueOf(numberitem));
+
+                return p;
             }
         };
 
         queue.add(request);
 
-*/
+
         btn_ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), ShowChest.class);
-                intent.putExtra("chestnumber",numberchest);
-                intent.putExtra("numberitem",numberitem);
+                intent.putExtra("chestnumber", numberchest);
+                intent.putExtra("numberitem", numberitem);
 
 
                 startActivity(intent);
-
-
 
 
             }
@@ -133,32 +137,55 @@ public class SetsenderChest extends DialogFragment {
             @Override
             public void onClick(View v) {
 
+                i[0]++;
 
                 text.setText("درحال تکمیل خرید....");
 
-                JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, "", new JSONObject(param), new Response.Listener<JSONObject>() {
+                StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                     @Override
-                    public void onResponse(JSONObject response) {
-                        text.setText("خرید تکمیل شد");
-                        prog.setVisibility(View.INVISIBLE);
+                    public void onResponse(String response) {
+
+                        text.setText("خرید تکمیل شد" +
+                                "\n" +
+                                "کدرهگیری:" +
+                                response);
                         btn_ok.setVisibility(View.VISIBLE);
-                        btn_ref.setVisibility(View.INVISIBLE);
+                        prog.setVisibility(View.INVISIBLE);
+
 
                     }
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        text.setText("خطا در تکمیل خرید");
-                        prog.setVisibility(View.INVISIBLE);
+                        text.setText("connection failed");
+                        if (i[0] > 2) {
 
+                            btn_ref.setVisibility(View.INVISIBLE);
+                            btn_ok.setVisibility(View.VISIBLE);
+                            prog.setVisibility(View.INVISIBLE);
+
+
+                        } else {
+                            btn_ref.setVisibility(View.VISIBLE);
+                            prog.setVisibility(View.INVISIBLE);
+                        }
 
                     }
                 }) {
                     @Override
-                    public Map<String, String> getHeaders() throws AuthFailureError {
-                        HashMap<String, String> headers = new HashMap<String, String>();
-                        headers.put("Content-Type", "application/json; charset=utf-8");
-                        return headers;
+                    protected Map<String, String> getParams() {
+                        Map<String, String> p = new HashMap<String, String>();
+
+
+                        p.put("name", name);
+                        p.put("chest", String.valueOf(numberchest));
+                        p.put("tradelink", tradelink);
+                        p.put("numberphone", numberphone);
+                        p.put("refid", refid);
+                        p.put("chestitem", String.valueOf(numberitem));
+
+
+                        return p;
                     }
                 };
 

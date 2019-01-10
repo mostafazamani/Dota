@@ -35,7 +35,7 @@ public class ChestNotification extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         super.onStartCommand(intent, flags, startId);
 
-        Toast.makeText(this, "start", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "start", Toast.LENGTH_SHORT).show();
 
         startTimer();
 
@@ -45,14 +45,14 @@ public class ChestNotification extends Service {
 
     @Override
     public void onCreate() {
-        Toast.makeText(this, "create", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "create", Toast.LENGTH_SHORT).show();
 
     }
 
     @Override
     public void onDestroy() {
 
-        Toast.makeText(this, "destroy", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "destroy", Toast.LENGTH_SHORT).show();
         stoptimertask();
         super.onDestroy();
 
@@ -67,8 +67,8 @@ public class ChestNotification extends Service {
         timer = new Timer();
 
         initializeTimerTask();
-        //Toast.makeText(this, "aaaaa", Toast.LENGTH_SHORT).show();
-        timer.schedule(timerTask, 860000, 860000); //
+
+        timer.schedule(timerTask, 86000000, 86400000);
     }
 
     public void stoptimertask() {

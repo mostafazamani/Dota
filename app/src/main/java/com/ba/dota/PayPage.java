@@ -139,7 +139,15 @@ public class PayPage extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+          //      finish();
+
+                SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                        item_name,
+                        trade.getText().toString(),
+                        number.getText().toString(),
+                        "dd",
+                        x);
+                sender.show((PayPage.this).getFragmentManager(), "send");
 
             }
         });
@@ -173,8 +181,8 @@ public class PayPage extends AppCompatActivity {
 
     }
 
-    @Override
+   /* @Override
     public void onBackPressed() {
         return;
-    }
+    }*/
 }

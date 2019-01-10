@@ -34,7 +34,7 @@ public class DbUtil extends SQLiteOpenHelper {
             ");";
 
 
-    private static final String[] allColumns = {Items.Key_Id, Items.KEY_TEXT, Items.KEY_IMAGE, Items.KEY_CAST};
+   // private static final String[] allColumns = {Items.Key_Id, Items.KEY_TEXT, Items.KEY_IMAGE, Items.KEY_CAST};
 
 
     public DbUtil(Context context) {
@@ -54,7 +54,7 @@ public class DbUtil extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CMD);
-        Toast.makeText(context, "created", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(context, "created", Toast.LENGTH_SHORT).show();
 
     }
 
