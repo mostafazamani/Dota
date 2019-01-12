@@ -156,8 +156,8 @@ public static final StrengthBio stinstanc(){
                 DialogHeroBio.instance(R.drawable.slardar, "Slarder", R.raw.slardar).show(getFragmentManager(), "oops");
                 break;
           //  case R.id.spiritbreaker:
-           //     DialogHeroBio.instance(R.drawable.spirit_breaker, "Spirit Breaker", R.raw.spiritbreaker).show(getFragmentManager(), "oops");
-           //     break;
+            //    DialogHeroBio.instance(R.drawable.spirit_breaker, "Spirit Breaker", R.raw.spiritbreaker).show(getFragmentManager(), "oops");
+              //  break;
             case R.id.sven:
                 DialogHeroBio.instance(R.drawable.sven, "Sven", R.raw.sven).show(getFragmentManager(), "oops");
                 break;

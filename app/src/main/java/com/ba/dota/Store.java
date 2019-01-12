@@ -29,7 +29,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 
 public class Store extends AppCompatActivity {
-    Button st, ag, in, cart, chest;
+    Button st, ag, in, cart, chest , tra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class Store extends AppCompatActivity {
         setContentView(R.layout.activity_store);
 
 
+        tra = (Button) findViewById(R.id.go_training);
         st = (Button) findViewById(R.id.go_st);
         ag = (Button) findViewById(R.id.go_ag);
         in = (Button) findViewById(R.id.go_int);
@@ -172,6 +173,15 @@ public class Store extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(Store.this, ShowList.class));
+
+            }
+        });
+
+        tra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(Store.this, Training.class));
 
             }
         });

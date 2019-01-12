@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="#695c6570"
+            android:id="@+id/traderelat"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:text="Trade Link :"
+                android:id="@+id/train_trade_text"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:gravity="left"
+
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/train_line_1"
+                android:layout_below="@+id/train_trade_text"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/train_line_1"
+                android:layout_marginTop="3dp"
+                android:padding="3dp"
+                android:text="@string/trade_dis"
+                android:textColor="@color/WhiteSmoke"
+                android:id="@+id/trade_dis"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/trade_dis"
+                android:src="@drawable/trade"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:id="@+id/image_trade_link"
+                />
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_mahv"
+                android:text="Open On Steam"
+                android:layout_below="@+id/image_trade_link"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_centerHorizontal="true"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#695c6570"
+
+            android:layout_below="@+id/traderelat"
+            android:layout_marginTop="20dp"
+            android:id="@+id/inventoryrelat"
+            >
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:text="Inventory :"
+                android:id="@+id/train_inventory_text"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:gravity="left"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/train_inventory_text"
+                android:background="@color/white"
+                android:layout_marginTop="1dp"
+                android:id="@+id/inventory_line"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:padding="3dp"
+                android:text="@string/inventory_exp"
+
+                android:id="@+id/inventory_text"
+                android:layout_below="@+id/inventory_line"
+
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/inventory"
+                android:layout_below="@+id/inventory_text"
+                android:layout_margin="3dp"
+                />
+
+        </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/inventoryrelat"
+                android:layout_marginTop="20dp"
+                android:background="#695c6570">
+
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="30dp"
+                    android:text="Description :"
+                    android:id="@+id/train_dis_text"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/train_dis_text"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

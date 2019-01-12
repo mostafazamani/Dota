@@ -20,11 +20,20 @@
 شانس خود را امتحان کنید...
     </string>
 
+    <string name="trade_dis">
+        ازین لینک برای انتقال آیتم های خریداری شده استفاده می شود.
+        \n
+        پس از باز کردن "Steam" در "View" و قسمت "Inventory" لینکی که در تصویر مشاهد میکنید را کپی کرده و در مشخصات خرید استفاده میکنید.
+    </string>
     <string name="trade_exp">
         ازین این لینک برای انتقال آیتم ها استفاده می شود
         \n
 
         Steam -> Inventory -> Trade Offer -> Who Can Send Me Trade Offer -> Copy Trade Url
         \n
+    </string>
+
+    <string name="inventory_exp">
+        دوستان عزیز توجه کنید که برای انتقال آیتم ها در Steam با حتماInventory را روی گزینه ی Public قرار دهید.
     </string>
 </resources>

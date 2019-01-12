@@ -21,6 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Training" />
         <activity android:name=".Store" />
         <activity android:name=".StrengthStore" />
         <activity android:name=".AgilityStore" />
