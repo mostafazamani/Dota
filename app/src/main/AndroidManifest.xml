@@ -11,141 +11,378 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".Training" />
-        <activity android:name=".Store" />
-        <activity android:name=".StrengthStore" />
-        <activity android:name=".AgilityStore" />
-        <activity android:name=".InteligenceStore" />
-        <activity android:name=".ShowList" />
-        <activity android:name=".hero.strength.Abaddon" />
-        <activity android:name=".hero.strength.Alchemist" />
-        <activity android:name=".hero.strength.Axe" />
-        <activity android:name=".hero.strength.Beastmaster" />
-        <activity android:name=".hero.strength.Brewmaster" />
-        <activity android:name=".hero.strength.Bristleback" />
-        <activity android:name=".hero.strength.CentaurWarrunner" />
-        <activity android:name=".hero.strength.ChaosKnight" />
-        <activity android:name=".hero.strength.Clockwerk" />
-        <activity android:name=".hero.strength.Doom" />
-        <activity android:name=".hero.strength.DragonKnight" />
-        <activity android:name=".hero.strength.Earthshaker" />
-        <activity android:name=".hero.strength.EarthSpirit" />
-        <activity android:name=".hero.strength.ElderTitan" />
-        <activity android:name=".hero.strength.Huskar" />
-        <activity android:name=".hero.strength.IO" />
-        <activity android:name=".hero.strength.Kunkka" />
-        <activity android:name=".hero.strength.LegionCommander" />
-        <activity android:name=".hero.strength.Lifestealer" />
-        <activity android:name=".hero.strength.Lycan" />
-        <activity android:name=".hero.strength.Magnus" />
-        <activity android:name=".hero.strength.NightStalker" />
-        <activity android:name=".hero.strength.Omniknight" />
-        <activity android:name=".hero.strength.Phoenix" />
-        <activity android:name=".hero.strength.Pudge" />
-        <activity android:name=".hero.strength.SandKing" />
-        <activity android:name=".hero.strength.Slardar" />
-        <activity android:name=".hero.strength.SpiritBreaker" />
-        <activity android:name=".hero.strength.Sven" />
-        <activity android:name=".hero.strength.Tidehunter" />
-        <activity android:name=".hero.strength.Timbersaw" />
-        <activity android:name=".hero.strength.Tiny" />
-        <activity android:name=".hero.strength.TreantProtector" />
-        <activity android:name=".hero.strength.Tusk" />
-        <activity android:name=".hero.strength.Underlord" />
-        <activity android:name=".hero.strength.Undying" />
-        <activity android:name=".hero.strength.WraithKing" />
-        <activity android:name=".hero.agility.AntiMage" />
-        <activity android:name=".hero.agility.ArcWarden" />
-        <activity android:name=".hero.agility.Bloodseeker" />
-        <activity android:name=".hero.agility.BountyHunter" />
-        <activity android:name=".hero.agility.Broodmother" />
-        <activity android:name=".hero.agility.Clinkz" />
-        <activity android:name=".hero.agility.DrowRanger" />
-        <activity android:name=".hero.agility.EmberSpirit" />
-        <activity android:name=".hero.agility.FacelessVoid" />
-        <activity android:name=".hero.agility.Gyrocopter" />
-        <activity android:name=".hero.agility.Juggernaut" />
-        <activity android:name=".hero.agility.LoneDruid" />
-        <activity android:name=".hero.agility.Luna" />
-        <activity android:name=".hero.agility.Medusa" />
-        <activity android:name=".hero.agility.Meepo" />
-        <activity android:name=".hero.agility.Mirana" />
-        <activity android:name=".hero.agility.MonkeyKing" />
-        <activity android:name=".hero.agility.Morphling" />
-        <activity android:name=".hero.agility.NagaSiren" />
-        <activity android:name=".hero.agility.NyxAssassin" />
-        <activity android:name=".hero.agility.Pangolier" />
-        <activity android:name=".hero.agility.PhantomAssassin" />
-        <activity android:name=".hero.agility.PhantomLancer" />
-        <activity android:name=".hero.agility.Razor" />
-        <activity android:name=".hero.agility.Riki" />
-        <activity android:name=".hero.agility.ShadowFiend" />
-        <activity android:name=".hero.agility.Slark" />
-        <activity android:name=".hero.agility.Sniper" />
-        <activity android:name=".hero.agility.Spectre" />
-        <activity android:name=".hero.agility.TemplarAssassin" />
-        <activity android:name=".hero.agility.Terrorblade" />
-        <activity android:name=".hero.agility.TrollWarlord" />
-        <activity android:name=".hero.agility.Ursa" />
-        <activity android:name=".hero.agility.VengefulSpirit" />
-        <activity android:name=".hero.agility.Venomancer" />
-        <activity android:name=".hero.agility.Viper" />
-        <activity android:name=".hero.agility.Weaver" />
-        <activity android:name=".hero.intelligence.AncientApparition" />
-        <activity android:name=".hero.intelligence.Bane" />
-        <activity android:name=".hero.intelligence.Batrider" />
-        <activity android:name=".hero.intelligence.Chen" />
-        <activity android:name=".hero.intelligence.CrystalMaiden" />
-        <activity android:name=".hero.intelligence.DarkSeer" />
-        <activity android:name=".hero.intelligence.DarkWillow" />
-        <activity android:name=".hero.intelligence.Dazzle" />
-        <activity android:name=".hero.intelligence.DeathProphet" />
-        <activity android:name=".hero.intelligence.Disruptor" />
-        <activity android:name=".hero.intelligence.Enchantress" />
-        <activity android:name=".hero.intelligence.Enigma" />
-        <activity android:name=".hero.intelligence.Grimstroke" />
-        <activity android:name=".hero.intelligence.Invoker" />
-        <activity android:name=".hero.intelligence.Jakiro" />
-        <activity android:name=".hero.intelligence.KeeperOfTheLight" />
-        <activity android:name=".hero.intelligence.Leshrac" />
-        <activity android:name=".hero.intelligence.Lich" />
-        <activity android:name=".hero.intelligence.Lina" />
-        <activity android:name=".hero.intelligence.Lion" />
-        <activity android:name=".hero.intelligence.NatureProphet" />
-        <activity android:name=".hero.intelligence.Necrophos" />
-        <activity android:name=".hero.intelligence.OgreMagi" />
-        <activity android:name=".hero.intelligence.Oracle" />
-        <activity android:name=".hero.intelligence.OutworldDevourer" />
-        <activity android:name=".hero.intelligence.Puck" />
-        <activity android:name=".hero.intelligence.Pugna" />
-        <activity android:name=".hero.intelligence.QueenOfPain" />
-        <activity android:name=".hero.intelligence.Rubick" />
-        <activity android:name=".hero.intelligence.ShadowDemon" />
-        <activity android:name=".hero.intelligence.ShadowShaman" />
-        <activity android:name=".hero.intelligence.Silencer" />
-        <activity android:name=".hero.intelligence.SkywrathMage" />
-        <activity android:name=".hero.intelligence.StormSpirit" />
-        <activity android:name=".hero.intelligence.Techies" />
-        <activity android:name=".hero.intelligence.Tinker" />
-        <activity android:name=".hero.intelligence.Visage" />
-        <activity android:name=".hero.intelligence.Warlock" />
-        <activity android:name=".hero.intelligence.Windranger" />
-        <activity android:name=".hero.intelligence.WinterWyvern" />
-        <activity android:name=".hero.intelligence.WitchDoctor" />
-        <activity android:name=".hero.intelligence.Zeus" />
+        <activity
+            android:name=".Store"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StrengthStore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AgilityStore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InteligenceStore"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ShowList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Abaddon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Alchemist"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Axe"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Beastmaster"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Brewmaster"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Bristleback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.CentaurWarrunner"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.ChaosKnight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Clockwerk"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Doom"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.DragonKnight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Earthshaker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.EarthSpirit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.ElderTitan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Huskar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.IO"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Kunkka"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.LegionCommander"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Lifestealer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Lycan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Magnus"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.NightStalker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Omniknight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Phoenix"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Pudge"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.SandKing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Slardar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.SpiritBreaker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Sven"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Tidehunter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Timbersaw"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Tiny"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.TreantProtector"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Tusk"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Underlord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.Undying"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.strength.WraithKing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.AntiMage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.ArcWarden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Bloodseeker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.BountyHunter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Broodmother"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Clinkz"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.DrowRanger"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.EmberSpirit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.FacelessVoid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Gyrocopter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Juggernaut"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.LoneDruid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Luna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Medusa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Meepo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Mirana"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.MonkeyKing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Morphling"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.NagaSiren"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.NyxAssassin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Pangolier"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.PhantomAssassin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.PhantomLancer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Razor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Riki"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.ShadowFiend"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Slark"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Sniper"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Spectre"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.TemplarAssassin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Terrorblade"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.TrollWarlord"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Ursa"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.VengefulSpirit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Venomancer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Viper"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.agility.Weaver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.AncientApparition"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Bane"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Batrider"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Chen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.CrystalMaiden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.DarkSeer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.DarkWillow"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Dazzle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.DeathProphet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Disruptor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Enchantress"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Enigma"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Grimstroke"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Invoker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Jakiro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.KeeperOfTheLight"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Leshrac"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Lich"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Lina"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Lion"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.NatureProphet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Necrophos"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.OgreMagi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Oracle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.OutworldDevourer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Puck"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Pugna"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.QueenOfPain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Rubick"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.ShadowDemon"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.ShadowShaman"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Silencer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.SkywrathMage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.StormSpirit"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Techies"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Tinker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Visage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Warlock"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Windranger"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.WinterWyvern"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.WitchDoctor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hero.intelligence.Zeus"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".PayPage"
             android:label="@string/title_activity_pay_page"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -156,8 +393,12 @@
                 <data android:scheme="return" />
             </intent-filter>
         </activity>
-        <activity android:name=".Chest" />
-        <activity android:name=".ChestPay">
+        <activity
+            android:name=".Chest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChestPay"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -167,7 +408,9 @@
                 <data android:scheme="ches" />
             </intent-filter>
         </activity>
-        <activity android:name=".HerosBio" />
+        <activity
+            android:name=".HerosBio"
+            android:screenOrientation="portrait" />
 
         <service
             android:name=".ChestNotification"
@@ -179,8 +422,20 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".ShowChest"/>
-        <activity android:name=".AboutUs"/>
+        <activity
+            android:name=".ShowChest"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AboutUs"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Lunch"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
