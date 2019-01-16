@@ -19,8 +19,8 @@ public class Lunch extends AppCompatActivity {
                 Intent intent = new Intent(Lunch.this, MainActivity.class);
 
                 startActivity(intent);
-                finish();
 
+                finish();
             }
         },3000);
 
