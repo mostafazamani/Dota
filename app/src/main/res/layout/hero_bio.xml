@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:background="@drawable/ancientwall"
 
+    android:layout_below="@+id/topimage_herosbio"
+    android:layout_above="@+id/bottonimage_heros"
     android:padding="5dp">
 
     <RelativeLayout
@@ -49,7 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#99000002"
+            android:paddingRight="3dp"
             android:gravity="right"
+            android:textSize="18sp"
 
             />
     </ScrollView>

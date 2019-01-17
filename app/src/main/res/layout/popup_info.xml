@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="300dp"
     android:layout_height="200dp"
+    android:padding="15dp"
     android:background="@drawable/square">
 
     <TextView
@@ -10,13 +11,11 @@
         android:layout_width="290dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:background="@color/Silver"
+        android:padding="5dp"
+        android:background="@drawable/shape_mahv"
         android:gravity="center"
         android:text="@string/trade_exp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
 
         />
@@ -27,12 +26,10 @@
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/txt_trade_exp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/Silver"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_mahv"
         android:text="بلـــه"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
     <Button
@@ -41,12 +38,11 @@
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/txt_trade_exp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/Silver"
+
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_mahv"
         android:text="اطلاعات بیشتر!"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textStyle="bold" />
 
 
