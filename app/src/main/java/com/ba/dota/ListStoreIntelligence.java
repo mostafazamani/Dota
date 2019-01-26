@@ -114,20 +114,21 @@ public class ListStoreIntelligence extends BaseAdapter {
 
                 }
 
-                imageView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        BigImage bigImage = BigImage.newInstace(list_view.get(position).getUri_image());
-
-                        bigImage.show(activity.getFragmentManager(), "lol");
-
-                    }
-                });
-
 
 
             }
         });
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                BigImage bigImage = BigImage.newInstace(list_view.get(position).getUri_image());
+
+                bigImage.show(activity.getFragmentManager(), "lol");
+
+            }
+        });
+
 
 
         return v;
