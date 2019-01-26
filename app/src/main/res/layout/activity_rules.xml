@@ -7,7 +7,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="300dp"
-        android:background="#dd5555ff">
+        android:background="#d9051359">
 
         <ImageView
             android:id="@+id/rulescard"
