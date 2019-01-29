@@ -70,12 +70,16 @@ public class ChestPay extends AppCompatActivity {
             @Override
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
                 if (isPaymentSuccess) {
-                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, refID, random,3);
+                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),
+                            trade.getText().toString(),number.getText().toString(),x, refID, random,3);
+
                     sc.show((ChestPay.this).getFragmentManager(), "ff");
 
                 } else {
-                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, refID, random,3);
-                    sc.show((ChestPay.this).getFragmentManager(), "ff");
+                    Toast.makeText(ChestPay.this, "خطا در خرید", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(new Intent(ChestPay.this,MainActivity.class));
+
 
                 }
 
@@ -88,23 +92,25 @@ public class ChestPay extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if (payer_name.getText().toString().matches("")||trade.getText().toString().matches("")||
+                        number.getText().toString().matches("")){
+                    Toast.makeText(ChestPay.this, "فیلد هارا پر کنید", Toast.LENGTH_SHORT).show();
+
+                }else {
 
                     editor.putInt("random", random);
                     editor.putInt("nc", x);
                     editor.apply();
 
                     paysetting(am, g);
-
+                }
             }
         });
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             //   finish();
-                SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),trade.getText().toString(),number.getText().toString(),x, "gg", random,3);
-                sc.show((ChestPay.this).getFragmentManager(), "ff");
-
+                finish();
             }
         });
 
@@ -115,7 +121,7 @@ public class ChestPay extends AppCompatActivity {
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
 
-        request.setMerchantID("22de3196-c5de-11e6-b6d8-005056a205be");
+        request.setMerchantID("ba319298-2385-11e9-b774-005056a205be");
         request.setAmount(amount);
         request.setDescription("DotA 2 Items :\n" +
                 itemname);

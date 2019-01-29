@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, Store.class));
             }
         });
-        Toast.makeText(this, "" + isAppRunning(), Toast.LENGTH_SHORT).show();
+
 
         if (isAppRunning()) dbUtil.EmptyTable();
 
@@ -252,6 +252,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
-
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        System.exit(0);
+    }
 }

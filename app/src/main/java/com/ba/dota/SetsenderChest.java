@@ -94,7 +94,7 @@ public class SetsenderChest extends DialogFragment {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                text.setText("connection failed");
+                text.setText("connection failed...");
                 btn_ref.setVisibility(View.VISIBLE);
                 prog.setVisibility(View.INVISIBLE);
 
@@ -157,9 +157,13 @@ public class SetsenderChest extends DialogFragment {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        text.setText("connection failed");
+                        text.setText("connection failed...");
                         if (i[0] > 2) {
 
+                            text.setText("connection failed\n" +
+                                    "کد زیر را به تلگرام بفرستید" +
+                                    "\n" +
+                                    refid);
                             btn_ref.setVisibility(View.INVISIBLE);
                             btn_ok.setVisibility(View.VISIBLE);
                             prog.setVisibility(View.INVISIBLE);

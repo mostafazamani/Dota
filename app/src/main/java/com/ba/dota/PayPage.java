@@ -76,15 +76,10 @@ public class PayPage extends AppCompatActivity {
 
                 } else {
 
-                    Toast.makeText(PayPage.this, "wrong..." + refID, Toast.LENGTH_SHORT).show();
-                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                            item_name,
-                            trade.getText().toString(),
-                            number.getText().toString(),
-                            refID,
-                            x);
-                    sender.setCancelable(false);
-                    sender.show((PayPage.this).getFragmentManager(), "send");
+                    Toast.makeText(PayPage.this, "خطا در خرید", Toast.LENGTH_SHORT).show();
+                    finish();
+                    startActivity(new Intent(PayPage.this,MainActivity.class));
+
                 }
 
 
@@ -119,9 +114,11 @@ public class PayPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(payer_name.getText() == null || trade.getText() == null || number.getText() == null )
+                if(payer_name.getText() == null|| payer_name.getText().toString().matches("")
+                        || trade.getText() == null|| trade.getText().toString().matches("")
+                        || number.getText() == null|| number.getText().toString().matches("") )
                 {
-                    Toast.makeText(PayPage.this, " مشخصات را پر کنید...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PayPage.this, " فیلد ها را پر کنید", Toast.LENGTH_SHORT).show();
                 }
                 else {
 
@@ -139,15 +136,8 @@ public class PayPage extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-          //      finish();
+               finish();
 
-                SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
-                        item_name,
-                        trade.getText().toString(),
-                        number.getText().toString(),
-                        "dd",
-                        x);
-                sender.show((PayPage.this).getFragmentManager(), "send");
 
             }
         });
@@ -159,7 +149,7 @@ public class PayPage extends AppCompatActivity {
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
 
-        request.setMerchantID("22de3196-c5de-11e6-b6d8-005056a205be");
+        request.setMerchantID("ba319298-2385-11e9-b774-005056a205be");
         request.setAmount(amount);
         request.setDescription("DotA 2 Items :\n" +
                 itemname);
@@ -181,8 +171,8 @@ public class PayPage extends AppCompatActivity {
 
     }
 
-   /* @Override
+    @Override
     public void onBackPressed() {
         return;
-    }*/
+    }
 }
