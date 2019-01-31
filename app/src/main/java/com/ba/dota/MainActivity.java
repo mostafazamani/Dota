@@ -47,7 +47,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
-    Button store, btn, heros_bio, about_us;
+    Button store, btn, heros_bio, about_us,exit;
     DbUtil dbUtil;
 
     @Override
@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         store = (Button) findViewById(R.id.store);
         heros_bio = (Button) findViewById(R.id.bio);
         about_us = (Button) findViewById(R.id.about_us);
+        exit = (Button) findViewById(R.id.exit);
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.main_layout);
 
 
@@ -100,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                                         .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
+                                                finishAffinity();
                                                 System.exit(0);
                                             }
                                         })
@@ -201,6 +203,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle("")
+                        .setMessage("ایا میخواهید خارج شوید؟ ")
+                        .setPositiveButton("بله", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                finishAffinity();
+                                System.exit(0);
+                            }
+                        })
+                        .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .setCancelable(false)
+                        .setIcon(android.R.drawable.stat_sys_warning)
+                        .show();
+            }
+        });
+
 
         if (isAppRunning()) dbUtil.EmptyTable();
 
@@ -254,7 +281,25 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        finishAffinity();
-        System.exit(0);
+        new AlertDialog.Builder(MainActivity.this)
+                .setTitle("")
+                .setMessage("ایا میخواهید خارج شوید؟ ")
+                .setPositiveButton("بله", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("خیر", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .setCancelable(false)
+                .setIcon(android.R.drawable.stat_sys_warning)
+                .show();
+
     }
 }

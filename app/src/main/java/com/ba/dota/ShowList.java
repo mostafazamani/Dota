@@ -118,7 +118,6 @@ public class ShowList extends AppCompatActivity {
     private BroadcastReceiver msg = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
-            Toast.makeText(context, " lol", Toast.LENGTH_SHORT).show();
             recreate();
         }
     };
