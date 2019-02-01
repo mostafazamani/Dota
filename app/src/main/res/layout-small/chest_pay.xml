@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wall">
+
+    <TextView
+        android:id="@+id/chest_pay_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:text="مبلغ:"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/chest_amount_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chest_pay_text"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="10000 تومان "
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+
+    <RelativeLayout
+        android:id="@+id/chest_linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:background="#33000000">
+
+        <TextView
+            android:id="@+id/chest_pay_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="نام و نام خانوادگی :"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/chest_payer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chest_pay_name_text"
+            android:hint="Name :"
+            android:imeOptions="actionDone" />
+
+        <TextView
+            android:id="@+id/chest_pay_tradelink_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chest_payer_name"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="لینک ترد :"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/chest_image_info"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_below="@+id/chest_payer_name"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@+id/chest_pay_tradelink_text"
+            android:background="@drawable/mangoo" />
+
+        <EditText
+            android:id="@+id/chest_trade_link"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chest_pay_tradelink_text"
+            android:hint="Trade Link :"
+            android:imeOptions="actionDone" />
+
+        <TextView
+            android:id="@+id/chest_pay_number_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chest_trade_link"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="شماره ی تماس :"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/chest_payer_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/chest_pay_number_text"
+            android:hint="Number : 091****1015"
+            android:inputType="number"
+            android:maxLength="11" />
+
+        <Button
+            android:id="@+id/chest_pay_next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/chest_payer_number"
+            android:background="@drawable/shape_mahv"
+            android:textStyle="bold"
+            android:text="تکمیل خرید" />
+
+        <Button
+            android:id="@+id/chest_pay_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_mahv"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/chest_payer_number"
+            android:text="لـغــو"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/zarinpalpic" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/dotaload" />
+
+</RelativeLayout>

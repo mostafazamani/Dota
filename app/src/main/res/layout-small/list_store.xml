@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:layout_margin="2dp">
+
+    <ImageView
+        android:id="@+id/image_item"
+        android:layout_width="160dp"
+        android:padding="2dp"
+        android:background="@drawable/square"
+        android:layout_height="120dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp" />
+
+
+    <TextView
+
+        android:id="@+id/text_item"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_margin="5dp"
+        android:layout_toEndOf="@id/image_item"
+        android:background="@drawable/square"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/cast_item"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_item"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/toman"
+        android:background="@drawable/square"
+        android:gravity="center"
+
+
+        />
+
+    <TextView
+        android:id="@+id/toman"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/text_item"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/image_item"
+        android:background="@drawable/square"
+        android:gravity="center"
+
+        android:text="تومان"
+
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_below="@+id/text_item"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/cast_item"
+        android:background="@drawable/square"
+        android:text="+"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:textSize="40sp"/>
+
+
+</RelativeLayout>

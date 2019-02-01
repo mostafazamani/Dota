@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
+        android:background="#d9051359">
+
+        <ImageView
+            android:id="@+id/rulescard"
+            android:layout_width="match_parent"
+
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/card" />
+
+        <TextView
+            android:id="@+id/rulespic"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/rulescard"
+            android:drawableRight="@drawable/book"
+            android:padding="5dp"
+            android:text="    قوانیــــن"
+            android:textColor="#e2fff235"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rulespic"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4f515e5b"
+                android:textSize="18sp"
+                android:text="@string/chest" />
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallherosbio"
+    tools:context="com.ba.dota.HerosBio">
+
+    <ImageView
+        android:id="@+id/topimage_herosbio"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@drawable/topimagebio" />
+
+
+    <ImageView
+        android:id="@+id/bottonimage_heros"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottonimagebio" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topimage_herosbio"
+        android:layout_above="@+id/bottonimage_heros">
+
+        <android.support.v4.view.PagerTabStrip
+            android:id="@+id/page_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </android.support.v4.view.ViewPager>
+
+
+
+</RelativeLayout>

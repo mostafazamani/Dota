@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/l_intelstor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    android:background="@drawable/wallintelligence"
+    tools:context="com.ba.dota.InteligenceStore">
+
+
+    <Button
+        android:id="@+id/btn_ilist"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/store" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/btn_ilist"
+        android:gravity="center"
+        android:text="Intelligence"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/textView" />
+
+    <ListView
+        android:id="@+id/list_ishop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/btn_ilist"></ListView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_i"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        style="@style/progress"
+        android:background="@drawable/dotaloadblack"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+
+</RelativeLayout>
