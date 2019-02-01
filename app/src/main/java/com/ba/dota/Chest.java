@@ -82,6 +82,8 @@ public class Chest extends AppCompatActivity {
     ImageView chest_13, chest_23, chest_33, chest_43, chest_53; //chest three
 
     public static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
+    public static String url2 = "https://www.dropbox.com/s/kf8wphmsz7w19q4/Chest%202.json?dl=1";
+    public static String url3 = "https://www.dropbox.com/s/w9y65zdhiccwhxq/Chest%203.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,11 +116,11 @@ public class Chest extends AppCompatActivity {
         chest_42 = (ImageView) findViewById(R.id.chest_42);
         chest_52 = (ImageView) findViewById(R.id.chest_52);
 
-        setImagechest(url, 0, chest_12);
-        setImagechest(url, 1, chest_22);
-        setImagechest(url, 2, chest_32);
-        setImagechest(url, 3, chest_42);
-        setImagechest(url, 4, chest_52);
+        setImagechest(url2, 0, chest_12);
+        setImagechest(url2, 1, chest_22);
+        setImagechest(url2, 2, chest_32);
+        setImagechest(url2, 3, chest_42);
+        setImagechest(url2, 4, chest_52);
 
 
         chest_13 = (ImageView) findViewById(R.id.chest_13); //aks aval radif seyom :)
@@ -127,11 +129,11 @@ public class Chest extends AppCompatActivity {
         chest_43 = (ImageView) findViewById(R.id.chest_43);
         chest_53 = (ImageView) findViewById(R.id.chest_53);
 
-        setImagechest(url, 0, chest_13);
-        setImagechest(url, 1, chest_23);
-        setImagechest(url, 2, chest_33);
-        setImagechest(url, 3, chest_43);
-        setImagechest(url, 4, chest_53);
+        setImagechest(url3, 0, chest_13);
+        setImagechest(url3, 1, chest_23);
+        setImagechest(url3, 2, chest_33);
+        setImagechest(url3, 3, chest_43);
+        setImagechest(url3, 4, chest_53);
 
 
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;

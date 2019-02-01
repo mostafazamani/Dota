@@ -39,7 +39,7 @@ public class DarkSeer extends AppCompatActivity {
     ListStoreIntelligence intelligence;
     TextView textView;
 
-    public static final String url = "https://www.dropbox.com/s/euk7pqt1j8vvps9/Dark%20Willow.json?dl=0";
+    public static final String url = "https://www.dropbox.com/s/j6kpf81qo0slaz0/darkseer.json?dl=1";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

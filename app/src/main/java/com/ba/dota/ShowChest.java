@@ -55,9 +55,12 @@ public class ShowChest extends AppCompatActivity {
         int chest = getIntent().getIntExtra("chestnumber",0);
         int pos = getIntent().getIntExtra("numberitem",6);
 
-        setOpen_images(Chest.url,pos,open_image);
+
 
         if (chest==1){
+
+            setOpen_images(Chest.url,pos,open_image);
+
             setOpen_images(Chest.url,0,i1);
             setOpen_images(Chest.url,1,i2);
             setOpen_images(Chest.url,2,i3);
@@ -67,19 +70,25 @@ public class ShowChest extends AppCompatActivity {
 
 
         }else if (chest==2){
-            setOpen_images(Chest.url,0,i1);
-            setOpen_images(Chest.url,1,i2);
-            setOpen_images(Chest.url,2,i3);
-            setOpen_images(Chest.url,3,i4);
-            setOpen_images(Chest.url,4,i5);
+
+            setOpen_images(Chest.url2,pos,open_image);
+
+            setOpen_images(Chest.url2,0,i1);
+            setOpen_images(Chest.url2,1,i2);
+            setOpen_images(Chest.url2,2,i3);
+            setOpen_images(Chest.url2,3,i4);
+            setOpen_images(Chest.url2,4,i5);
 
 
         }else if (chest==3){
-            setOpen_images(Chest.url,0,i1);
-            setOpen_images(Chest.url,1,i2);
-            setOpen_images(Chest.url,2,i3);
-            setOpen_images(Chest.url,3,i4);
-            setOpen_images(Chest.url,4,i5);
+
+            setOpen_images(Chest.url3,pos,open_image);
+
+            setOpen_images(Chest.url3,0,i1);
+            setOpen_images(Chest.url3,1,i2);
+            setOpen_images(Chest.url3,2,i3);
+            setOpen_images(Chest.url3,3,i4);
+            setOpen_images(Chest.url3,4,i5);
 
         }else {
             Toast.makeText(this, "failed:"+chest, Toast.LENGTH_SHORT).show();
