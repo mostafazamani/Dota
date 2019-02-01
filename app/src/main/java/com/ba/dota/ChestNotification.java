@@ -127,10 +127,10 @@ public class ChestNotification extends Service {
         b.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.add)
+                .setSmallIcon(R.drawable.chest)
                 .setTicker("Hearty365")
-                .setContentTitle("Default notification")
-                .setContentText("Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
+                .setContentTitle("صندوق های شانس بروز شدن")
+                .setContentText("وقتشه ی نگاهی به صندوق های شانس بندازی،آیتم جدید اوردیم")
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND)
                 .setContentIntent(contentIntent)
                 .setContentInfo("Info");
