@@ -251,7 +251,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static void update(Context ctx) {
-        String urlup = "http://prodall.ir";
+        String urlup = "http://prodall.ir/?p=39";
 
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -263,10 +263,10 @@ public class MainActivity extends AppCompatActivity {
         b.setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.drawable.add)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setTicker("Hearty365")
                 .setContentTitle("Update")
-                .setContentText("اپ کن دیوث")
+                .setContentText("UpDate")
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND)
                 .setContentIntent(contentIntent)
                 .setContentInfo("Info");
