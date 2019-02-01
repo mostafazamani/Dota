@@ -83,7 +83,7 @@
             <RelativeLayout
                 android:id="@+id/inventoryrelat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="450dp"
 
                 android:layout_below="@+id/traderelat"
                 android:layout_marginTop="20dp"
@@ -136,42 +136,7 @@
 
             </RelativeLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@+id/inventoryrelat"
-                android:layout_marginTop="20dp"
-                android:background="#695c6570">
 
-
-                <TextView
-                    android:id="@+id/train_dis_text"
-                    android:layout_width="130dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="3dp"
-                    android:gravity="left"
-                    android:text="Description :"
-                    android:textColor="@color/white"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:layout_below="@+id/train_dis_text"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="20dp"
-                    android:layout_marginTop="1dp"
-                    android:background="@color/white" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
 

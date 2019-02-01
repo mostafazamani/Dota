@@ -8,6 +8,15 @@
     android:background="@drawable/lunchwall"
     >
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="1.0.0"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/DarkRed"/>
+
 
 
 

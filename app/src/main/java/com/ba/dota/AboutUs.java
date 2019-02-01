@@ -44,7 +44,7 @@ public class AboutUs extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/the_dall"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/Dota_dall"));
                 startActivity(browserIntent);
 
 

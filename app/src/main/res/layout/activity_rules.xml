@@ -6,7 +6,7 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="300dp"
+        android:layout_height="350dp"
         android:background="#d9051359">
 
         <ImageView
@@ -28,13 +28,23 @@
             android:textColor="#e2fff235"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="match_parent"
+        <ScrollView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rulespic"
             android:layout_marginTop="5dp"
-            android:background="#4f515e5b"
-            android:text="@string/chest" />
+            android:padding="5dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#4f515e5b"
+                android:textSize="18sp"
+                android:text="@string/chest" />
+
+        </ScrollView>
+
 
     </RelativeLayout>
 
