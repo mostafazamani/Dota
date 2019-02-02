@@ -33,11 +33,8 @@
         android:drawableLeft="@drawable/book"
         android:gravity="center"
         android:padding="5dp"
-
         android:text="قوانین"
         android:textColor="@color/dark_yellow"
-
-
         android:textSize="18sp"
         android:textStyle="bold" />
 
@@ -56,7 +53,7 @@
                 android:id="@+id/scrollchest_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/txt_dis"
+
                 android:scrollbarStyle="insideOverlay">
 
                 <RelativeLayout
@@ -194,21 +191,21 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@drawable/shape_mahv"
-                android:text="5000 تومـــان"
-                android:textColor="@color/dark_yellow"
-                android:layout_below="@+id/scrollchest_1"
-                android:gravity="center"
-                android:layout_marginTop="2dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="5dp"/>
+                android:layout_below="@+id/scrollchest_1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_mahv"
+                android:gravity="center"
+                android:text="5000 تومـــان"
+                android:textColor="@color/dark_yellow" />
 
             <Button
                 android:id="@+id/pay_chest_1"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_below="@+id/scrollchest_1"
                 android:layout_alignParentRight="true"
+                android:layout_below="@+id/scrollchest_1"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
@@ -356,22 +353,22 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@drawable/shape_mahv"
-                android:text="8000 تومـــان"
-                android:textColor="@color/dark_yellow"
-                android:layout_below="@+id/scrollchest_2"
-                android:gravity="center"
-                android:layout_marginTop="2dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="5dp"/>
+                android:layout_below="@+id/scrollchest_2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_mahv"
+                android:gravity="center"
+                android:text="8000 تومـــان"
+                android:textColor="@color/dark_yellow" />
 
             <Button
                 android:id="@+id/pay_chest_2"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
 
-                android:layout_below="@+id/scrollchest_2"
                 android:layout_alignParentRight="true"
+                android:layout_below="@+id/scrollchest_2"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
@@ -521,21 +518,21 @@
             <TextView
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@drawable/shape_mahv"
-                android:text="10000 تومـــان"
-                android:textColor="@color/dark_yellow"
-                android:layout_below="@+id/scrollchest_3"
-                android:gravity="center"
-                android:layout_marginTop="2dp"
                 android:layout_alignParentLeft="true"
-                android:layout_marginLeft="5dp"/>
+                android:layout_below="@+id/scrollchest_3"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/shape_mahv"
+                android:gravity="center"
+                android:text="10000 تومـــان"
+                android:textColor="@color/dark_yellow" />
 
             <Button
                 android:id="@+id/pay_chest_3"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:layout_below="@+id/scrollchest_3"
                 android:layout_alignParentRight="true"
+                android:layout_below="@+id/scrollchest_3"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
