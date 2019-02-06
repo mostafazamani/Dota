@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="315dp"
     android:layout_height="150dp"
-    android:padding="5dp"
-    android:background="@drawable/square">
+    android:background="@drawable/square"
+    android:padding="5dp">
+
+
+
     <ScrollView
+        android:id="@+id/scrollpop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/scrollpop"
         android:padding="5dp">
 
         <TextView
@@ -17,9 +19,9 @@
             android:layout_width="290dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:padding="5dp"
             android:background="@drawable/shape_mahv"
             android:gravity="center"
+            android:padding="5dp"
             android:text="@string/trade_exp"
             android:textColor="@color/white"
             android:textSize="15sp"
@@ -30,16 +32,16 @@
     <TextView
 
         android:id="@+id/info_moreinfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-       android:layout_alignStart="@+id/scrollpop"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignEnd="@+id/scrollpop"
-        android:gravity="center"
-
+        android:layout_alignStart="@+id/scrollpop"
         android:layout_below="@id/scrollpop"
+
         android:layout_marginTop="5dp"
         android:background="@drawable/shape_mahv"
-        android:text="اطلاعات بیشتر در    Training"
+        android:gravity="center"
+        android:text="بستن"
         android:textColor="@color/white"
         android:textStyle="bold" />
 

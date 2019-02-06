@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
-    android:layout_height="300dp"
+    android:layout_width="500dp"
+    android:layout_height="700dp"
     android:padding="5dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_height="700dp"
         android:background="#d9051359">
+
+        <Button
+            android:id="@+id/rules_close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginleft="10dp"
+            android:background="@drawable/shape_mahv"
+            android:gravity="center"
+
+            android:layout_marginTop="10dp"
+            android:text="x"
+
+            />
 
         <ImageView
             android:id="@+id/rulescard"
-            android:layout_width="match_parent"
-
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
             android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/rules_close"
             android:src="@drawable/card" />
+
 
         <TextView
             android:id="@+id/rulespic"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/rulescard"
             android:drawableRight="@drawable/book"
             android:padding="5dp"
             android:text="    قوانیــــن"
             android:textColor="#e2fff235"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <ScrollView
@@ -33,15 +49,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rulespic"
             android:layout_marginTop="5dp"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4f515e5b"
-                android:textSize="18sp"
-                android:text="@string/chest" />
+                android:text="@string/chest"
+                android:textSize="24sp" />
 
         </ScrollView>
 

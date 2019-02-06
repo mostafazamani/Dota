@@ -5,51 +5,49 @@
     android:id="@+id/about_us_rel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wall_medium"
     android:padding="10dp"
     tools:context="com.ba.dota.AboutUs">
 
     <RelativeLayout
+        android:id="@+id/dotadall_rel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:padding="5dp"
-        android:id="@+id/dotadall_rel"
-        android:background="#c6424348"
         android:layout_margin="15dp"
-        >
+        android:background="#c6424348"
+        android:padding="5dp">
 
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:src="@drawable/dotadall"
-        android:id="@+id/dotadall_about"
-        android:layout_alignParentTop="true"/>
+        <ImageView
+            android:id="@+id/dotadall_about"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/dotadall" />
 
         <TextView
+            android:id="@+id/version_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Version : 1.0.0"
             android:layout_below="@+id/dotadall_about"
             android:layout_centerHorizontal="true"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:id="@+id/version_text"/>
-</RelativeLayout>
+            android:text="Version : 1.0.0"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_alignStart="@+id/dotadall_rel"
         android:layout_alignEnd="@+id/dotadall_rel"
+        android:layout_alignStart="@+id/dotadall_rel"
+        android:layout_below="@+id/dotadall_rel"
         android:layout_centerHorizontal="true"
 
-        android:layout_below="@+id/dotadall_rel"
         android:background="#c6424348"
+        android:gravity="center"
 
         >
 
@@ -57,26 +55,27 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="@string/createby"
             android:gravity="center"
-            android:textSize="25sp"
-            android:padding="10dp"/>
+            android:padding="10dp"
+            android:text="@string/createby"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
 
     </RelativeLayout>
+
     <TextView
+        android:id="@+id/follow_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="مارا دنبال کنید"
-        android:padding="3dp"
-        android:id="@+id/follow_text"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_above= "@+id/site"
+        android:layout_above="@+id/site"
         android:layout_centerHorizontal="true"
-        android:textSize="18sp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginBottom="5dp"
+        android:padding="3dp"
+        android:text="مارا دنبال کنید"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
 
     <ImageView

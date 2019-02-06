@@ -6,46 +6,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="2dp"
-    android:background="@drawable/wallintelligence"
+    android:background="@drawable/wallintelligence_large"
     tools:context="com.ba.dota.InteligenceStore">
 
 
     <Button
         android:id="@+id/btn_ilist"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
         android:background="@drawable/store" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
         android:layout_toLeftOf="@id/btn_ilist"
         android:gravity="center"
         android:text="Intelligence"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:id="@+id/textView" />
+        android:textSize="45sp"
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/list_ishop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
+        android:layout_below="@+id/textView"
+
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/textView"
-        android:layout_toStartOf="@+id/btn_ilist"></ListView>
+        android:layout_marginTop="10dp"
+        android:scrollbars="none"></ListView>
 
     <ProgressBar
         android:id="@+id/progressBar_i"
+        style="@style/progress"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        style="@style/progress"
-        android:background="@drawable/dotaloadblack"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:background="@drawable/dotaloadblack" />
 
 
 </RelativeLayout>

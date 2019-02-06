@@ -4,15 +4,15 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wall_small"
     tools:context="com.ba.dota.MainActivity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:padding="30dp"
+
+
+        android:padding="2dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true">
 
@@ -27,9 +27,9 @@
             <Button
                 android:gravity="center"
                 android:id="@+id/bio"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_margin="24dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="25dp"
                 android:background="@drawable/shape_hero_btn"
                 android:rotation="45" />
 
@@ -50,8 +50,8 @@
             android:layout_alignParentRight="true">
             <Button
                 android:id="@+id/store"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:background="@drawable/shape_store_btn"
                 android:rotation="45"
                 android:gravity="center"
@@ -72,8 +72,8 @@
 
             <Button
                 android:id="@+id/exit"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:layout_margin="25dp"
                 android:background="@drawable/shape_exit_btn"
@@ -88,8 +88,8 @@
 
             <Button
                 android:id="@+id/about_us"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
 
                 android:layout_margin="25dp"
                 android:background="@drawable/shape_about_btn"

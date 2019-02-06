@@ -1,42 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hero_layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:id="@+id/hero_layout"
     android:background="@drawable/wall">
 
 
     <Button
         android:id="@+id/btn_hlist"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
         android:background="@drawable/store" />
 
     <TextView
         android:id="@+id/text_hlist"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
         android:layout_toLeftOf="@id/btn_hlist"
         android:gravity="center"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="30sp" />
 
     <ListView
         android:id="@+id/list_hshop"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/text_hlist"
-        android:layout_margin="50dp"
-        android:scrollbars="none"/>
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="30dp"
+        android:scrollbars="none" />
+
     <ProgressBar
         android:id="@+id/progressBar_hero_item"
+        style="@style/progress"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        style="@style/progress"
-        android:background="@drawable/dotaloadblack"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:background="@drawable/dotaloadblack" />
 
 
 </RelativeLayout>

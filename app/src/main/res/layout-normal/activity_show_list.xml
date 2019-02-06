@@ -4,39 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wall_medium"
     tools:context="com.ba.dota.ShowList">
 
 
-
-
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
         android:id="@+id/text_all_cast"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
 
         android:gravity="center"
         android:textSize="20sp"
         android:textStyle="bold" />
 
     <ListView
+        android:id="@+id/show_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
-        android:id="@+id/show_list"
-        />
+        android:layout_margin="30dp" />
 
     <Button
         android:id="@+id/btn_pay"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/shape_mahv"
+        android:layout_height="30dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_mahv"
         android:text="پرداخت" />
-
 
 
 </RelativeLayout>

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallherosbio"
+    android:background="@drawable/wallherosbio_medium"
     tools:context="com.ba.dota.HerosBio">
 
     <ImageView
         android:id="@+id/topimage_herosbio"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:background="@drawable/topimagebio" />
+        android:background="@drawable/topimagebio_medium" />
 
 
     <ImageView
@@ -19,14 +19,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bottonimagebio" />
+        android:background="@drawable/bottonimagebio_medium" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/topimage_herosbio"
-        android:layout_above="@+id/bottonimage_heros">
+        android:layout_above="@+id/bottonimage_heros"
+        android:layout_below="@id/topimage_herosbio">
 
         <android.support.v4.view.PagerTabStrip
             android:id="@+id/page_title"
@@ -36,7 +36,6 @@
             />
 
     </android.support.v4.view.ViewPager>
-
 
 
 </RelativeLayout>

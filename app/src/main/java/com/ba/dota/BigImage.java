@@ -35,7 +35,7 @@ public class BigImage extends DialogFragment {
 
 
 
-    @RequiresApi(api = Build.VERSION_CODES.M)
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -50,7 +50,7 @@ public class BigImage extends DialogFragment {
 
         bar.setVisibility(View.VISIBLE);
 
-        final RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        final RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         final ImageRequest request = new ImageRequest(url, new Response.Listener<Bitmap>() {
             @Override
             public void onResponse(Bitmap response) {

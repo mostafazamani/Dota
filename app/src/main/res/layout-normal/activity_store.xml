@@ -4,68 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wall_medium"
     tools:context="com.ba.dota.Store">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="70dp"
+        android:layout_margin="30dp"
         android:gravity="center">
 
         <Button
             android:id="@+id/go_st"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:text="Strength"
+            android:layout_height="50dp"
             android:background="#30576161"
             android:drawableLeft="@drawable/striconleft"
+            android:text="Strength"
 
             />
 
         <Button
             android:id="@+id/go_ag"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_below="@id/go_st"
             android:background="#30576161"
-            android:text="Agility"
             android:drawableLeft="@drawable/agiiconleft"
-            />
+            android:text="Agility" />
 
         <Button
             android:id="@+id/go_int"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_below="@id/go_ag"
             android:background="#30576161"
-            android:text="Intelligence"
-            android:drawableLeft="@drawable/inticonleft"/>
+            android:drawableLeft="@drawable/inticonleft"
+            android:text="Intelligence" />
 
         <Button
-            android:background="#30576161"
             android:id="@+id/go_chest"
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="50dp"
             android:layout_below="@+id/go_int"
+            android:background="#30576161"
             android:drawableLeft="@drawable/chest"
             android:text="Chest" />
+
         <Button
-            android:layout_width="match_parent"
-            android:background="#30576161"
-            android:layout_height="70dp"
             android:id="@+id/go_store"
-            android:text="Cart"
-            android:drawableLeft="@drawable/cart"
-            android:layout_below="@+id/go_chest"/>
-        <Button
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:layout_below="@+id/go_store"
-            android:id="@+id/go_training"
-            android:text="Training"
+            android:layout_height="50dp"
+            android:layout_below="@+id/go_chest"
             android:background="#30576161"
-            android:drawableLeft="@drawable/tips"/>
+            android:drawableLeft="@drawable/cart"
+            android:text="Cart" />
+
+        <Button
+            android:id="@+id/go_training"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/go_store"
+            android:background="#30576161"
+            android:drawableLeft="@drawable/tips"
+            android:text="Training" />
 
     </RelativeLayout>
 

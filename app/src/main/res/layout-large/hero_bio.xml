@@ -2,23 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ancientwall"
+    android:layout_above="@+id/bottonimage_heros"
 
     android:layout_below="@+id/topimage_herosbio"
-    android:layout_above="@+id/bottonimage_heros"
+    android:background="@drawable/ancientwall"
     android:padding="5dp">
 
     <RelativeLayout
         android:id="@+id/heronamerell"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_margin="5dp"
+        android:layout_height="85dp"
+        android:layout_margin="10dp"
         android:background="#77000002">
 
         <ImageView
             android:id="@+id/profile_hero"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_width="150dp"
+            android:layout_height="85dp"
             android:layout_alignParentLeft="true"
             android:background="@drawable/rect"
             android:padding="2dp"
@@ -27,10 +27,11 @@
         <TextView
             android:id="@+id/bio_name"
             android:layout_width="match_parent"
-            android:layout_height="68dp"
+            android:layout_height="83dp"
             android:layout_margin="2dp"
             android:layout_toEndOf="@id/profile_hero"
-            android:gravity="center_horizontal" />
+            android:gravity="center_horizontal"
+            android:textSize="40sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -51,9 +52,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#99000002"
-            android:paddingRight="3dp"
             android:gravity="right"
-            android:textSize="18sp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:textSize="28sp"
 
             />
     </ScrollView>
@@ -61,11 +63,14 @@
     <Button
         android:id="@+id/btn_bastan"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="70dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/rect"
         android:text="بستن"
-
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 

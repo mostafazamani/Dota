@@ -8,20 +8,21 @@
     <ImageView
         android:id="@+id/image_hero"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         android:scaleType="fitCenter" />
 
 
     <TextView
         android:id="@+id/name_hero"
-        android:textColor="#ffffff"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignBottom="@id/image_hero"
         android:layout_toEndOf="@id/image_hero"
-
         android:gravity="center"
-        android:textStyle="bold"
-        />
+
+        android:textColor="@color/white"
+
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

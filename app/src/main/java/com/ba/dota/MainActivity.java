@@ -229,10 +229,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        if (isAppRunning()) dbUtil.EmptyTable();
+      //  if (isAppRunning()) dbUtil.EmptyTable();
 
     }
-
+/*
     private boolean isAppRunning() {
         ActivityManager m = (ActivityManager) this.getSystemService(ACTIVITY_SERVICE);
         List<ActivityManager.RunningTaskInfo> runningTaskInfoList = m.getRunningTasks(10);
@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity {
         return true; // App is in background or foreground
     }
 
-
+*/
     public static void update(Context ctx) {
         String urlup = "http://prodall.ir/?p=39";
 

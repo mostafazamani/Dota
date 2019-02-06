@@ -9,30 +9,32 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="right"
-        android:textSize="35dp"
         android:textColor="#ffffff"
-        />
+        android:textSize="35dp" />
+
     <ProgressBar
         android:id="@+id/prog_sender"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
+
     <Button
         android:id="@+id/ref_sender"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="Refresh"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="Refresh" />
+
     <Button
         android:id="@+id/ok_sender"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:text="Ok"
-        android:background="@drawable/shape_mahv"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/shape_mahv"
+        android:text="Ok" />
 
 
 </RelativeLayout>

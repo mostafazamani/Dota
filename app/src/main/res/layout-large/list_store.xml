@@ -8,57 +8,59 @@
 
     <ImageView
         android:id="@+id/image_item"
-        android:layout_width="160dp"
-        android:padding="2dp"
-        android:background="@drawable/square"
-        android:layout_height="120dp"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginTop="5dp"
+        android:background="@drawable/square"
+        android:padding="2dp" />
 
 
     <TextView
 
         android:id="@+id/text_item"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="250dp"
+        android:layout_height="110dp"
         android:layout_margin="5dp"
         android:layout_toEndOf="@id/image_item"
         android:background="@drawable/square"
-        android:gravity="center" />
+        android:gravity="center"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/cast_item"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/toman"
         android:background="@drawable/square"
         android:gravity="center"
+        android:textColor="@color/white"
 
 
         />
 
     <TextView
         android:id="@+id/toman"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@id/image_item"
         android:background="@drawable/square"
         android:gravity="center"
-
         android:text="تومان"
+        android:textColor="@color/white"
 
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
 
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
@@ -66,11 +68,11 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/cast_item"
         android:background="@drawable/square"
-        android:text="+"
         android:gravity="center"
+        android:text="+"
         android:textColor="@color/white"
-        android:textStyle="normal"
-        android:textSize="40sp"/>
+        android:textSize="40sp"
+        android:textStyle="normal" />
 
 
 </RelativeLayout>
