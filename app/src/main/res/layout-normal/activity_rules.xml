@@ -9,12 +9,26 @@
         android:layout_height="450dp"
         android:background="#d9051359">
 
+        <Button
+            android:id="@+id/rules_close"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_marginTop="5dp"
+
+            android:background="@drawable/shape_mahv"
+
+            android:gravity="center"
+            android:text="x"
+
+            />
+
         <ImageView
             android:id="@+id/rulescard"
             android:layout_width="match_parent"
-
             android:layout_height="100dp"
             android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/rules_close"
             android:src="@drawable/card" />
 
         <TextView
@@ -33,15 +47,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/rulespic"
             android:layout_marginTop="5dp"
-            android:padding="5dp"
-            >
+            android:padding="5dp">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#4f515e5b"
-                android:textSize="18sp"
-                android:text="@string/chest" />
+                android:text="@string/chest"
+                android:textSize="18sp" />
 
         </ScrollView>
 
