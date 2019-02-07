@@ -228,6 +228,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        dbUtil.EmptyTable();
 
       //  if (isAppRunning()) dbUtil.EmptyTable();
 

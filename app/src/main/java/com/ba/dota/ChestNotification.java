@@ -68,7 +68,7 @@ public class ChestNotification extends Service {
 
         initializeTimerTask();
 
-        timer.schedule(timerTask, 5000, 86400000);
+        timer.schedule(timerTask, 86400000, 86400000);
     }
 
     public void stoptimertask() {

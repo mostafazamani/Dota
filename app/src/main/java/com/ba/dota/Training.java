@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -23,8 +24,19 @@ public class Training extends AppCompatActivity {
         ImageView inventory = (ImageView) findViewById(R.id.inventory);
 
 
+        Button op = (Button) findViewById(R.id.open_steam);
+
+        op.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
 
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://steamcommunity.com/profiles/76561198360706389/tradeoffers/privacy"));
+                startActivity(browserIntent);
+
+
+            }
+        });
 
 
         image_trade.setOnClickListener(new View.OnClickListener() {

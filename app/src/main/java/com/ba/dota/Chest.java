@@ -80,6 +80,7 @@ public class Chest extends AppCompatActivity {
     ImageView chest_11, chest_21, chest_31, chest_41, chest_51; //chest one
     ImageView chest_12, chest_22, chest_32, chest_42, chest_52; //chest two
     ImageView chest_13, chest_23, chest_33, chest_43, chest_53; //chest three
+    Button close;
 
     public static String url = "https://www.dropbox.com/s/thrr531fu7k5wu5/Chest%201.json?dl=1";
     public static String url2 = "https://www.dropbox.com/s/kf8wphmsz7w19q4/Chest%202.json?dl=1";
@@ -144,7 +145,15 @@ public class Chest extends AppCompatActivity {
 
 
         View view = inflater.inflate(R.layout.activity_rules, null);
+        close = (Button) view.findViewById(R.id.rules_close);
         final PopupWindow popupWindow = new PopupWindow(view, width, height, true);
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+            }
+        });
 
 
         btn_dis.setOnClickListener(new View.OnClickListener() {

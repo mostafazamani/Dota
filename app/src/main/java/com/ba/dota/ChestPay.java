@@ -47,7 +47,15 @@ public class ChestPay extends AppCompatActivity {
 
 
         View view = inflater.inflate(R.layout.popup_info, null);
+        TextView cl = (TextView) view.findViewById(R.id.info_moreinfo);
         final PopupWindow popupWindow = new PopupWindow(view, width, height, true);
+
+        cl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupWindow.dismiss();
+            }
+        });
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
