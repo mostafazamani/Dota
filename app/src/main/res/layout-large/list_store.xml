@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/image_item"
-        android:layout_width="300dp"
-        android:layout_height="200dp"
+        android:layout_width="200dp"
+        android:layout_height="166dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/square"
@@ -19,8 +19,8 @@
     <TextView
 
         android:id="@+id/text_item"
-        android:layout_width="250dp"
-        android:layout_height="110dp"
+        android:layout_width="205dp"
+        android:layout_height="90dp"
         android:layout_margin="5dp"
         android:layout_toEndOf="@id/image_item"
         android:background="@drawable/square"
@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/cast_item"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
@@ -44,8 +44,8 @@
 
     <TextView
         android:id="@+id/toman"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
@@ -59,8 +59,8 @@
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
 
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"

@@ -9,30 +9,32 @@
     <ImageView
         android:id="@+id/image_item"
         android:layout_width="160dp"
-        android:padding="2dp"
-        android:background="@drawable/square"
         android:layout_height="120dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp" />
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/square"
+        android:padding="2dp" />
 
 
     <TextView
 
         android:id="@+id/text_item"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="145dp"
+        android:layout_height="65dp"
         android:layout_margin="5dp"
+        android:textSize="10sp"
         android:layout_toEndOf="@id/image_item"
         android:background="@drawable/square"
         android:gravity="center" />
 
     <TextView
         android:id="@+id/cast_item"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
+        android:textSize="8sp"
         android:layout_toRightOf="@+id/toman"
         android:background="@drawable/square"
         android:gravity="center"
@@ -42,12 +44,13 @@
 
     <TextView
         android:id="@+id/toman"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@id/image_item"
+        android:textSize="8sp"
         android:background="@drawable/square"
         android:gravity="center"
 
@@ -57,8 +60,8 @@
 
     <Button
         android:id="@+id/btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
 
         android:layout_below="@+id/text_item"
         android:layout_marginLeft="5dp"
@@ -66,11 +69,11 @@
         android:layout_marginTop="5dp"
         android:layout_toRightOf="@+id/cast_item"
         android:background="@drawable/square"
-        android:text="+"
         android:gravity="center"
+        android:text="+"
         android:textColor="@color/white"
-        android:textStyle="normal"
-        android:textSize="40sp"/>
+        android:textSize="20sp"
+        android:textStyle="normal" />
 
 
 </RelativeLayout>
