@@ -4,6 +4,7 @@
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@drawable/wall_medium"
     tools:context="com.ba.dota.MainActivity">
 
@@ -12,13 +13,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
-        android:padding="30dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:padding="30dp">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
 
@@ -38,8 +37,8 @@
 
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true">
             <Button
@@ -58,8 +57,8 @@
 
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             >
@@ -75,8 +74,8 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="138dp"
+            android:layout_height="138dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true">
 
