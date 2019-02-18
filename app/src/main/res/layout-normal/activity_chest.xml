@@ -14,8 +14,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/dark_yellow"
-        android:drawableLeft="@drawable/chest"
-        android:drawableRight="@drawable/chest"
+        android:drawableStart="@drawable/chest"
+        android:drawableEnd="@drawable/chest"
         android:gravity="center"
         android:text="Lucky Chest"
         android:textColor="@color/Brown"
@@ -30,7 +30,7 @@
 
         android:layout_marginTop="2dp"
         android:background="@drawable/shape_mahv"
-        android:drawableLeft="@drawable/book"
+        android:drawableStart="@drawable/book"
         android:gravity="center"
         android:padding="5dp"
 
@@ -49,7 +49,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
 
             <HorizontalScrollView
@@ -60,7 +60,7 @@
 
                 <RelativeLayout
                     android:id="@+id/relchest1"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:padding="5dp">
 
@@ -94,8 +94,8 @@
                         android:id="@+id/chest_21"
                         android:layout_width="150dp"
                         android:layout_height="200dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_toRightOf="@+id/chest_11"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@+id/chest_11"
                         android:background="@drawable/shape_common"
                         android:padding="3dp"
                         android:src="@drawable/chestwall" />
@@ -105,9 +105,9 @@
                         android:layout_width="150dp"
                         android:layout_height="30dp"
                         android:layout_below="@+id/chest_21"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="1dp"
-                        android:layout_toRightOf="@+id/txt11"
+                        android:layout_toEndOf="@+id/txt11"
                         android:background="@drawable/shape_common"
                         android:gravity="center"
                         android:text="احتمال بالا"
@@ -118,8 +118,8 @@
                         android:id="@+id/chest_31"
                         android:layout_width="150dp"
                         android:layout_height="200dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_toRightOf="@+id/chest_21"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@+id/chest_21"
                         android:background="@drawable/shape_rare"
                         android:padding="3dp"
                         android:src="@drawable/chestwall" />
@@ -129,9 +129,9 @@
                         android:layout_width="150dp"
                         android:layout_height="30dp"
                         android:layout_below="@+id/chest_31"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="1dp"
-                        android:layout_toRightOf="@+id/chest_21"
+                        android:layout_toEndOf="@+id/chest_21"
                         android:background="@drawable/shape_rare"
                         android:gravity="center"
                         android:text="احتمال متوسط"
@@ -142,8 +142,8 @@
                         android:id="@+id/chest_41"
                         android:layout_width="150dp"
                         android:layout_height="200dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_toRightOf="@+id/chest_31"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@+id/chest_31"
                         android:background="@drawable/shape_epic"
                         android:padding="3dp"
                         android:src="@drawable/chestwall" />
@@ -153,9 +153,9 @@
                         android:layout_width="150dp"
                         android:layout_height="30dp"
                         android:layout_below="@+id/chest_41"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="1dp"
-                        android:layout_toRightOf="@+id/txt31"
+                        android:layout_toEndOf="@+id/txt31"
                         android:background="@drawable/shape_epic"
                         android:gravity="center"
                         android:text="احتمال کم"
@@ -166,8 +166,8 @@
                         android:id="@+id/chest_51"
                         android:layout_width="150dp"
                         android:layout_height="200dp"
-                        android:layout_marginLeft="2dp"
-                        android:layout_toRightOf="@+id/chest_41"
+                        android:layout_marginStart="2dp"
+                        android:layout_toEndOf="@+id/chest_41"
                         android:background="@drawable/shape_legendary"
                         android:padding="3dp"
                         android:src="@drawable/chestwall" />
@@ -177,9 +177,9 @@
                         android:layout_width="150dp"
                         android:layout_height="30dp"
                         android:layout_below="@+id/chest_51"
-                        android:layout_marginLeft="2dp"
+                        android:layout_marginStart="2dp"
                         android:layout_marginTop="1dp"
-                        android:layout_toRightOf="@+id/txt41"
+                        android:layout_toEndOf="@+id/txt41"
                         android:background="@drawable/shape_legendary"
                         android:gravity="center"
                         android:text="احتمال خیلی کم"
@@ -199,16 +199,16 @@
                 android:layout_below="@+id/scrollchest_1"
                 android:gravity="center"
                 android:layout_marginTop="2dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="5dp"/>
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"/>
 
             <Button
                 android:id="@+id/pay_chest_1"
                 android:layout_width="100dp"
                 android:layout_height="30dp"
                 android:layout_below="@+id/scrollchest_1"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="5dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
                 android:layout_marginTop="2dp"
                 android:background="@drawable/shape_mahv"
                 android:text="پـرداخــت"
