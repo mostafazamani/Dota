@@ -448,6 +448,7 @@
             android:name=".AboutUs"
             android:screenOrientation="portrait" />
 
+
     </application>
 
 </manifest>

@@ -66,7 +66,7 @@
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/cast_item"
+        android:layout_toEndOf="@+id/cast_item"
         android:background="@drawable/square"
         android:gravity="center"
         android:text="+"

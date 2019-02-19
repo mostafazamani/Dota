@@ -13,20 +13,20 @@
         android:id="@+id/i1"
         android:layout_width="210dp"
         android:layout_height="280dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:src="@drawable/chestwall" />
 
     <ImageView
         android:layout_width="210dp"
         android:layout_height="280dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:src="@drawable/chestwall" />
 
     <ImageView
         android:id="@+id/i4"
         android:layout_width="210dp"
         android:layout_height="280dp"
-        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/chestwall" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/i5"
         android:layout_width="210dp"
         android:layout_height="280dp"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:src="@drawable/chestwall" />
 
