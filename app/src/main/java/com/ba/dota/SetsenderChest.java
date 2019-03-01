@@ -76,7 +76,7 @@ public class SetsenderChest extends DialogFragment {
         final String url = "http://prodall.ir/myupload/chestdota.php";
 
         final RequestQueue queue = Volley.newRequestQueue(getActivity());
-
+        text.setText("درحال تکمیل خرید....");
 
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override

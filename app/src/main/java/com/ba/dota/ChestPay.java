@@ -21,6 +21,7 @@ import com.zarinpal.ewallets.purchase.PaymentRequest;
 import com.zarinpal.ewallets.purchase.ZarinPal;
 
 import java.util.Random;
+import java.util.logging.Handler;
 
 public class ChestPay extends AppCompatActivity {
     SharedPreferences per;
@@ -31,7 +32,7 @@ public class ChestPay extends AppCompatActivity {
         setContentView(R.layout.chest_pay);
 
         TextView amount = (TextView) findViewById(R.id.chest_amount_show);
-        Button pay = (Button) findViewById(R.id.chest_pay_next_btn);
+        final Button pay = (Button) findViewById(R.id.chest_pay_next_btn);
         Button cancel = (Button) findViewById(R.id.chest_pay_cancel);
         final TextView payer_name = (TextView) findViewById(R.id.chest_payer_name);
         final TextView trade = (TextView) findViewById(R.id.chest_trade_link);
@@ -42,6 +43,7 @@ public class ChestPay extends AppCompatActivity {
                 getSystemService(LAYOUT_INFLATER_SERVICE);
 
 
+        pay.setClickable(true);
         int width = LinearLayout.LayoutParams.WRAP_CONTENT;
         int height = LinearLayout.LayoutParams.WRAP_CONTENT;
 
@@ -103,8 +105,8 @@ public class ChestPay extends AppCompatActivity {
             @Override
             public void onCallbackResultVerificationPayment(boolean isPaymentSuccess, String refID, PaymentRequest paymentRequest) {
                 if (isPaymentSuccess) {
-                    SetsenderChest sc = SetsenderChest.chestinstance(payer_name.getText().toString(),
-                            trade.getText().toString(),number.getText().toString(),x, refID, random,3);
+                    SetsenderChest sc = SetsenderChest.chestinstance(per.getString("payer_name","customer"),
+                            per.getString("trade",null),per.getString("number",null),per.getInt("nc",0), refID, per.getInt("random",6),3);
 
                     sc.show((ChestPay.this).getFragmentManager(), "ff");
 
@@ -124,19 +126,31 @@ public class ChestPay extends AppCompatActivity {
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                pay.setClickable(false);
 
                 if (payer_name.getText().toString().matches("")||trade.getText().toString().matches("")||
                         number.getText().toString().matches("")){
                     Toast.makeText(ChestPay.this, "فیلد هارا پر کنید", Toast.LENGTH_SHORT).show();
 
                 }else {
-
+                    editor.putString("payer_name" , payer_name.getText().toString());
+                    editor.putString("number",number.getText().toString());
+                    editor.putString("trade",trade.getText().toString());
                     editor.putInt("random", random);
                     editor.putInt("nc", x);
                     editor.apply();
 
-                    paysetting(am, g);
+                    paysetting(am, g,trade.getText().toString(),number.getText().toString());
                 }
+
+                final android.os.Handler handler = new android.os.Handler();
+               handler.postDelayed(new Runnable() {
+                   @Override
+                   public void run() {
+                       pay.setClickable(true);
+                   }
+               },3000);
+
             }
         });
 
@@ -149,7 +163,7 @@ public class ChestPay extends AppCompatActivity {
 
     }
 
-    public void paysetting(long amount, String itemname) {
+    public void paysetting(long amount, String itemname,String tradlink,String numb) {
 
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
@@ -157,7 +171,8 @@ public class ChestPay extends AppCompatActivity {
         request.setMerchantID("ba319298-2385-11e9-b774-005056a205be");
         request.setAmount(amount);
         request.setDescription("DotA 2 Items :\n" +
-                itemname);
+                itemname+"\n------- trade link:"+tradlink
+        +"\n----- phone number:"+numb);
         request.setCallbackURL("ches://ches");
 
         zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {

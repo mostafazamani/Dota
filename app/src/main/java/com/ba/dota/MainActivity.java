@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
 
-                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.prodall.ir"));
+                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://prodall.ir/?p=39"));
                                                 startActivity(myIntent);
 
                                             }
@@ -113,13 +113,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                                 new AlertDialog.Builder(MainActivity.this)
-                                        .setTitle("UpDate request")
-                                        .setMessage("ایا میخواهید برنام را بروز رسانی کنید؟ ")
+                                        .setTitle("Update request")
+                                        .setMessage("آیا میخواهید برنامه را به روزرسانی کنید؟ ")
                                         .setPositiveButton("بله", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
 
-                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.prodall.ir"));
+                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://prodall.ir/?p=39"));
                                                 startActivity(myIntent);
                                                 dialog.dismiss();
 
@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setTicker("Hearty365")
                 .setContentTitle("Update")
-                .setContentText("UpDate")
+                .setContentText("نسخه ی جدید برنامه موجود است")
                 .setDefaults(Notification.DEFAULT_LIGHTS | Notification.DEFAULT_SOUND)
                 .setContentIntent(contentIntent)
                 .setContentInfo("Info");

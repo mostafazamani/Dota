@@ -73,7 +73,7 @@ public class AgilityStore extends AppCompatActivity {
     HeroSAdapte strength;
     ProgressBar bar;
 
-    public static final String url = "https://www.dropbox.com/s/e8hjpjbqs071y2l/Agility.json?dl=1";
+    public static final String url = "http://prodall.ir/myupload/Agility.json";
 
 
     @Override

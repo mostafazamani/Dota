@@ -72,7 +72,7 @@ public class StrengthStore extends AppCompatActivity {
     ListView listView;
     List<Hero> list;
     HeroSAdapte heroAdapte;
-    public static String url = "https://www.dropbox.com/s/6mcrnjcohrovcei/Strength.json?dl=1";
+    public static String url = "http://prodall.ir/myupload/Strength.json";
     Button button;
 
 

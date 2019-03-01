@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 
 
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 
@@ -46,6 +47,8 @@ public class PayPage extends AppCompatActivity {
 
         dbUtil = new DbUtil(this);
 
+        btn_pay.setClickable(true);
+
         final String item_name = getIntent().getStringExtra("name");
         final int gh = getIntent().getIntExtra("gh", 0);
 
@@ -63,10 +66,10 @@ public class PayPage extends AppCompatActivity {
 
                     Toast.makeText(PayPage.this, "this..." + refID, Toast.LENGTH_SHORT).show();
 
-                    SetSender sender = SetSender.newinstance(payer_name.getText().toString(),
+                    SetSender sender = SetSender.newinstance(per.getString("payername" , "customer"),
                             item_name,
-                            trade.getText().toString(),
-                            number.getText().toString(),
+                            per.getString("tradelink",null),
+                            per.getString("number" , null),
                             refID,
                             x);
                     sender.setCancelable(false);
@@ -122,6 +125,7 @@ public class PayPage extends AppCompatActivity {
         btn_pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                btn_pay.setClickable(false);
 
                 if(payer_name.getText() == null|| payer_name.getText().toString().matches("")
                         || trade.getText() == null|| trade.getText().toString().matches("")
@@ -136,8 +140,15 @@ public class PayPage extends AppCompatActivity {
                     editor.putString("number", number.getText().toString().trim());
                     editor.apply();
 
-                    paysetting(gh, item_name);
+                    paysetting(gh, item_name,trade.getText().toString(),number.getText().toString());
                 }
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                      btn_pay.setClickable(true);
+                    }
+                },3000);
 
             }
         });
@@ -153,7 +164,7 @@ public class PayPage extends AppCompatActivity {
 
     }
 
-    public void paysetting(long amount, String itemname) {
+    public void paysetting(long amount, String itemname,String trade,String nu) {
 
         ZarinPal zarinPal = ZarinPal.getPurchase(this);
         PaymentRequest request = ZarinPal.getPaymentRequest();
@@ -161,7 +172,8 @@ public class PayPage extends AppCompatActivity {
         request.setMerchantID("ba319298-2385-11e9-b774-005056a205be");
         request.setAmount(amount);
         request.setDescription("DotA 2 Items :\n" +
-                itemname);
+                itemname+"\n----- trade link :"+trade
+        +"\n----phone number:"+nu);
         request.setCallbackURL("return://return");
 
         zarinPal.startPayment(request, new OnCallbackRequestPaymentListener() {

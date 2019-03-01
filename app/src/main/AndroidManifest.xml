@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Lunch"
+        <activity
+            android:name=".Lunch"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,21 +21,13 @@
             </intent-filter>
         </activity>
 
-        <supports-screens
-            android:resizeable="true"
-            android:smallScreens="true"
-            android:normalScreens="true"
-            android:largeScreens="true"
-            android:anyDensity="true"
-            />
 
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-
-        <activity android:name=".Training"
-            android:screenOrientation="portrait"/>
-
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Training"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Store"
             android:screenOrientation="portrait" />
@@ -447,8 +440,7 @@
         <activity
             android:name=".AboutUs"
             android:screenOrientation="portrait" />
-
-
+        <activity android:name=".hero.Traning" />
     </application>
 
 </manifest>

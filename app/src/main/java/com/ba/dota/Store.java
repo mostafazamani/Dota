@@ -73,7 +73,7 @@ public class Store extends AppCompatActivity {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
 
-                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.prodall.ir"));
+                                                Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://prodall.ir/?p=39"));
                                                 startActivity(myIntent);
 
                                             }

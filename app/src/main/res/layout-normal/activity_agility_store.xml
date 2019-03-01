@@ -15,11 +15,14 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
         android:background="@drawable/store" />
 
     <TextView
+        android:id="@+id/agility_textname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginTop="5dp"
         android:layout_toLeftOf="@id/btn_alist"
         android:gravity="center"
         android:text="Agility"
@@ -30,7 +33,11 @@
         android:id="@+id/list_shopa"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="50dp"
+        android:layout_below="@+id/agility_textname"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
         android:scrollbars="none"></ListView>
 
     <ProgressBar

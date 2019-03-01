@@ -3,7 +3,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wall"
+    android:background="@drawable/wall_medium"
     android:padding="10dp">
 
     <ScrollView
@@ -70,6 +70,7 @@
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="40dp"
+                    android:id="@+id/open_steam"
                     android:layout_below="@+id/image_trade_link"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="3dp"
@@ -133,6 +134,54 @@
                     android:layout_below="@+id/inventory_text"
                     android:layout_margin="3dp"
                     android:src="@drawable/inventory" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/descriptionrelat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inventoryrelat"
+                android:layout_marginTop="20dp"
+                android:background="#695c6570">
+
+                <TextView
+                    android:id="@+id/train_description_text"
+                    android:layout_width="130dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="3dp"
+                    android:gravity="left"
+                    android:text="Description :"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/description_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/train_description_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:id="@+id/description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/description_line"
+                    android:layout_marginTop="3dp"
+
+                    android:padding="5dp"
+                    android:text="@string/desciption_exp"
+
+
+                    />
+
 
             </RelativeLayout>
 

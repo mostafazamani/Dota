@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/dotadall_about"
             android:layout_centerHorizontal="true"
-            android:text="Version : 1.0.0"
+            android:text="Version : 1.1.0"
             android:textSize="16sp"
             android:textStyle="bold" />
     </RelativeLayout>
